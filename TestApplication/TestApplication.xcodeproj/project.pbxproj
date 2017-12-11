@@ -18,6 +18,7 @@
 		C37D73601FDA69AD00E5D848 /* TestApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D735F1FDA69AD00E5D848 /* TestApplicationTests.swift */; };
 		C37D736B1FDA69AD00E5D848 /* TestApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D736A1FDA69AD00E5D848 /* TestApplicationUITests.swift */; };
 		C37D737A1FDC35D700E5D848 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D73791FDC35D700E5D848 /* RatingControl.swift */; };
+		C38F3B351FDEAB9B00092F65 /* SceneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F3B341FDEAB9B00092F65 /* SceneTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		C37D736A1FDA69AD00E5D848 /* TestApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplicationUITests.swift; sourceTree = "<group>"; };
 		C37D736C1FDA69AD00E5D848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C37D73791FDC35D700E5D848 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		C38F3B341FDEAB9B00092F65 /* SceneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				C37D73781FDC359500E5D848 /* Controls */,
 				C37D73471FDA69AD00E5D848 /* AppDelegate.swift */,
 				C37D73491FDA69AD00E5D848 /* SceneViewController.swift */,
+				C38F3B341FDEAB9B00092F65 /* SceneTableViewController.swift */,
 				C37D734B1FDA69AD00E5D848 /* Main.storyboard */,
 				C37D73511FDA69AD00E5D848 /* Assets.xcassets */,
 				C37D73531FDA69AD00E5D848 /* LaunchScreen.storyboard */,
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3606F271FDD8233003B90E5 /* Item.swift in Sources */,
+				C38F3B351FDEAB9B00092F65 /* SceneTableViewController.swift in Sources */,
 				C37D734A1FDA69AD00E5D848 /* SceneViewController.swift in Sources */,
 				C3606F291FDE8254003B90E5 /* ItemCell.swift in Sources */,
 				C37D73481FDA69AD00E5D848 /* AppDelegate.swift in Sources */,

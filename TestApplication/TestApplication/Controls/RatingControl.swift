@@ -25,6 +25,8 @@ class RatingControl: UIStackView {
         }
     }
 
+    var setAllowed: Bool = true
+
     // initialize from view hierarchy
     required init(coder: NSCoder) {
         super.init(coder: coder)
@@ -72,7 +74,9 @@ class RatingControl: UIStackView {
     
     @objc func ratingButtonTapped(_ button: UIButton, _ event: UIEvent) {
         if let index = self.ratingButtons.index(of: button) {
-            self.rating = index + 1
+            if self.setAllowed {
+                self.rating = index + 1
+            }
         }
     }
 }
