@@ -1,4 +1,5 @@
 import UIKit
+import os.log
 
 class SceneViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -6,6 +7,22 @@ class SceneViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
     @IBOutlet weak var hTFieldNameInput: UITextField!
     @IBOutlet weak var hImagePhotoSelect: UIImageView!
     @IBOutlet weak var hRatingSelector: RatingControl!
+
+    @IBOutlet weak var hNavSaveButton: UIBarButtonItem!
+    var item: Item? = nil
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard let button = sender as? UIBarButtonItem, button === self.hNavSaveButton else {
+            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+            return
+        }
+
+        let name = self.hTFieldNameInput.text ?? ""
+        let photo = self.hImagePhotoSelect.image
+        let rating = self.hRatingSelector.rating
+        self.item = Item(n: name, photo: photo, rating: rating)
+    }
     
     @IBAction func acTapGesOnImage(_ sender: UITapGestureRecognizer) {
         // Try to hide the keyboard which is activated by the input.
@@ -17,10 +34,16 @@ class SceneViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
         
         self.present(imagePicker, animated: true, completion: nil)
     }
-    
+
+    @IBAction func acBarCancel(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hNavSaveButton.isEnabled = false
         self.hTFieldNameInput.delegate = self
+        self.hTFieldNameInput.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,8 +57,10 @@ class SceneViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        self.hTViewYourName.text = "Your Name : \(self.hTFieldNameInput.text!)"
-        self.hTFieldNameInput.text = ""
+        self.hTViewYourName.text = "Scene Name : \(self.hTFieldNameInput.text!)"
+        if let txt = self.hTFieldNameInput.text, !txt.isEmpty {
+            self.hNavSaveButton.isEnabled = true
+        }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

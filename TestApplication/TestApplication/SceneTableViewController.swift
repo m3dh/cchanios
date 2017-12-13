@@ -27,7 +27,20 @@ class SceneTableViewController: UITableViewController { // UITableViewDataSource
         cell.hCellLabel.text = item.name
         cell.hCellRatingCtrl.rating = item.rating
         cell.hCellRatingCtrl.setAllowed = false
+
+        if let image = item.photo {
+            cell.hCellImage.image = image
+        }
+
         return cell
+    }
+
+    @IBAction func unwindToSceneList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? SceneViewController, let item = sourceViewController.item {
+            let index = IndexPath(row: self.items.count, section: 0)
+            self.items.append(item)
+            self.tableView.insertRows(at: [index], with: .automatic)
+        }
     }
 
     private func loadSampleData() {
