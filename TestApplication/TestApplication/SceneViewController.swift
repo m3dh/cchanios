@@ -7,9 +7,9 @@ class SceneViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
     @IBOutlet weak var hTFieldNameInput: UITextField!
     @IBOutlet weak var hImagePhotoSelect: UIImageView!
     @IBOutlet weak var hRatingSelector: RatingControl!
-
     @IBOutlet weak var hNavSaveButton: UIBarButtonItem!
     var item: Item? = nil
+    var isEdit: Bool = false
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
@@ -36,14 +36,27 @@ class SceneViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
     }
 
     @IBAction func acBarCancel(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+        if self.isEdit {
+            if let owningNavigationController = self.navigationController {
+                owningNavigationController.popViewController(animated: true)
+            }
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hNavSaveButton.isEnabled = false
         self.hTFieldNameInput.delegate = self
-        self.hTFieldNameInput.becomeFirstResponder()
+        if let item = self.item {
+            if let image = item.photo {
+                self.hImagePhotoSelect.image = image
+            }
+            self.hTFieldNameInput.text = item.name
+            self.hRatingSelector.rating = item.rating
+            self.textFieldDidEndEditing(self.hTFieldNameInput)
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -56,6 +56,7 @@
                                     <outlet property="hCellImage" destination="JGG-DI-fPt" id="WTU-IH-cGG"/>
                                     <outlet property="hCellLabel" destination="Pia-m9-jgy" id="fJ3-h3-m1z"/>
                                     <outlet property="hCellRatingCtrl" destination="Msr-nW-cKP" id="e0I-F6-Hnu"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowSceneDetail" id="1kW-Vo-i1j"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -198,10 +199,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iK8-dY-giE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532.5" y="130.98591549295776"/>
+            <point key="canvasLocation" x="514" y="489"/>
         </scene>
     </scenes>
     <resources>
         <image name="DefaultPhoto" width="320" height="320"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1kW-Vo-i1j"/>
+    </inferredMetricsTieBreakers>
 </document>
