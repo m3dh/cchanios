@@ -5,7 +5,12 @@ class SceneTableViewController: UITableViewController { // UITableViewDataSource
     var items = [Item]()
 
     override func viewDidLoad() {
-        self.loadSampleData()
+        if let itemList = Item.loadItemList() {
+            self.items += itemList
+        } else {
+            self.editButtonItem.isEnabled = false
+        }
+
         self.navigationItem.leftBarButtonItem = editButtonItem
     }
 
@@ -67,6 +72,10 @@ class SceneTableViewController: UITableViewController { // UITableViewDataSource
             // Delete the row from the data source
             self.items.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .fade)
+            Item.saveItemList(list: self.items)
+            if self.items.count == 0 {
+                self.editButtonItem.isEnabled = false
+            }
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
@@ -88,13 +97,10 @@ class SceneTableViewController: UITableViewController { // UITableViewDataSource
                 let index = IndexPath(row: self.items.count, section: 0)
                 self.items.append(item)
                 self.tableView.insertRows(at: [index], with: .automatic)
+                self.editButtonItem.isEnabled = true
             }
-        }
-    }
 
-    private func loadSampleData() {
-        let item1 = Item(n: "Item-1", photo: nil, rating: 3)!
-        let item2 = Item(n: "Item-2", photo: nil, rating: 5)!
-        self.items += [item1, item2]
+            Item.saveItemList(list: self.items)
+        }
     }
 }
