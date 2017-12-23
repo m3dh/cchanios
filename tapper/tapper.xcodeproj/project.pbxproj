@@ -11,10 +11,10 @@
 		C314F7131FEE377800AC2B1B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7121FEE377800AC2B1B /* SignInViewController.swift */; };
 		C314F7161FEE377800AC2B1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C314F7141FEE377800AC2B1B /* Main.storyboard */; };
 		C314F7191FEE377800AC2B1B /* Tapper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C314F7171FEE377800AC2B1B /* Tapper.xcdatamodeld */; };
-		C314F71B1FEE377800AC2B1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C314F71A1FEE377800AC2B1B /* Assets.xcassets */; };
 		C314F71E1FEE377800AC2B1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C314F71C1FEE377800AC2B1B /* LaunchScreen.storyboard */; };
 		C314F7291FEE377800AC2B1B /* TapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7281FEE377800AC2B1B /* TapperTests.swift */; };
-		C3E360A61FEE8CBE00896586 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E360A51FEE8CBE00896586 /* SignUpViewController.swift */; };
+		C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */; };
+		C37535A41FEEAE0000D8B4F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37535A31FEEAE0000D8B4F3 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,13 +33,13 @@
 		C314F7121FEE377800AC2B1B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C314F7151FEE377800AC2B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C314F7181FEE377800AC2B1B /* Tapper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tapper.xcdatamodel; sourceTree = "<group>"; };
-		C314F71A1FEE377800AC2B1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C314F71D1FEE377800AC2B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C314F71F1FEE377800AC2B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C314F7241FEE377800AC2B1B /* TapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C314F7281FEE377800AC2B1B /* TapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapperTests.swift; sourceTree = "<group>"; };
 		C314F72A1FEE377800AC2B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3E360A51FEE8CBE00896586 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = tapper/ViewControllers/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
+		C37535A31FEEAE0000D8B4F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = tapper/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +81,10 @@
 		C314F70F1FEE377800AC2B1B /* Tapper */ = {
 			isa = PBXGroup;
 			children = (
+				C37535A31FEEAE0000D8B4F3 /* Assets.xcassets */,
 				C3E360A41FEE8C7D00896586 /* ViewControllers */,
 				C314F7101FEE377800AC2B1B /* AppDelegate.swift */,
 				C314F7141FEE377800AC2B1B /* Main.storyboard */,
-				C314F71A1FEE377800AC2B1B /* Assets.xcassets */,
 				C314F71C1FEE377800AC2B1B /* LaunchScreen.storyboard */,
 				C314F71F1FEE377800AC2B1B /* Info.plist */,
 				C314F7171FEE377800AC2B1B /* Tapper.xcdatamodeld */,
@@ -104,8 +104,8 @@
 		C3E360A41FEE8C7D00896586 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */,
 				C314F7121FEE377800AC2B1B /* SignInViewController.swift */,
-				C3E360A51FEE8CBE00896586 /* SignUpViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -169,7 +169,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C314F7081FEE377800AC2B1B /* Build configuration list for PBXProject "Tapper" */;
+			buildConfigurationList = C314F7081FEE377800AC2B1B /* Build configuration list for PBXProject "tapper" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -194,7 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C314F71E1FEE377800AC2B1B /* LaunchScreen.storyboard in Resources */,
-				C314F71B1FEE377800AC2B1B /* Assets.xcassets in Resources */,
+				C37535A41FEEAE0000D8B4F3 /* Assets.xcassets in Resources */,
 				C314F7161FEE377800AC2B1B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,7 +215,7 @@
 			files = (
 				C314F7131FEE377800AC2B1B /* SignInViewController.swift in Sources */,
 				C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */,
-				C3E360A61FEE8CBE00896586 /* SignUpViewController.swift in Sources */,
+				C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */,
 				C314F7191FEE377800AC2B1B /* Tapper.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,7 +432,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C314F7081FEE377800AC2B1B /* Build configuration list for PBXProject "Tapper" */ = {
+		C314F7081FEE377800AC2B1B /* Build configuration list for PBXProject "tapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C314F72B1FEE377800AC2B1B /* Debug */,
