@@ -1,0 +1,14 @@
+platform :ios, '9.0'
+
+target 'Tapper' do
+  use_frameworks!
+
+  # Pods for Tapper
+  pod 'Fusuma', :git => 'https://github.com/m3dh/Fusuma.git'
+
+  target 'TapperTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

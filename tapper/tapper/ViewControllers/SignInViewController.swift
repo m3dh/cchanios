@@ -11,9 +11,7 @@ class SignInViewController: UIViewController {
 
         // add tap gesture recognizer to hide keyboards.
         let viewTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleViewGestureTap(_:)))
-        viewTapGestureRecognizer.isEnabled = true
         self.view.addGestureRecognizer(viewTapGestureRecognizer)
-        self.view.isUserInteractionEnabled = true
 
         // disable sign in button by default
         self.signInButton.isEnabled = false

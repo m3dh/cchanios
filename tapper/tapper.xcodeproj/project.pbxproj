@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05B4AE3EB2ECADD2F2A68BBA /* Pods_Tapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950CE219F56FCC7E1A33D32D /* Pods_Tapper.framework */; };
 		C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7101FEE377800AC2B1B /* AppDelegate.swift */; };
 		C314F7131FEE377800AC2B1B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7121FEE377800AC2B1B /* SignInViewController.swift */; };
 		C314F7161FEE377800AC2B1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C314F7141FEE377800AC2B1B /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		C314F7291FEE377800AC2B1B /* TapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7281FEE377800AC2B1B /* TapperTests.swift */; };
 		C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */; };
 		C37535A41FEEAE0000D8B4F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37535A31FEEAE0000D8B4F3 /* Assets.xcassets */; };
+		CDA0185C2F07BD4F4AD3DF01 /* Pods_TapperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E2008A163E56C883286B48 /* Pods_TapperTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18E2008A163E56C883286B48 /* Pods_TapperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E8E6B947C14963731CA3EF6 /* Pods-TapperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TapperTests/Pods-TapperTests.debug.xcconfig"; sourceTree = "<group>"; };
+		919E59519FCE594F19203C14 /* Pods-Tapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tapper/Pods-Tapper.release.xcconfig"; sourceTree = "<group>"; };
+		950CE219F56FCC7E1A33D32D /* Pods_Tapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C314F70D1FEE377800AC2B1B /* Tapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C314F7101FEE377800AC2B1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C314F7121FEE377800AC2B1B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +46,8 @@
 		C314F72A1FEE377800AC2B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = tapper/ViewControllers/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		C37535A31FEEAE0000D8B4F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = tapper/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		D8D5E57818EA1622F67AECF4 /* Pods-TapperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TapperTests/Pods-TapperTests.release.xcconfig"; sourceTree = "<group>"; };
+		FEE3E93463A9ADEEC7E86EC7 /* Pods-Tapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tapper/Pods-Tapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05B4AE3EB2ECADD2F2A68BBA /* Pods_Tapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +63,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDA0185C2F07BD4F4AD3DF01 /* Pods_TapperTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		95C0D3BC99F98FC534AA1A5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEE3E93463A9ADEEC7E86EC7 /* Pods-Tapper.debug.xcconfig */,
+				919E59519FCE594F19203C14 /* Pods-Tapper.release.xcconfig */,
+				5E8E6B947C14963731CA3EF6 /* Pods-TapperTests.debug.xcconfig */,
+				D8D5E57818EA1622F67AECF4 /* Pods-TapperTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9CF3FF541F9A518BA96B52D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				950CE219F56FCC7E1A33D32D /* Pods_Tapper.framework */,
+				18E2008A163E56C883286B48 /* Pods_TapperTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C314F7041FEE377800AC2B1B = {
 			isa = PBXGroup;
 			children = (
 				C314F70F1FEE377800AC2B1B /* Tapper */,
 				C314F7271FEE377800AC2B1B /* TapperTests */,
 				C314F70E1FEE377800AC2B1B /* Products */,
+				95C0D3BC99F98FC534AA1A5F /* Pods */,
+				9CF3FF541F9A518BA96B52D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				C37535A31FEEAE0000D8B4F3 /* Assets.xcassets */,
+				C3AC0D6F1FEF9BBE00BDD8ED /* Managers */,
 				C3E360A41FEE8C7D00896586 /* ViewControllers */,
 				C314F7101FEE377800AC2B1B /* AppDelegate.swift */,
 				C314F7141FEE377800AC2B1B /* Main.storyboard */,
@@ -101,6 +134,13 @@
 			path = TapperTests;
 			sourceTree = "<group>";
 		};
+		C3AC0D6F1FEF9BBE00BDD8ED /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		C3E360A41FEE8C7D00896586 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,9 +157,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C314F72D1FEE377800AC2B1B /* Build configuration list for PBXNativeTarget "Tapper" */;
 			buildPhases = (
+				A084F1A0DF441B1F9600C26C /* [CP] Check Pods Manifest.lock */,
 				C314F7091FEE377800AC2B1B /* Sources */,
 				C314F70A1FEE377800AC2B1B /* Frameworks */,
 				C314F70B1FEE377800AC2B1B /* Resources */,
+				05F311061576E50F07EABE57 /* [CP] Embed Pods Frameworks */,
+				EEF88AA55B29076A526E7F26 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C314F7301FEE377800AC2B1B /* Build configuration list for PBXNativeTarget "TapperTests" */;
 			buildPhases = (
+				1FD51C7D0E7684202395CB63 /* [CP] Check Pods Manifest.lock */,
 				C314F7201FEE377800AC2B1B /* Sources */,
 				C314F7211FEE377800AC2B1B /* Frameworks */,
 				C314F7221FEE377800AC2B1B /* Resources */,
+				C2D7D8DD13A5CC3DC054C2BC /* [CP] Embed Pods Frameworks */,
+				5AFB49D6027C2C73B58F5500 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,6 +253,108 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05F311061576E50F07EABE57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tapper/Pods-Tapper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Fusuma/Fusuma.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fusuma.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tapper/Pods-Tapper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1FD51C7D0E7684202395CB63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TapperTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AFB49D6027C2C73B58F5500 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TapperTests/Pods-TapperTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A084F1A0DF441B1F9600C26C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tapper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2D7D8DD13A5CC3DC054C2BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TapperTests/Pods-TapperTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEF88AA55B29076A526E7F26 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tapper/Pods-Tapper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C314F7091FEE377800AC2B1B /* Sources */ = {
@@ -367,13 +515,14 @@
 		};
 		C314F72E1FEE377800AC2B1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEE3E93463A9ADEEC7E86EC7 /* Pods-Tapper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NT8NN84PG3;
 				INFOPLIST_FILE = Tapper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = m3dh.Tapper;
+				PRODUCT_BUNDLE_IDENTIFIER = "m3dh.chatapp.tappera-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -382,13 +531,14 @@
 		};
 		C314F72F1FEE377800AC2B1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 919E59519FCE594F19203C14 /* Pods-Tapper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NT8NN84PG3;
 				INFOPLIST_FILE = Tapper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = m3dh.Tapper;
+				PRODUCT_BUNDLE_IDENTIFIER = "m3dh.chatapp.tappera-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -397,6 +547,7 @@
 		};
 		C314F7311FEE377800AC2B1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E8E6B947C14963731CA3EF6 /* Pods-TapperTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -414,6 +565,7 @@
 		};
 		C314F7321FEE377800AC2B1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8D5E57818EA1622F67AECF4 /* Pods-TapperTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
