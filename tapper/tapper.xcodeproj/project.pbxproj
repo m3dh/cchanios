@@ -16,6 +16,7 @@
 		C314F7291FEE377800AC2B1B /* TapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7281FEE377800AC2B1B /* TapperTests.swift */; };
 		C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */; };
 		C37535A41FEEAE0000D8B4F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37535A31FEEAE0000D8B4F3 /* Assets.xcassets */; };
+		C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */; };
 		CDA0185C2F07BD4F4AD3DF01 /* Pods_TapperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E2008A163E56C883286B48 /* Pods_TapperTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		C314F72A1FEE377800AC2B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = tapper/ViewControllers/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		C37535A31FEEAE0000D8B4F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = tapper/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeProtector.swift; sourceTree = "<group>"; };
 		D8D5E57818EA1622F67AECF4 /* Pods-TapperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TapperTests/Pods-TapperTests.release.xcconfig"; sourceTree = "<group>"; };
 		FEE3E93463A9ADEEC7E86EC7 /* Pods-Tapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tapper/Pods-Tapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +139,7 @@
 		C3AC0D6F1FEF9BBE00BDD8ED /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */,
 				C314F7131FEE377800AC2B1B /* SignInViewController.swift in Sources */,
 				C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */,
 				C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */,

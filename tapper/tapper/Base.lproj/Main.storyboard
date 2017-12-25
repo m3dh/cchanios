@@ -212,6 +212,8 @@
                     <connections>
                         <outlet property="avatarImageView" destination="xgc-bf-aTF" id="lCj-BN-gkf"/>
                         <outlet property="displayNameTextField" destination="5TH-mz-aDF" id="0yb-rU-oy2"/>
+                        <outlet property="inputStackView" destination="dXk-tq-Wiz" id="AwY-PL-tVo"/>
+                        <outlet property="inputStackViewTopConst" destination="gyO-jZ-SRn" id="2Js-sL-7Mj"/>
                         <outlet property="passwordTextField" destination="pGG-v8-oA1" id="4od-bQ-SYN"/>
                         <outlet property="signUpButton" destination="CXt-dK-GYX" id="ThC-Pg-6V2"/>
                         <outlet property="usernameTextField" destination="Gnk-nm-Pck" id="yYJ-av-2OQ"/>

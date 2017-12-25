@@ -1,7 +1,7 @@
 import UIKit
 import os.log
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
@@ -13,6 +13,10 @@ class SignInViewController: UIViewController {
         let viewTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleViewGestureTap(_:)))
         self.view.addGestureRecognizer(viewTapGestureRecognizer)
 
+        // setup delegation for all text fields
+        self.usernameTextField.delegate = self
+        self.passwordTextField.delegate = self
+
         // disable sign in button by default
         self.signInButton.isEnabled = false
     }
@@ -22,6 +26,30 @@ class SignInViewController: UIViewController {
     }
 
     @objc func handleViewGestureTap(_: UITapGestureRecognizer) {
+        self.resignAllTextFieldFirstResponder()
+    }
+
+    @IBAction func signInTouchUpInsideAction(_ sender: UIButton) {
+        self.tryEnableSignInButton()
+    }
+
+    // MARK: Protocol UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.resignAllTextFieldFirstResponder()
+        return true
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.resignAllTextFieldFirstResponder()
+    }
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        self.tryEnableSignInButton()
+        return true
+    }
+
+    // MARK: State transitions
+    func resignAllTextFieldFirstResponder() {
         if self.usernameTextField.isFirstResponder {
             self.usernameTextField.resignFirstResponder()
         }
@@ -31,7 +59,12 @@ class SignInViewController: UIViewController {
         }
     }
 
-    @IBAction func signInTouchUpInsideAction(_ sender: UIButton) {
+    func tryEnableSignInButton() {
+        if self.usernameTextField.text?.isEmpty == false && self.passwordTextField.text?.isEmpty == false {
+            self.signInButton.isEnabled = true
+        } else {
+            self.signInButton.isEnabled = false
+        }
     }
 
     @IBAction func unwindToSignInViewNormally(sender: UIStoryboardSegue) {

@@ -2,7 +2,7 @@ import UIKit
 import Fusuma
 import os.log
 
-class SignUpViewController: UIViewController, FusumaDelegate {
+class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegate {
     static let ViewTagAvatarPicker = 0
     static let ViewTagSuperView = 1
 
@@ -13,9 +13,33 @@ class SignUpViewController: UIViewController, FusumaDelegate {
     @IBOutlet weak var verifyPasswordTextField: UITextField!
     @IBOutlet weak var avatarImageView: UIImageView!
 
+    @IBOutlet weak var inputStackView: UIStackView!
+    @IBOutlet weak var inputStackViewTopConst: NSLayoutConstraint!
+
+    var inputStackViewProtector: KeyboardFrameChangeProtector! = nil
+    var allTextfields: [UITextField]! = nil
+
     // MARK: State transitions
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        // remove all registered observers
+        NotificationCenter.default.removeObserver(self.inputStackViewProtector, name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self.inputStackViewProtector, name: .UIKeyboardWillHide, object: nil)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        // setup keyboard show / hide notification
+        inputStackViewProtector = KeyboardFrameChangeProtector(protectView: self.inputStackView, globalView: self.view, animateConstraint: self.inputStackViewTopConst)
+        NotificationCenter.default.addObserver(self.inputStackViewProtector, selector: #selector(inputStackViewProtector.keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self.inputStackViewProtector, selector: #selector(inputStackViewProtector.keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // load image for the default avatar
         if let defaultAvatar = UIImage(named: "Avatar - Default") {
             self.avatarImageView.image = defaultAvatar
@@ -35,6 +59,16 @@ class SignUpViewController: UIViewController, FusumaDelegate {
         let viewTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleViewGestureTap(_:)))
         self.view.tag = SignUpViewController.ViewTagSuperView
         self.view.addGestureRecognizer(viewTapGestureRecognizer)
+
+        // disable signup button
+        self.signUpButton.isEnabled = false
+
+        // setup all text fields
+        self.usernameTextField.delegate = self
+        self.displayNameTextField.delegate = self
+        self.passwordTextField.delegate = self
+        self.verifyPasswordTextField.delegate = self
+        self.allTextfields = [self.usernameTextField, self.displayNameTextField, self.passwordTextField, self.verifyPasswordTextField]
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,10 +88,6 @@ class SignUpViewController: UIViewController, FusumaDelegate {
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
     func showAvatarImagePicker() {
         let controller = FusumaViewController()
         controller.allowMultipleSelection = false
@@ -74,33 +104,42 @@ class SignUpViewController: UIViewController, FusumaDelegate {
     }
 
     func fusumaMultipleImageSelected(_ images: [UIImage], source: FusumaMode) {
-        //
+        // Empty
     }
 
     func fusumaVideoCompleted(withFileURL fileURL: URL) {
-        //
+        // Empty
     }
 
     func fusumaCameraRollUnauthorized() {
-        //
+        // Empty
     }
 
-    // MARK: Inner methods
+    // MARK: Protocol UITextFieldDelegate
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.resignAllTextFieldFirstResponder()
+    }
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        self.tryEnableSignUpButton()
+        return true
+    }
+
+    // MARK: Text field operations
     func resignAllTextFieldFirstResponder() {
-        if self.usernameTextField.isFirstResponder {
-            self.usernameTextField.resignFirstResponder()
+        for textField in self.allTextfields {
+            if textField.isFirstResponder {
+                textField.resignFirstResponder()
+            }
         }
+    }
 
-        if self.displayNameTextField.isFirstResponder {
-            self.displayNameTextField.resignFirstResponder()
-        }
-
-        if self.passwordTextField.isFirstResponder {
-            self.passwordTextField.resignFirstResponder()
-        }
-
-        if self.verifyPasswordTextField.isFirstResponder {
-            self.verifyPasswordTextField.resignFirstResponder()
+    func tryEnableSignUpButton() {
+        if self.usernameTextField.text?.isEmpty == false && self.displayNameTextField.text?.isEmpty == false
+        && self.passwordTextField.text?.isEmpty == false && self.verifyPasswordTextField.text?.isEmpty == false {
+            self.signUpButton.isEnabled = true
+        } else {
+            self.signUpButton.isEnabled = false
         }
     }
 }
