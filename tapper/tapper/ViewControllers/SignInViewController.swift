@@ -68,6 +68,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func unwindToSignInViewNormally(sender: UIStoryboardSegue) {
-        os_log("Unwind to sign in view (normally)")
+        print("Goes back from sender!")
+        if let source = sender.source as? SignUpViewController {
+            print("Goes back from SignUp! \(source.passwordTextField.text!)")
+        }
     }
 }

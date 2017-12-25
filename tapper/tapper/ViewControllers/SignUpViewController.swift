@@ -12,6 +12,8 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var verifyPasswordTextField: UITextField!
     @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var errorMessageLabel: UILabel!
+    @IBOutlet weak var errorMessageLabelHeightConst: NSLayoutConstraint!
 
     @IBOutlet weak var inputStackView: UIStackView!
     @IBOutlet weak var inputStackViewTopConst: NSLayoutConstraint!
@@ -39,6 +41,9 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // misc.
+        self.errorMessageLabel.textColor = UIColor.red
 
         // load image for the default avatar
         if let defaultAvatar = UIImage(named: "Avatar - Default") {
@@ -71,8 +76,19 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
         self.allTextfields = [self.usernameTextField, self.displayNameTextField, self.passwordTextField, self.verifyPasswordTextField]
     }
 
+    override func viewDidLayoutSubviews() {
+        self.inputStackViewProtector?.protectViewSizeChanged()
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
+    }
+
+    @IBAction func signUpTouchUpInsideAction(_ sender: UIButton) {
+        print("signUpTouchUpInsideAction")
+        if self.checkIfAllFieldsAreValid() {
+            self.performSegue(withIdentifier: "signInUnwindSegue", sender: nil)
+        }
     }
 
     @IBAction func cancelTouchUpInsideAction(_ sender: UIButton) {
@@ -135,12 +151,52 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
     }
 
     func tryEnableSignUpButton() {
-        if self.usernameTextField.text?.isEmpty == false && self.displayNameTextField.text?.isEmpty == false
-        && self.passwordTextField.text?.isEmpty == false && self.verifyPasswordTextField.text?.isEmpty == false {
+        if self.checkIfAllFieldsAreNotEmpty() {
             self.signUpButton.isEnabled = true
         } else {
             self.signUpButton.isEnabled = false
         }
+    }
+
+    func checkIfAllFieldsAreNotEmpty() -> Bool {
+        for textfield in self.allTextfields {
+            if textfield.text?.isEmpty == true {
+                return false
+            }
+        }
+
+        return true
+    }
+
+    func checkIfAllFieldsAreValid() -> Bool {
+        if !self.checkIfAllFieldsAreNotEmpty() {
+            return false
+        }
+
+        self.errorMessageLabel.text = nil
+        for textfield in self.allTextfields {
+            UIControlHelper.resetTextFieldStyle(textfield: textfield)
+        }
+
+        if self.usernameTextField.text?.range(of: "^[a-zA-Z]\\w{3,10}$", options: .regularExpression) == nil {
+            UIControlHelper.safelySetUILabelText(
+                label: self.errorMessageLabel,
+                labelHeight: self.errorMessageLabelHeightConst,
+                text: "Invalid username.")
+            UIControlHelper.markTextFieldError(textfield: self.usernameTextField)
+            return false
+        }
+
+        if self.passwordTextField.text! != self.verifyPasswordTextField.text! {
+            UIControlHelper.safelySetUILabelText(
+                label: self.errorMessageLabel,
+                labelHeight: self.errorMessageLabelHeightConst,
+                text: "Confirm password does not match the password.")
+            UIControlHelper.markTextFieldError(textfield: self.verifyPasswordTextField)
+            return false
+        }
+
+        return true
     }
 }
 
