@@ -6,6 +6,33 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
 
+    @IBOutlet weak var errorMessageLabel: UILabel!
+    @IBOutlet weak var errorMessageLabelHeightConst: NSLayoutConstraint!
+
+    @IBOutlet weak var inputStackView: UIStackView!
+    @IBOutlet weak var inputStackViewTopConst: NSLayoutConstraint!
+
+    var inputStackViewProtector: KeyboardFrameChangeProtector! = nil
+    var avatarImageView: UIImageView? = nil
+
+    // MARK: State transitions
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        // remove all registered observers
+        NotificationCenter.default.removeObserver(self.inputStackViewProtector, name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self.inputStackViewProtector, name: .UIKeyboardWillHide, object: nil)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        // setup keyboard show / hide notification
+        self.inputStackViewProtector = KeyboardFrameChangeProtector(protectView: self.inputStackView, globalView: self.view, animateConstraint: self.inputStackViewTopConst)
+        NotificationCenter.default.addObserver(self.inputStackViewProtector, selector: #selector(inputStackViewProtector.keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self.inputStackViewProtector, selector: #selector(inputStackViewProtector.keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,8 +48,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         self.signInButton.isEnabled = false
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func viewDidLayoutSubviews() {
+        self.inputStackViewProtector?.protectViewSizeChanged()
     }
 
     @objc func handleViewGestureTap(_: UITapGestureRecognizer) {
@@ -48,7 +75,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         return true
     }
 
-    // MARK: State transitions
+    // MARK: Private methods
     func resignAllTextFieldFirstResponder() {
         if self.usernameTextField.isFirstResponder {
             self.usernameTextField.resignFirstResponder()
@@ -67,10 +94,37 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    func tryLoadAccountInfo() {
+
+    }
+
+    func saveAccountInfo() {
+
+    }
+
     @IBAction func unwindToSignInViewNormally(sender: UIStoryboardSegue) {
-        print("Goes back from sender!")
         if let source = sender.source as? SignUpViewController {
-            print("Goes back from SignUp! \(source.passwordTextField.text!)")
+            print("Goes back from sign up")
+            UIControlHelper.safelySetUILabelText(
+                label: self.errorMessageLabel,
+                labelHeight: self.errorMessageLabelHeightConst,
+                text: "")
+            self.usernameTextField.text = source.usernameTextField.text
+            self.passwordTextField.text = source.passwordTextField.text
+            if let avatarImage = source.avatarImageView.image {
+                if self.avatarImageView == nil {
+                    self.avatarImageView = UIImageView(image: avatarImage)
+                    self.inputStackView.insertArrangedSubview(self.avatarImageView!, at: 1)
+                    self.avatarImageView!.widthAnchor.constraint(equalToConstant: 100.0).isActive = true
+                    self.avatarImageView!.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+                    self.avatarImageView!.layer.cornerRadius = 50.0
+                    self.avatarImageView!.layer.masksToBounds = true
+                    self.avatarImageView!.layer.borderWidth = 1.5
+                    self.avatarImageView!.layer.borderColor = UIColor.darkGray.cgColor
+                } else {
+                    self.avatarImageView!.image = avatarImage
+                }
+            }
         }
     }
 }

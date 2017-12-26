@@ -3,7 +3,7 @@ import UIKit
 class KeyboardFrameChangeProtector {
     let globalView: UIView
     let protectView: UIView
-    let animationDuration: Double = 0.5
+    let animationDuration: Double = 0.2
 
     let animateConstraintOriginVal: CGFloat
     let animateConstraint: NSLayoutConstraint

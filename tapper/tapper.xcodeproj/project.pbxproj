@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		05B4AE3EB2ECADD2F2A68BBA /* Pods_Tapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950CE219F56FCC7E1A33D32D /* Pods_Tapper.framework */; };
 		C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7101FEE377800AC2B1B /* AppDelegate.swift */; };
-		C314F7131FEE377800AC2B1B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7121FEE377800AC2B1B /* SignInViewController.swift */; };
 		C314F7161FEE377800AC2B1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C314F7141FEE377800AC2B1B /* Main.storyboard */; };
 		C314F7191FEE377800AC2B1B /* Tapper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C314F7171FEE377800AC2B1B /* Tapper.xcdatamodeld */; };
 		C314F71E1FEE377800AC2B1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C314F71C1FEE377800AC2B1B /* LaunchScreen.storyboard */; };
 		C314F7291FEE377800AC2B1B /* TapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7281FEE377800AC2B1B /* TapperTests.swift */; };
 		C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */; };
 		C37535A41FEEAE0000D8B4F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37535A31FEEAE0000D8B4F3 /* Assets.xcassets */; };
+		C3A29E681FF2469900013C71 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A29E671FF2469900013C71 /* SignInViewController.swift */; };
 		C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */; };
 		C3AC0D761FF222A000BDD8ED /* UIControlHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */; };
 		CDA0185C2F07BD4F4AD3DF01 /* Pods_TapperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E2008A163E56C883286B48 /* Pods_TapperTests.framework */; };
@@ -38,7 +38,6 @@
 		950CE219F56FCC7E1A33D32D /* Pods_Tapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C314F70D1FEE377800AC2B1B /* Tapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C314F7101FEE377800AC2B1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C314F7121FEE377800AC2B1B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C314F7151FEE377800AC2B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C314F7181FEE377800AC2B1B /* Tapper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tapper.xcdatamodel; sourceTree = "<group>"; };
 		C314F71D1FEE377800AC2B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		C314F72A1FEE377800AC2B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = tapper/ViewControllers/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		C37535A31FEEAE0000D8B4F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = tapper/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		C3A29E671FF2469900013C71 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = tapper/ViewControllers/SignInViewController.swift; sourceTree = SOURCE_ROOT; };
 		C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeProtector.swift; sourceTree = "<group>"; };
 		C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIControlHelper.swift; path = tapper/ViewControllers/UIControlHelper.swift; sourceTree = SOURCE_ROOT; };
 		D8D5E57818EA1622F67AECF4 /* Pods-TapperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TapperTests/Pods-TapperTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,8 +149,8 @@
 		C3E360A41FEE8C7D00896586 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C3A29E671FF2469900013C71 /* SignInViewController.swift */,
 				C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */,
-				C314F7121FEE377800AC2B1B /* SignInViewController.swift */,
 				C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */,
 			);
 			path = ViewControllers;
@@ -369,7 +369,7 @@
 			files = (
 				C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */,
 				C3AC0D761FF222A000BDD8ED /* UIControlHelper.swift in Sources */,
-				C314F7131FEE377800AC2B1B /* SignInViewController.swift in Sources */,
+				C3A29E681FF2469900013C71 /* SignInViewController.swift in Sources */,
 				C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */,
 				C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */,
 				C314F7191FEE377800AC2B1B /* Tapper.xcdatamodeld in Sources */,

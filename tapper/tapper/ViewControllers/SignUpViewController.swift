@@ -6,7 +6,9 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
     static let ViewTagAvatarPicker = 0
     static let ViewTagSuperView = 1
 
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
+
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var displayNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -34,7 +36,7 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
         super.viewDidAppear(animated)
 
         // setup keyboard show / hide notification
-        inputStackViewProtector = KeyboardFrameChangeProtector(protectView: self.inputStackView, globalView: self.view, animateConstraint: self.inputStackViewTopConst)
+        self.inputStackViewProtector = KeyboardFrameChangeProtector(protectView: self.inputStackView, globalView: self.view, animateConstraint: self.inputStackViewTopConst)
         NotificationCenter.default.addObserver(self.inputStackViewProtector, selector: #selector(inputStackViewProtector.keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self.inputStackViewProtector, selector: #selector(inputStackViewProtector.keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
     }
@@ -85,10 +87,25 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
     }
 
     @IBAction func signUpTouchUpInsideAction(_ sender: UIButton) {
-        print("signUpTouchUpInsideAction")
-        if self.checkIfAllFieldsAreValid() {
-            self.performSegue(withIdentifier: "signInUnwindSegue", sender: nil)
+        if !self.checkIfAllFieldsAreValid() {
+            return
         }
+
+        // disable sign up button to prevent invoking multiple times
+        self.disableAllControls()
+
+        // TODO: Invoke sign up API here. (Using async after to mimic a slow API)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
+            // TODO: shall use a real result
+            let success = true
+            if success {
+                // perform segue when all checks passed and sign up completed.
+                self.performSegue(withIdentifier: "signInUnwindSegue", sender: nil)
+            } else {
+                // write error & bring back resources.
+                self.enableAllControls()
+            }
+        })
     }
 
     @IBAction func cancelTouchUpInsideAction(_ sender: UIButton) {
@@ -156,6 +173,25 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
         } else {
             self.signUpButton.isEnabled = false
         }
+    }
+
+    func disableAllControls() {
+        for textfield in self.allTextfields {
+            textfield.isEnabled = false
+        }
+
+        self.signUpButton.isEnabled = false
+        self.cancelButton.isEnabled = false
+        self.resignAllTextFieldFirstResponder()
+    }
+
+    func enableAllControls() {
+        for textfield in self.allTextfields {
+            textfield.isEnabled = true
+        }
+
+        self.tryEnableSignUpButton()
+        self.cancelButton.isEnabled = true
     }
 
     func checkIfAllFieldsAreNotEmpty() -> Bool {
