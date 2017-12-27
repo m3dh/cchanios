@@ -91,21 +91,19 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
             return
         }
 
-        // disable sign up button to prevent invoking multiple times
-        self.disableAllControls()
-
-        // TODO: Invoke sign up API here. (Using async after to mimic a slow API)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
-            // TODO: shall use a real result
-            let success = true
-            if success {
-                // perform segue when all checks passed and sign up completed.
-                self.performSegue(withIdentifier: "signInUnwindSegue", sender: nil)
-            } else {
-                // write error & bring back resources.
-                self.enableAllControls()
-            }
-        })
+        OperationHelper.startAsyncJobAndBlockCurrentWindow(
+            window: self,
+            task: {
+                // TODO: shall use a real result
+                let success = true
+                if success {
+                    // perform segue when all checks passed and sign up completed.
+                    self.performSegue(withIdentifier: "signInUnwindSegue", sender: nil)
+                } else {
+                    // write error
+                }
+            },
+            message: "Signing up...")
     }
 
     @IBAction func cancelTouchUpInsideAction(_ sender: UIButton) {
@@ -175,25 +173,6 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
         }
     }
 
-    func disableAllControls() {
-        for textfield in self.allTextfields {
-            textfield.isEnabled = false
-        }
-
-        self.signUpButton.isEnabled = false
-        self.cancelButton.isEnabled = false
-        self.resignAllTextFieldFirstResponder()
-    }
-
-    func enableAllControls() {
-        for textfield in self.allTextfields {
-            textfield.isEnabled = true
-        }
-
-        self.tryEnableSignUpButton()
-        self.cancelButton.isEnabled = true
-    }
-
     func checkIfAllFieldsAreNotEmpty() -> Bool {
         for textfield in self.allTextfields {
             if textfield.text?.isEmpty == true {
@@ -218,8 +197,26 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
             UIControlHelper.safelySetUILabelText(
                 label: self.errorMessageLabel,
                 labelHeight: self.errorMessageLabelHeightConst,
-                text: "Invalid username.")
+                text: "Invalid username: user name shall be 4-10 alphanumeric strings.")
             UIControlHelper.markTextFieldError(textfield: self.usernameTextField)
+            return false
+        }
+
+        if self.passwordTextField.text?.range(of: "[a-zA-Z0-9!@#$%^&*]{5,20}", options: .regularExpression) == nil {
+            UIControlHelper.safelySetUILabelText(
+                label: self.errorMessageLabel,
+                labelHeight: self.errorMessageLabelHeightConst,
+                text: "Invalid password: password shall be 6-20 with only alphanumeric or @, #, $, %, ^, & charactors")
+            UIControlHelper.markTextFieldError(textfield: self.passwordTextField)
+            return false
+        }
+
+        if self.displayNameTextField.text!.count >= 20 {
+            UIControlHelper.safelySetUILabelText(
+                label: self.errorMessageLabel,
+                labelHeight: self.errorMessageLabelHeightConst,
+                text: "Invalid display name: display name shall have less than 20 charactors")
+            UIControlHelper.markTextFieldError(textfield: self.displayNameTextField)
             return false
         }
 

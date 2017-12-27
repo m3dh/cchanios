@@ -104,7 +104,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func unwindToSignInViewNormally(sender: UIStoryboardSegue) {
         if let source = sender.source as? SignUpViewController {
-            print("Goes back from sign up")
+            print("Back from sign up")
             UIControlHelper.safelySetUILabelText(
                 label: self.errorMessageLabel,
                 labelHeight: self.errorMessageLabelHeightConst,
