@@ -28,4 +28,14 @@ class UIControlHelper {
             }
         }
     }
+
+    static func findAndHideShadowView(under view: UIView, hide: Bool) {
+        if view is UIImageView && view.bounds.size.height <= 1 {
+            (view as! UIImageView).isHidden = hide
+        } else {
+            for subView in view.subviews {
+                findAndHideShadowView(under: subView, hide: hide)
+            }
+        }
+    }
 }

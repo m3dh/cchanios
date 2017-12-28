@@ -16,8 +16,13 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     var avatarImageView: UIImageView? = nil
 
     // MARK: State transitions
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
 
         // remove all registered observers
         NotificationCenter.default.removeObserver(self.inputStackViewProtector, name: .UIKeyboardWillShow, object: nil)
