@@ -78,10 +78,4 @@ class MainMenuBarCell: UICollectionViewCell {
         self.contentLabel.font = UIFont.init(name: "AvenirNext-DemiBold", size: 14)
         self.contentLabel.textAlignment = .center
     }
-
-    override var isSelected: Bool{
-        didSet {
-            print("\(self.contentLabel.text!) is selected")
-        }
-    }
 }

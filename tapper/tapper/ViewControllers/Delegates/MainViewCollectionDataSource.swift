@@ -4,10 +4,12 @@ class MainViewCollectionDataSource: NSObject, UICollectionViewDataSource, UIColl
     static let CollectionCellId = "mainViewCollectionCellId"
     let parentView: UICollectionView
     let menuBar: MainMenuBarDataSource
+    let tableMgr: TableViewsManager
 
-    init(parentView: UICollectionView, menuBar: MainMenuBarDataSource) {
+    init(parentView: UICollectionView, menuBar: MainMenuBarDataSource, tableViewsMgr: TableViewsManager) {
         self.parentView = parentView
         self.menuBar = menuBar
+        self.tableMgr = tableViewsMgr
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -16,8 +18,12 @@ class MainViewCollectionDataSource: NSObject, UICollectionViewDataSource, UIColl
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainViewCollectionDataSource.CollectionCellId, for: indexPath)
-        let colors: [UIColor] = [UIColor.white, UIColor.lightGray, UIColor.darkGray]
-        cell.backgroundColor = colors[indexPath.item]
+        let tableView = self.tableMgr.tables[indexPath.item]
+        cell.addSubview(tableView)
+        tableView.topAnchor.constraint(equalTo: cell.contentView.topAnchor).isActive = true
+        tableView.leftAnchor.constraint(equalTo: cell.contentView.leftAnchor).isActive = true
+        tableView.rightAnchor.constraint(equalTo: cell.contentView.rightAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor).isActive = true
         return cell
     }
 
@@ -29,13 +35,10 @@ class MainViewCollectionDataSource: NSObject, UICollectionViewDataSource, UIColl
         let movedCount = scrollView.contentOffset.x / self.parentView.frame.width
         self.menuBar.horizontalBarLeftAnchorConstraint.constant = 5 + (self.parentView.frame.width - 10) * movedCount / 3
     }
-//
-//    override func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-//
-//        let index = targetContentOffset.memory.x / view.frame.width
-//
-//        let indexPath = NSIndexPath(forItem: Int(index), inSection: 0)
-//        menuBar.collectionView.selectItemAtIndexPath(indexPath, animated: true, scrollPosition: .None)
-//
-//    }
+
+    var focusedIndex: Int {
+        get {
+            return Int(self.parentView.contentOffset.x / self.parentView.frame.width)
+        }
+    }
 }

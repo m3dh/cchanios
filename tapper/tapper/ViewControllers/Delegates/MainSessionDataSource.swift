@@ -1,16 +1,7 @@
 import UIKit
 
 class MainSessionDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
-    static let DataSourceUsSessions = 0
-    static let DataSourceMeSessions = 1
-
     static let CellReuseIdentifier = "mainSessionCell"
-
-    let dataSourceType: Int
-
-    init(_ dataSourceType: Int) {
-        self.dataSourceType = dataSourceType
-    }
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

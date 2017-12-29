@@ -6,14 +6,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mainCollectionView: UICollectionView!
     @IBOutlet weak var menuBarCollectionView: UICollectionView!
 
-    let usLeftTableView = UITableView()
-    let meRightTableView = UITableView()
-
-    let usSessionsSource = MainSessionDataSource(MainSessionDataSource.DataSourceUsSessions)
-    let meSessionsSource = MainSessionDataSource(MainSessionDataSource.DataSourceMeSessions)
-
     var menuBarCollectionViewSource: MainMenuBarDataSource!
     var mainCollectionViewSource: MainViewCollectionDataSource!
+    var tableViewsManager: TableViewsManager!
 
     override func viewWillAppear(_ animated: Bool) {
         UIControlHelper.findAndHideShadowView(under: self.navigationController!.navigationBar, hide: true)
@@ -33,17 +28,7 @@ class MainViewController: UIViewController {
         // ui views initialization
         self.subNavBarBottonShadowView.backgroundColor = UIColor.darkGray
         self.subNavBarBottonShadowView.alpha = 0.5
-
-        // initialize two session table views.
-        self.usLeftTableView.dataSource = self.usSessionsSource
-        self.usLeftTableView.delegate = self.usSessionsSource
-        self.usLeftTableView.register(MainSessionCell.self, forCellReuseIdentifier: MainSessionDataSource.CellReuseIdentifier)
-        self.meRightTableView.dataSource = self.meSessionsSource
-        self.meRightTableView.delegate = self.meSessionsSource
-        self.meRightTableView.register(MainSessionCell.self, forCellReuseIdentifier: MainSessionDataSource.CellReuseIdentifier)
-        self.usLeftTableView.translatesAutoresizingMaskIntoConstraints = false
-        self.meRightTableView.translatesAutoresizingMaskIntoConstraints = false
-
+  
         // initialize top menu bar
         self.menuBarCollectionView.register(MainMenuBarCell.self, forCellWithReuseIdentifier: MainMenuBarDataSource.CollectionCellId)
         self.menuBarCollectionViewSource = MainMenuBarDataSource(containerView: self.subNavBarView, parentView: self.menuBarCollectionView, controllingView: self.mainCollectionView)
@@ -59,7 +44,8 @@ class MainViewController: UIViewController {
         }
 
         // background collection view
-        self.mainCollectionViewSource = MainViewCollectionDataSource(parentView: self.mainCollectionView, menuBar: self.menuBarCollectionViewSource)
+        self.tableViewsManager = TableViewsManager()
+        self.mainCollectionViewSource = MainViewCollectionDataSource(parentView: self.mainCollectionView, menuBar: self.menuBarCollectionViewSource, tableViewsMgr: tableViewsManager)
         self.mainCollectionView.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
         self.mainCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: MainViewCollectionDataSource.CollectionCellId)
 
