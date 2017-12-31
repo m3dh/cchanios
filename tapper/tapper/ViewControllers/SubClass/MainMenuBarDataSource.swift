@@ -16,7 +16,7 @@ class MainMenuBarDataSource: NSObject, UICollectionViewDataSource, UICollectionV
 
         // initialize horizontal bar
         let horizontalBarView = UIView()
-        horizontalBarView.backgroundColor = UIColor.black
+        horizontalBarView.backgroundColor = UIColor(white: 0.95, alpha: 1)
         horizontalBarView.translatesAutoresizingMaskIntoConstraints = false
         self.containerView.addSubview(horizontalBarView)
 
@@ -65,17 +65,39 @@ class MainMenuBarCell: UICollectionViewCell {
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        self.contentView.addSubview(contentLabel)
-        self.contentLabel.frame = self.contentView.bounds
-        self.contentLabel.font = UIFont.init(name: "AvenirNext-DemiBold", size: 14)
-        self.contentLabel.textAlignment = .center
+        self.innerInit()
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.innerInit()
+    }
+
+    override var isHighlighted: Bool {
+        didSet {
+            if self.isHighlighted {
+                self.contentLabel.textColor = ColorCollection.NavigationBarTextColor
+            } else {
+                self.contentLabel.textColor = ColorCollection.NavigationBarUnselectedTextColor
+            }
+        }
+    }
+
+    override var isSelected: Bool {
+        didSet {
+            if self.isSelected {
+                self.contentLabel.textColor = ColorCollection.NavigationBarTextColor
+            } else {
+                self.contentLabel.textColor = ColorCollection.NavigationBarUnselectedTextColor
+            }
+        }
+    }
+
+    func innerInit() {
         self.contentView.addSubview(contentLabel)
         self.contentLabel.frame = self.contentView.bounds
         self.contentLabel.font = UIFont.init(name: "AvenirNext-DemiBold", size: 14)
+        self.contentLabel.textColor = ColorCollection.NavigationBarUnselectedTextColor
         self.contentLabel.textAlignment = .center
     }
 }

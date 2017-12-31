@@ -11,6 +11,7 @@
 		C3048F901FF624900012A4AF /* MainMenuBarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3048F8F1FF624900012A4AF /* MainMenuBarDataSource.swift */; };
 		C3048F921FF66E490012A4AF /* TableViewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3048F911FF66E490012A4AF /* TableViewsManager.swift */; };
 		C3095A551FF68E4600A56760 /* MainSessionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3095A541FF68E4600A56760 /* MainSessionDataSource.swift */; };
+		C3095A571FF88D5C00A56760 /* ColorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3095A561FF88D5C00A56760 /* ColorCollection.swift */; };
 		C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7101FEE377800AC2B1B /* AppDelegate.swift */; };
 		C314F7161FEE377800AC2B1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C314F7141FEE377800AC2B1B /* Main.storyboard */; };
 		C314F7191FEE377800AC2B1B /* Tapper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C314F7171FEE377800AC2B1B /* Tapper.xcdatamodeld */; };
@@ -47,6 +48,7 @@
 		C3048F8F1FF624900012A4AF /* MainMenuBarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuBarDataSource.swift; sourceTree = "<group>"; };
 		C3048F911FF66E490012A4AF /* TableViewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewsManager.swift; path = Tapper/ViewControllers/SubClass/TableViewsManager.swift; sourceTree = SOURCE_ROOT; };
 		C3095A541FF68E4600A56760 /* MainSessionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainSessionDataSource.swift; path = tapper/ViewControllers/SubClass/MainSessionDataSource.swift; sourceTree = SOURCE_ROOT; };
+		C3095A561FF88D5C00A56760 /* ColorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorCollection.swift; path = tapper/Helpers/ColorCollection.swift; sourceTree = SOURCE_ROOT; };
 		C314F70D1FEE377800AC2B1B /* Tapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C314F7101FEE377800AC2B1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C314F7151FEE377800AC2B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */,
 				C3A29E6A1FF33F1A00013C71 /* OperationHelper.swift */,
+				C3095A561FF88D5C00A56760 /* ColorCollection.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				C3095A551FF68E4600A56760 /* MainSessionDataSource.swift in Sources */,
 				C3A29E6B1FF33F1A00013C71 /* OperationHelper.swift in Sources */,
 				C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */,
+				C3095A571FF88D5C00A56760 /* ColorCollection.swift in Sources */,
 				C36767181FF3E46200F003CB /* MainViewController.swift in Sources */,
 				C37EBA2B1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift in Sources */,
 				C3048F901FF624900012A4AF /* MainMenuBarDataSource.swift in Sources */,

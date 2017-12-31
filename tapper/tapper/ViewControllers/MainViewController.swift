@@ -26,6 +26,7 @@ class MainViewController: UIViewController {
         }
 
         // ui views initialization
+        self.subNavBarView.backgroundColor = ColorCollection.NavigationBarTintColor
         self.subNavBarBottonShadowView.backgroundColor = UIColor.darkGray
         self.subNavBarBottonShadowView.alpha = 0.5
   
@@ -62,6 +63,8 @@ class MainViewController: UIViewController {
         // trigger data reload
         self.menuBarCollectionView.reloadData()
         self.mainCollectionView.reloadData()
+
+        self.menuBarCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .top)
     }
 
     @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
