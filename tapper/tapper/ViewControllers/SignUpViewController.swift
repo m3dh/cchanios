@@ -211,7 +211,7 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
             return false
         }
 
-        if self.displayNameTextField.text!.count >= 20 {
+        if self.displayNameTextField.text!.count >= 15 {
             UIControlHelper.safelySetUILabelText(
                 label: self.errorMessageLabel,
                 labelHeight: self.errorMessageLabelHeightConst,

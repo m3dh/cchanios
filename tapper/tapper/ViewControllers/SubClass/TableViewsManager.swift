@@ -8,8 +8,8 @@ class TableViewsManager {
     let directSessionsTable = UITableView()
 
     let recentSessionsSource = MainSessionDataSource(rowHeight: 72)
-    let channelSessionsSource = MainSessionDataSource(rowHeight: 80)
-    let directSessionsSource = MainSessionDataSource(rowHeight: 80)
+    let channelSessionsSource = MainSessionDataSource(rowHeight: 72)
+    let directSessionsSource = MainSessionDataSource(rowHeight: 72)
 
     let tables: [UITableView]
 
