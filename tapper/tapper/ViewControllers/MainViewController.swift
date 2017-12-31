@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
   
         // initialize top menu bar
         self.menuBarCollectionView.register(MainMenuBarCell.self, forCellWithReuseIdentifier: MainMenuBarDataSource.CollectionCellId)
-        self.menuBarCollectionViewSource = MainMenuBarDataSource(containerView: self.subNavBarView, parentView: self.menuBarCollectionView, controllingView: self.mainCollectionView)
+        self.menuBarCollectionViewSource = MainMenuBarDataSource(containerView: self.subNavBarView, parentView: self.menuBarCollectionView, controllingView: self.mainCollectionView, screenWidth: self.view.frame.width)
         self.menuBarCollectionView.delegate = self.menuBarCollectionViewSource
         self.menuBarCollectionView.dataSource = self.menuBarCollectionViewSource
         self.menuBarCollectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
@@ -46,10 +46,9 @@ class MainViewController: UIViewController {
 
         // background collection view
         self.tableViewsManager = TableViewsManager()
-        self.mainCollectionViewSource = MainViewCollectionDataSource(parentView: self.mainCollectionView, menuBar: self.menuBarCollectionViewSource, tableViewsMgr: tableViewsManager)
+        self.mainCollectionViewSource = MainViewCollectionDataSource(parentView: self.mainCollectionView, menuBar: self.menuBarCollectionViewSource, menuBarView: self.menuBarCollectionView, tableViewsMgr: tableViewsManager)
         self.mainCollectionView.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
         self.mainCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: MainViewCollectionDataSource.CollectionCellId)
-
         self.mainCollectionView.delegate = self.mainCollectionViewSource
         self.mainCollectionView.dataSource = self.mainCollectionViewSource
         self.mainCollectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
@@ -65,10 +64,5 @@ class MainViewController: UIViewController {
         self.mainCollectionView.reloadData()
 
         self.menuBarCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .top)
-    }
-
-    @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
-        let index = IndexPath(row: sender.selectedSegmentIndex, section: 0)
-        self.mainCollectionView.scrollToItem(at: index, at: .left, animated: true)
     }
 }

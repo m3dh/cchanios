@@ -6,13 +6,15 @@ class MainMenuBarDataSource: NSObject, UICollectionViewDataSource, UICollectionV
     let parentView: UICollectionView
     let controllingView: UICollectionView
     let containerView: UIView
+    let screenWidth: CGFloat
 
     var horizontalBarLeftAnchorConstraint: NSLayoutConstraint!
 
-    init(containerView: UIView, parentView: UICollectionView, controllingView: UICollectionView) {
+    init(containerView: UIView, parentView: UICollectionView, controllingView: UICollectionView, screenWidth: CGFloat) {
         self.parentView = parentView
         self.containerView = containerView
         self.controllingView = controllingView
+        self.screenWidth = screenWidth
 
         // initialize horizontal bar
         let horizontalBarView = UIView()
@@ -29,7 +31,7 @@ class MainMenuBarDataSource: NSObject, UICollectionViewDataSource, UICollectionV
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.parentView.bounds.width / CGFloat(self.expectedCellCount), height: self.parentView.bounds.height)
+        return CGSize(width: (self.screenWidth - 10) / CGFloat(self.expectedCellCount), height: self.parentView.bounds.height)
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -71,16 +73,6 @@ class MainMenuBarCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.innerInit()
-    }
-
-    override var isHighlighted: Bool {
-        didSet {
-            if self.isHighlighted {
-                self.contentLabel.textColor = ColorCollection.NavigationBarTextColor
-            } else {
-                self.contentLabel.textColor = ColorCollection.NavigationBarUnselectedTextColor
-            }
-        }
     }
 
     override var isSelected: Bool {

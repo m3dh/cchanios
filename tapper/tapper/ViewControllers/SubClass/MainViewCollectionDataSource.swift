@@ -4,11 +4,13 @@ class MainViewCollectionDataSource: NSObject, UICollectionViewDataSource, UIColl
     static let CollectionCellId = "mainViewCollectionCellId"
     let parentView: UICollectionView
     let menuBar: MainMenuBarDataSource
+    let menuBarView: UICollectionView
     let tableMgr: TableViewsManager
 
-    init(parentView: UICollectionView, menuBar: MainMenuBarDataSource, tableViewsMgr: TableViewsManager) {
+    init(parentView: UICollectionView, menuBar: MainMenuBarDataSource, menuBarView: UICollectionView, tableViewsMgr: TableViewsManager) {
         self.parentView = parentView
         self.menuBar = menuBar
+        self.menuBarView = menuBarView
         self.tableMgr = tableViewsMgr
     }
 
@@ -31,14 +33,17 @@ class MainViewCollectionDataSource: NSObject, UICollectionViewDataSource, UIColl
         return CGSize(width: self.parentView.bounds.width, height: self.parentView.bounds.height)
     }
 
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let indexPath = IndexPath(item: Int((targetContentOffset.pointee.x - 5 + self.parentView.frame.width/2) / self.parentView.frame.width), section: 0)
+        self.menuBarView.selectItem(at: indexPath, animated: true, scrollPosition: .left)
+    }
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let movedCount = scrollView.contentOffset.x / self.parentView.frame.width
         self.menuBar.horizontalBarLeftAnchorConstraint.constant = 5 + (self.parentView.frame.width - 10) * movedCount / 3
     }
 
-    var focusedIndex: Int {
-        get {
-            return Int(self.parentView.contentOffset.x / self.parentView.frame.width)
-        }
+    func getFocusedIndex() -> Int {
+        return Int((self.parentView.contentOffset.x + self.parentView.frame.width / 2) / self.parentView.frame.width)
     }
 }
