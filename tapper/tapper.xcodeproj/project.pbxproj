@@ -13,11 +13,12 @@
 		C3095A551FF68E4600A56760 /* MainSessionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3095A541FF68E4600A56760 /* MainSessionDataSource.swift */; };
 		C3095A571FF88D5C00A56760 /* ColorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3095A561FF88D5C00A56760 /* ColorCollection.swift */; };
 		C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7101FEE377800AC2B1B /* AppDelegate.swift */; };
-		C314F7161FEE377800AC2B1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C314F7141FEE377800AC2B1B /* Main.storyboard */; };
 		C314F7191FEE377800AC2B1B /* Tapper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C314F7171FEE377800AC2B1B /* Tapper.xcdatamodeld */; };
 		C314F71E1FEE377800AC2B1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C314F71C1FEE377800AC2B1B /* LaunchScreen.storyboard */; };
 		C314F7291FEE377800AC2B1B /* TapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7281FEE377800AC2B1B /* TapperTests.swift */; };
 		C36767181FF3E46200F003CB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36767171FF3E46200F003CB /* MainViewController.swift */; };
+		C36F835C1FFA304700F64FE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36F835A1FFA304700F64FE1 /* Main.storyboard */; };
+		C36F835E1FFA33D300F64FE1 /* BackendServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36F835D1FFA33D300F64FE1 /* BackendServiceLocator.swift */; };
 		C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */; };
 		C37535A41FEEAE0000D8B4F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37535A31FEEAE0000D8B4F3 /* Assets.xcassets */; };
 		C37EBA2B1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37EBA2A1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift */; };
@@ -26,6 +27,7 @@
 		C3A29E6D1FF36B4A00013C71 /* AccountManagerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A29E6C1FF36B4A00013C71 /* AccountManagerClient.swift */; };
 		C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */; };
 		C3AC0D761FF222A000BDD8ED /* UIControlHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */; };
+		C3C32DBB1FFA7B1100DEA5D8 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */; };
 		C3C802D21FF5083E00165B3C /* MainSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C802D11FF5083E00165B3C /* MainSessionCell.swift */; };
 		CDA0185C2F07BD4F4AD3DF01 /* Pods_TapperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E2008A163E56C883286B48 /* Pods_TapperTests.framework */; };
 /* End PBXBuildFile section */
@@ -51,7 +53,6 @@
 		C3095A561FF88D5C00A56760 /* ColorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorCollection.swift; path = tapper/Helpers/ColorCollection.swift; sourceTree = SOURCE_ROOT; };
 		C314F70D1FEE377800AC2B1B /* Tapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C314F7101FEE377800AC2B1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C314F7151FEE377800AC2B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C314F7181FEE377800AC2B1B /* Tapper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tapper.xcdatamodel; sourceTree = "<group>"; };
 		C314F71D1FEE377800AC2B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C314F71F1FEE377800AC2B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +60,8 @@
 		C314F7281FEE377800AC2B1B /* TapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapperTests.swift; sourceTree = "<group>"; };
 		C314F72A1FEE377800AC2B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C36767171FF3E46200F003CB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = tapper/ViewControllers/MainViewController.swift; sourceTree = SOURCE_ROOT; };
+		C36F835B1FFA304700F64FE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = tapper/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		C36F835D1FFA33D300F64FE1 /* BackendServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackendServiceLocator.swift; path = tapper/Managers/BackendServiceLocator.swift; sourceTree = SOURCE_ROOT; };
 		C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = tapper/ViewControllers/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		C37535A31FEEAE0000D8B4F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = tapper/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		C37EBA2A1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCollectionDataSource.swift; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 		C3A29E6C1FF36B4A00013C71 /* AccountManagerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountManagerClient.swift; path = tapper/Managers/AccountManagerClient.swift; sourceTree = SOURCE_ROOT; };
 		C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeProtector.swift; sourceTree = "<group>"; };
 		C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIControlHelper.swift; path = Tapper/Helpers/UIControlHelper.swift; sourceTree = SOURCE_ROOT; };
+		C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageHelper.swift; path = tapper/Helpers/ImageHelper.swift; sourceTree = SOURCE_ROOT; };
 		C3C802D11FF5083E00165B3C /* MainSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainSessionCell.swift; path = Tapper/ViewControllers/SubClass/MainSessionCell.swift; sourceTree = SOURCE_ROOT; };
 		D8D5E57818EA1622F67AECF4 /* Pods-TapperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TapperTests/Pods-TapperTests.release.xcconfig"; sourceTree = "<group>"; };
 		FEE3E93463A9ADEEC7E86EC7 /* Pods-Tapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tapper/Pods-Tapper.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,7 +144,7 @@
 				C3AC0D6F1FEF9BBE00BDD8ED /* Managers */,
 				C3E360A41FEE8C7D00896586 /* ViewControllers */,
 				C314F7101FEE377800AC2B1B /* AppDelegate.swift */,
-				C314F7141FEE377800AC2B1B /* Main.storyboard */,
+				C36F835A1FFA304700F64FE1 /* Main.storyboard */,
 				C314F71C1FEE377800AC2B1B /* LaunchScreen.storyboard */,
 				C314F71F1FEE377800AC2B1B /* Info.plist */,
 				C314F7171FEE377800AC2B1B /* Tapper.xcdatamodeld */,
@@ -163,6 +167,7 @@
 				C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */,
 				C3A29E6A1FF33F1A00013C71 /* OperationHelper.swift */,
 				C3095A561FF88D5C00A56760 /* ColorCollection.swift */,
+				C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 			children = (
 				C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */,
 				C3A29E6C1FF36B4A00013C71 /* AccountManagerClient.swift */,
+				C36F835D1FFA33D300F64FE1 /* BackendServiceLocator.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -288,9 +294,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36F835C1FFA304700F64FE1 /* Main.storyboard in Resources */,
 				C314F71E1FEE377800AC2B1B /* LaunchScreen.storyboard in Resources */,
 				C37535A41FEEAE0000D8B4F3 /* Assets.xcassets in Resources */,
-				C314F7161FEE377800AC2B1B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,10 +317,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tapper/Pods-Tapper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Fusuma/Fusuma.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fusuma.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +421,7 @@
 				C3095A551FF68E4600A56760 /* MainSessionDataSource.swift in Sources */,
 				C3A29E6B1FF33F1A00013C71 /* OperationHelper.swift in Sources */,
 				C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */,
+				C36F835E1FFA33D300F64FE1 /* BackendServiceLocator.swift in Sources */,
 				C3095A571FF88D5C00A56760 /* ColorCollection.swift in Sources */,
 				C36767181FF3E46200F003CB /* MainViewController.swift in Sources */,
 				C37EBA2B1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift in Sources */,
@@ -425,6 +434,7 @@
 				C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */,
 				C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */,
 				C314F7191FEE377800AC2B1B /* Tapper.xcdatamodeld in Sources */,
+				C3C32DBB1FFA7B1100DEA5D8 /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,20 +457,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C314F7141FEE377800AC2B1B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C314F7151FEE377800AC2B1B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C314F71C1FEE377800AC2B1B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C314F71D1FEE377800AC2B1B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C36F835A1FFA304700F64FE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C36F835B1FFA304700F64FE1 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -11,17 +11,19 @@ class MainViewController: UIViewController {
     var tableViewsManager: TableViewsManager!
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         UIControlHelper.findAndHideShadowView(under: self.navigationController!.navigationBar, hide: true)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         UIControlHelper.findAndHideShadowView(under: self.navigationController!.navigationBar, hide: false)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if false /* no token found or auth failed */ {
+        if true /* no token found or auth failed */ {
             self.performSegue(withIdentifier: "mainNeedSignIn", sender: nil)
         }
 

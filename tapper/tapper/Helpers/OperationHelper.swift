@@ -14,7 +14,7 @@ class OperationHelper {
 
         print("Presented popup indicator")
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5, execute: {
+        DispatchQueue.main.async(execute: {
             task() // execute the real task
 
             activityIndicator.stopAnimating()

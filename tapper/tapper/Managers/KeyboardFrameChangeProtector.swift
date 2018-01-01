@@ -5,6 +5,7 @@ class KeyboardFrameChangeProtector {
     let protectView: UIView
     let animationDuration: Double = 0.2
 
+    let navigationBarHeight: CGFloat
     let animateConstraintOriginVal: CGFloat
     let animateConstraint: NSLayoutConstraint
 
@@ -16,15 +17,21 @@ class KeyboardFrameChangeProtector {
         self.animateConstraintOriginVal = animateConstraint.constant
         self.animateConstraint = animateConstraint
         self.previousKeyboardFrameMinY = globalView.frame.maxY
+        self.navigationBarHeight = globalView.frame.maxY - globalView.frame.height
     }
 
     func protectViewSizeChanged() {
-        let protectedMaxY = protectView.superview!.convert(protectView.frame, to: globalView).maxY
+        let protectedMaxY = protectView.superview!.convert(protectView.frame, to: globalView).maxY + self.navigationBarHeight
         if self.previousKeyboardFrameMinY != protectedMaxY {
             let moveUpDistance = protectedMaxY - self.previousKeyboardFrameMinY
-            if moveUpDistance != 0 && self.animateConstraint.constant - moveUpDistance <= self.animateConstraintOriginVal {
-                self.animateConstraint.constant -= moveUpDistance
-                UIView.animate(withDuration: animationDuration, animations: { self.globalView.layoutIfNeeded() })
+            if moveUpDistance != 0 {
+                if self.animateConstraint.constant - moveUpDistance <= self.animateConstraintOriginVal {
+                    self.animateConstraint.constant -= moveUpDistance
+                    UIView.animate(withDuration: animationDuration, animations: { self.globalView.layoutIfNeeded() })
+                } else {
+                    self.animateConstraint.constant = self.animateConstraintOriginVal
+                    UIView.animate(withDuration: animationDuration, animations: { self.globalView.layoutIfNeeded() })
+                }
             }
         }
     }
@@ -32,13 +39,19 @@ class KeyboardFrameChangeProtector {
     @objc func keyboardWillShow(_ notification: Notification) {
         if let keyboardFrame: NSValue = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardMinY = keyboardFrame.cgRectValue.minY
-            let protectedMaxY = protectView.superview!.convert(protectView.frame, to: globalView).maxY
+            let protectedMaxY = protectView.superview!.convert(protectView.frame, to: globalView).maxY + self.navigationBarHeight
             self.previousKeyboardFrameMinY = keyboardMinY
+            print("keyboardMinY \(keyboardMinY), protectedMaxY \(protectedMaxY)")
             if keyboardMinY != protectedMaxY {
                 let moveUpDistance = protectedMaxY - keyboardMinY
-                if moveUpDistance != 0 && self.animateConstraint.constant - moveUpDistance <= self.animateConstraintOriginVal {
-                    self.animateConstraint.constant -= moveUpDistance
-                    UIView.animate(withDuration: animationDuration, animations: { self.globalView.layoutIfNeeded() })
+                if moveUpDistance != 0 {
+                    if self.animateConstraint.constant - moveUpDistance <= self.animateConstraintOriginVal {
+                        self.animateConstraint.constant -= moveUpDistance
+                        UIView.animate(withDuration: animationDuration, animations: { self.globalView.layoutIfNeeded() })
+                    } else {
+                        self.animateConstraint.constant = self.animateConstraintOriginVal
+                        UIView.animate(withDuration: animationDuration, animations: { self.globalView.layoutIfNeeded() })
+                    }
                 }
             }
         }

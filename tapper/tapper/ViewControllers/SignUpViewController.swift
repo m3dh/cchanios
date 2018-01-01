@@ -202,7 +202,7 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
             return false
         }
 
-        if self.passwordTextField.text?.range(of: "[a-zA-Z0-9!@#$%^&*]{5,20}", options: .regularExpression) == nil {
+        if self.passwordTextField.text?.range(of: "[a-zA-Z0-9!@#$%^&*]{6,20}", options: .regularExpression) == nil {
             UIControlHelper.safelySetUILabelText(
                 label: self.errorMessageLabel,
                 labelHeight: self.errorMessageLabelHeightConst,

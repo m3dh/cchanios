@@ -17,12 +17,12 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: State transitions
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
 
         // remove all registered observers
         NotificationCenter.default.removeObserver(self.inputStackViewProtector, name: .UIKeyboardWillShow, object: nil)
@@ -33,6 +33,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         super.viewDidAppear(animated)
 
         // setup keyboard show / hide notification
+        self.inputStackView.translatesAutoresizingMaskIntoConstraints = false
         self.inputStackViewProtector = KeyboardFrameChangeProtector(protectView: self.inputStackView, globalView: self.view, animateConstraint: self.inputStackViewTopConst)
         NotificationCenter.default.addObserver(self.inputStackViewProtector, selector: #selector(inputStackViewProtector.keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self.inputStackViewProtector, selector: #selector(inputStackViewProtector.keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
@@ -117,6 +118,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             self.usernameTextField.text = source.usernameTextField.text
             self.passwordTextField.text = source.passwordTextField.text
             if let avatarImage = source.avatarImageView.image {
+                print("\(avatarImage.size)")
                 if self.avatarImageView == nil {
                     self.avatarImageView = UIImageView(image: avatarImage)
                     self.inputStackView.insertArrangedSubview(self.avatarImageView!, at: 1)
