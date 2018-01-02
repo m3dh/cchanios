@@ -15,7 +15,7 @@
 		C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7101FEE377800AC2B1B /* AppDelegate.swift */; };
 		C314F7191FEE377800AC2B1B /* Tapper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C314F7171FEE377800AC2B1B /* Tapper.xcdatamodeld */; };
 		C314F71E1FEE377800AC2B1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C314F71C1FEE377800AC2B1B /* LaunchScreen.storyboard */; };
-		C314F7291FEE377800AC2B1B /* TapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7281FEE377800AC2B1B /* TapperTests.swift */; };
+		C314F7291FEE377800AC2B1B /* AccountManagerClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7281FEE377800AC2B1B /* AccountManagerClientTests.swift */; };
 		C36767181FF3E46200F003CB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36767171FF3E46200F003CB /* MainViewController.swift */; };
 		C36F835C1FFA304700F64FE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36F835A1FFA304700F64FE1 /* Main.storyboard */; };
 		C36F835E1FFA33D300F64FE1 /* BackendServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36F835D1FFA33D300F64FE1 /* BackendServiceLocator.swift */; };
@@ -29,6 +29,7 @@
 		C3AC0D761FF222A000BDD8ED /* UIControlHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */; };
 		C3C32DBB1FFA7B1100DEA5D8 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */; };
 		C3C802D21FF5083E00165B3C /* MainSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C802D11FF5083E00165B3C /* MainSessionCell.swift */; };
+		C3E58C501FFBA72E0022E181 /* WebHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */; };
 		CDA0185C2F07BD4F4AD3DF01 /* Pods_TapperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E2008A163E56C883286B48 /* Pods_TapperTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +58,7 @@
 		C314F71D1FEE377800AC2B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C314F71F1FEE377800AC2B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C314F7241FEE377800AC2B1B /* TapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C314F7281FEE377800AC2B1B /* TapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapperTests.swift; sourceTree = "<group>"; };
+		C314F7281FEE377800AC2B1B /* AccountManagerClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManagerClientTests.swift; sourceTree = "<group>"; };
 		C314F72A1FEE377800AC2B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C36767171FF3E46200F003CB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = tapper/ViewControllers/MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		C36F835B1FFA304700F64FE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = tapper/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
@@ -72,6 +73,7 @@
 		C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIControlHelper.swift; path = Tapper/Helpers/UIControlHelper.swift; sourceTree = SOURCE_ROOT; };
 		C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageHelper.swift; path = tapper/Helpers/ImageHelper.swift; sourceTree = SOURCE_ROOT; };
 		C3C802D11FF5083E00165B3C /* MainSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainSessionCell.swift; path = Tapper/ViewControllers/SubClass/MainSessionCell.swift; sourceTree = SOURCE_ROOT; };
+		C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebHelper.swift; sourceTree = "<group>"; };
 		D8D5E57818EA1622F67AECF4 /* Pods-TapperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TapperTests/Pods-TapperTests.release.xcconfig"; sourceTree = "<group>"; };
 		FEE3E93463A9ADEEC7E86EC7 /* Pods-Tapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tapper/Pods-Tapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,7 +157,7 @@
 		C314F7271FEE377800AC2B1B /* TapperTests */ = {
 			isa = PBXGroup;
 			children = (
-				C314F7281FEE377800AC2B1B /* TapperTests.swift */,
+				C314F7281FEE377800AC2B1B /* AccountManagerClientTests.swift */,
 				C314F72A1FEE377800AC2B1B /* Info.plist */,
 			);
 			path = TapperTests;
@@ -168,6 +170,7 @@
 				C3A29E6A1FF33F1A00013C71 /* OperationHelper.swift */,
 				C3095A561FF88D5C00A56760 /* ColorCollection.swift */,
 				C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */,
+				C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				C3AC0D761FF222A000BDD8ED /* UIControlHelper.swift in Sources */,
 				C3A29E681FF2469900013C71 /* SignInViewController.swift in Sources */,
 				C3048F921FF66E490012A4AF /* TableViewsManager.swift in Sources */,
+				C3E58C501FFBA72E0022E181 /* WebHelper.swift in Sources */,
 				C3A29E6D1FF36B4A00013C71 /* AccountManagerClient.swift in Sources */,
 				C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */,
 				C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */,
@@ -442,7 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C314F7291FEE377800AC2B1B /* TapperTests.swift in Sources */,
+				C314F7291FEE377800AC2B1B /* AccountManagerClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

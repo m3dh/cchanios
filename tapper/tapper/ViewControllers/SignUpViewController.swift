@@ -203,7 +203,7 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
                 UIControlHelper.safelySetUILabelText(
                     label: self.errorMessageLabel,
                     labelHeight: self.errorMessageLabelHeightConst,
-                    text: "Invalid avatar picture : shall be bigger than 240pixel x 240pixel.")
+                    text: "Invalid avatar picture : shall be bigger than 240pix x 240pix.")
                 return false
             } else {
                 print("Sign up with image size : \(imgSize.height * self.avatarImageView.image!.scale) x \(imgSize.width * self.avatarImageView.image!.scale)")

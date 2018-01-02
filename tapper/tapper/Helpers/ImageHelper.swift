@@ -2,7 +2,7 @@ import UIKit
 
 class ImageHelper {
     static let expectedAvatarWidthAndHeight: CGFloat = 240
-    static let expectedAvatarMaxSizeInKiBs: Int = 64
+    static let expectedAvatarMaxSizeInKiBs: Int = 128
 
     static func resizeSquareImageForAvatarUsage(image: UIImage) -> UIImage {
         // expected avatar image : 120 x 120 in JPEG with less than 64 KiB
@@ -16,6 +16,31 @@ class ImageHelper {
         // now resize it to 240 * 240 (pixels)
         contextImage = ImageHelper.scaleImageTo(image: contextImage, width: expectedAvatarWidthAndHeight, height: expectedAvatarWidthAndHeight)
         return contextImage
+    }
+
+    static func getAvatarRawData(image: UIImage) -> Data {
+        if let data = ImageHelper.compressImageToJpeg(image: image, maxSize: expectedAvatarMaxSizeInKiBs) {
+            return data
+        } else {
+            fatalError("Unexpected image - unable to compress to expected avatar file size.")
+        }
+    }
+
+    static func compressImageToJpeg(image: UIImage, maxSize: Int) -> Data? {
+        let maxCompression: CGFloat = 0.2
+        let maxFileSize: Int = maxSize*1024
+        var compression:CGFloat = 1.0
+        while compression > maxCompression {
+            var imageData = UIImageJPEGRepresentation(image, compression)!
+            print("Get image data size : \(imageData.count)")
+            if imageData.count > maxFileSize {
+                compression -= 0.1
+            } else {
+                return imageData
+            }
+        }
+
+        return nil
     }
 
     static func scaleImageTo(image: UIImage, width: CGFloat, height: CGFloat) -> UIImage {
