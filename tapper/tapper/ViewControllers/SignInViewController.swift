@@ -110,7 +110,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func unwindToSignInViewNormally(sender: UIStoryboardSegue) {
         if let source = sender.source as? SignUpViewController {
-            print("Back from sign up")
             UIControlHelper.safelySetUILabelText(
                 label: self.errorMessageLabel,
                 labelHeight: self.errorMessageLabelHeightConst,
@@ -118,7 +117,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             self.usernameTextField.text = source.usernameTextField.text
             self.passwordTextField.text = source.passwordTextField.text
             if let avatarImage = source.avatarImageView.image {
-                print("\(avatarImage.size)")
                 if self.avatarImageView == nil {
                     self.avatarImageView = UIImageView(image: avatarImage)
                     self.inputStackView.insertArrangedSubview(self.avatarImageView!, at: 1)

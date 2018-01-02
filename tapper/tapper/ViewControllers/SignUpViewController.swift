@@ -91,6 +91,11 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
             return
         }
 
+        let avatarImage = self.avatarImageView.image!
+        let newImage = ImageHelper.resizeSquareImageForAvatarUsage(image: avatarImage)
+        print(">>> \(newImage.size.height * newImage.scale) x \(newImage.size.width * newImage.scale)")
+        self.avatarImageView.image = newImage
+
         OperationHelper.startAsyncJobAndBlockCurrentWindow(
             window: self,
             task: {
@@ -191,6 +196,18 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
         self.errorMessageLabel.text = nil
         for textfield in self.allTextfields {
             UIControlHelper.resetTextFieldStyle(textfield: textfield)
+        }
+
+        if let imgSize = self.avatarImageView.image?.size {
+            if imgSize.height * self.avatarImageView.image!.scale < ImageHelper.expectedAvatarWidthAndHeight || imgSize.width * self.avatarImageView.image!.scale < ImageHelper.expectedAvatarWidthAndHeight {
+                UIControlHelper.safelySetUILabelText(
+                    label: self.errorMessageLabel,
+                    labelHeight: self.errorMessageLabelHeightConst,
+                    text: "Invalid avatar picture : shall be bigger than 240pixel x 240pixel.")
+                return false
+            } else {
+                print("Sign up with image size : \(imgSize.height * self.avatarImageView.image!.scale) x \(imgSize.width * self.avatarImageView.image!.scale)")
+            }
         }
 
         if self.usernameTextField.text?.range(of: "^[a-zA-Z]\\w{3,10}$", options: .regularExpression) == nil {
