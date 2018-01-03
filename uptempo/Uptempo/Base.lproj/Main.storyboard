@@ -23,7 +23,7 @@
         <!--Uptempo-->
         <scene sceneID="YLz-ML-bDI">
             <objects>
-                <viewController id="Qzp-Qj-kee" customClass="MainViewController" customModule="Tapper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qzp-Qj-kee" customClass="MainViewController" customModule="Uptempo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q4e-lu-tTe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,13 +142,13 @@
         <!--Sign In-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Sign In" id="BYZ-38-t0r" customClass="SignInViewController" customModule="Tapper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sign In" id="BYZ-38-t0r" customClass="SignInViewController" customModule="Uptempo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="326-jg-ZA0">
-                                <rect key="frame" x="20" y="40.000000000000014" width="374" height="232.33333333333337"/>
+                                <rect key="frame" x="20" y="40.000000000000014" width="374" height="255.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uptempo (ver 0.1)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZn-1v-djd">
                                         <rect key="frame" x="98.666666666666671" y="0.0" width="176.66666666666663" height="23.333333333333332"/>
@@ -162,23 +162,25 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xzf-AA-4Fw">
-                                        <rect key="frame" x="0.0" y="97.333333333333343" width="374" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xzf-AA-4Fw" customClass="UnderlineTextField" customModule="Uptempo" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="97.333333333333343" width="364" height="33"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="n8R-em-Cem">
-                                        <rect key="frame" x="0.0" y="142.33333333333334" width="374" height="90"/>
+                                        <rect key="frame" x="0.0" y="145.33333333333334" width="374" height="110"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zZT-lx-E6y">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zZT-lx-E6y" customClass="UnderlineTextField" customModule="Uptempo" customModuleProvider="target">
+                                                <rect key="frame" x="5" y="0.0" width="364" height="33"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3S-XB-eWG">
-                                                <rect key="frame" x="8" y="32.999999999999972" width="358" height="14"/>
+                                                <rect key="frame" x="8" y="35.999999999999972" width="358" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="14" id="dTY-q4-vs7"/>
                                                 </constraints>
@@ -187,26 +189,38 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1P-Ch-JBW">
-                                                <rect key="frame" x="0.0" y="49.999999999999972" width="374" height="40"/>
+                                                <rect key="frame" x="0.0" y="52.999999999999972" width="374" height="40"/>
+                                                <color key="backgroundColor" red="0.40392156862745099" green="0.43529411764705883" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                <state key="normal" title="Sign In"/>
+                                                <state key="normal" title="Sign In">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="signInTouchUpInsideAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uwc-1p-96o"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNg-kk-llm">
+                                                <rect key="frame" x="0.0" y="95.999999999999972" width="374" height="14"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="14" id="xhm-87-j1g"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="zZT-lx-E6y" secondAttribute="trailing" id="dgT-3c-tbp"/>
+                                            <constraint firstAttribute="trailing" secondItem="zZT-lx-E6y" secondAttribute="trailing" constant="5" id="dgT-3c-tbp"/>
                                             <constraint firstItem="c1P-Ch-JBW" firstAttribute="leading" secondItem="n8R-em-Cem" secondAttribute="leading" id="hA0-64-bWV"/>
-                                            <constraint firstItem="zZT-lx-E6y" firstAttribute="leading" secondItem="n8R-em-Cem" secondAttribute="leading" id="sJ0-J3-AIk"/>
+                                            <constraint firstItem="zZT-lx-E6y" firstAttribute="leading" secondItem="n8R-em-Cem" secondAttribute="leading" constant="5" id="sJ0-J3-AIk"/>
                                             <constraint firstAttribute="trailing" secondItem="c1P-Ch-JBW" secondAttribute="trailing" id="wld-q2-bKp"/>
                                             <constraint firstItem="T3S-XB-eWG" firstAttribute="leading" secondItem="n8R-em-Cem" secondAttribute="leading" constant="8" id="yVH-gi-rT1"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Xzf-AA-4Fw" firstAttribute="leading" secondItem="326-jg-ZA0" secondAttribute="leading" id="6sn-3K-IIK"/>
-                                    <constraint firstAttribute="trailing" secondItem="Xzf-AA-4Fw" secondAttribute="trailing" id="AG4-Wu-W3Y"/>
+                                    <constraint firstItem="Xzf-AA-4Fw" firstAttribute="leading" secondItem="326-jg-ZA0" secondAttribute="leading" constant="5" id="6sn-3K-IIK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xzf-AA-4Fw" secondAttribute="trailing" constant="5" id="AG4-Wu-W3Y"/>
                                     <constraint firstItem="h3r-aP-lOW" firstAttribute="leading" secondItem="326-jg-ZA0" secondAttribute="leading" constant="8" id="IL3-j7-fqD"/>
                                     <constraint firstAttribute="trailing" secondItem="h3r-aP-lOW" secondAttribute="trailing" constant="8" id="J16-Ts-1ob"/>
                                     <constraint firstAttribute="trailing" secondItem="n8R-em-Cem" secondAttribute="trailing" id="JC8-GI-Vcy"/>
@@ -261,7 +275,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="xik-hh-uE1">
             <objects>
-                <viewController id="Tiq-Xa-cmF" customClass="SignUpViewController" customModule="Tapper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Tiq-Xa-cmF" customClass="SignUpViewController" customModule="Uptempo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zq3-wf-GoW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

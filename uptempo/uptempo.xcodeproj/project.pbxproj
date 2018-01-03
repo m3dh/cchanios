@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05B4AE3EB2ECADD2F2A68BBA /* Pods_Tapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950CE219F56FCC7E1A33D32D /* Pods_Tapper.framework */; };
+		05B4AE3EB2ECADD2F2A68BBA /* Pods_Uptempo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950CE219F56FCC7E1A33D32D /* Pods_Uptempo.framework */; };
 		C3048F901FF624900012A4AF /* MainMenuBarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3048F8F1FF624900012A4AF /* MainMenuBarDataSource.swift */; };
 		C3048F921FF66E490012A4AF /* TableViewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3048F911FF66E490012A4AF /* TableViewsManager.swift */; };
 		C3095A551FF68E4600A56760 /* MainSessionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3095A541FF68E4600A56760 /* MainSessionDataSource.swift */; };
 		C3095A571FF88D5C00A56760 /* ColorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3095A561FF88D5C00A56760 /* ColorCollection.swift */; };
 		C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7101FEE377800AC2B1B /* AppDelegate.swift */; };
-		C314F7191FEE377800AC2B1B /* Tapper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C314F7171FEE377800AC2B1B /* Tapper.xcdatamodeld */; };
+		C314F7191FEE377800AC2B1B /* Uptempo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C314F7171FEE377800AC2B1B /* Uptempo.xcdatamodeld */; };
 		C314F71E1FEE377800AC2B1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C314F71C1FEE377800AC2B1B /* LaunchScreen.storyboard */; };
 		C314F7291FEE377800AC2B1B /* AccountManagerClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7281FEE377800AC2B1B /* AccountManagerClientTests.swift */; };
+		C3554A991FFCCA86000B879E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3554A9B1FFCCA86000B879E /* Localizable.strings */; };
+		C3554A9E1FFCF903000B879E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3554A9D1FFCF903000B879E /* Assets.xcassets */; };
+		C35B87FF1FFCC26D003EB6C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35B87FD1FFCC26D003EB6C6 /* Main.storyboard */; };
 		C36767181FF3E46200F003CB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36767171FF3E46200F003CB /* MainViewController.swift */; };
-		C36F835C1FFA304700F64FE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36F835A1FFA304700F64FE1 /* Main.storyboard */; };
 		C36F835E1FFA33D300F64FE1 /* BackendServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36F835D1FFA33D300F64FE1 /* BackendServiceLocator.swift */; };
 		C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */; };
-		C37535A41FEEAE0000D8B4F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37535A31FEEAE0000D8B4F3 /* Assets.xcassets */; };
 		C37EBA2B1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37EBA2A1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift */; };
 		C3A29E681FF2469900013C71 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A29E671FF2469900013C71 /* SignInViewController.swift */; };
 		C3A29E6B1FF33F1A00013C71 /* OperationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A29E6A1FF33F1A00013C71 /* OperationHelper.swift */; };
@@ -31,7 +32,8 @@
 		C3C32DBB1FFA7B1100DEA5D8 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */; };
 		C3C802D21FF5083E00165B3C /* MainSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C802D11FF5083E00165B3C /* MainSessionCell.swift */; };
 		C3E58C501FFBA72E0022E181 /* WebHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */; };
-		CDA0185C2F07BD4F4AD3DF01 /* Pods_TapperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E2008A163E56C883286B48 /* Pods_TapperTests.framework */; };
+		C3FC5F651FFCC52400083BF3 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5F641FFCC52400083BF3 /* UnderlineTextField.swift */; };
+		CDA0185C2F07BD4F4AD3DF01 /* Pods_UptempoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E2008A163E56C883286B48 /* Pods_UptempoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,44 +42,49 @@
 			containerPortal = C314F7051FEE377800AC2B1B /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C314F70C1FEE377800AC2B1B;
-			remoteInfo = Tapper;
+			remoteInfo = Uptempo;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18E2008A163E56C883286B48 /* Pods_TapperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E8E6B947C14963731CA3EF6 /* Pods-TapperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TapperTests/Pods-TapperTests.debug.xcconfig"; sourceTree = "<group>"; };
-		919E59519FCE594F19203C14 /* Pods-Tapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tapper/Pods-Tapper.release.xcconfig"; sourceTree = "<group>"; };
-		950CE219F56FCC7E1A33D32D /* Pods_Tapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E2008A163E56C883286B48 /* Pods_UptempoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UptempoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E8E6B947C14963731CA3EF6 /* Pods-UptempoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UptempoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UptempoTests/Pods-UptempoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		919E59519FCE594F19203C14 /* Pods-Uptempo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uptempo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Uptempo/Pods-Uptempo.release.xcconfig"; sourceTree = "<group>"; };
+		950CE219F56FCC7E1A33D32D /* Pods_Uptempo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uptempo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3048F8F1FF624900012A4AF /* MainMenuBarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuBarDataSource.swift; sourceTree = "<group>"; };
-		C3048F911FF66E490012A4AF /* TableViewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewsManager.swift; path = Tapper/ViewControllers/SubClass/TableViewsManager.swift; sourceTree = SOURCE_ROOT; };
-		C3095A541FF68E4600A56760 /* MainSessionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainSessionDataSource.swift; path = tapper/ViewControllers/SubClass/MainSessionDataSource.swift; sourceTree = SOURCE_ROOT; };
-		C3095A561FF88D5C00A56760 /* ColorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorCollection.swift; path = tapper/Helpers/ColorCollection.swift; sourceTree = SOURCE_ROOT; };
-		C314F70D1FEE377800AC2B1B /* Tapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3048F911FF66E490012A4AF /* TableViewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewsManager.swift; path = Uptempo/ViewControllers/SubClass/TableViewsManager.swift; sourceTree = SOURCE_ROOT; };
+		C3095A541FF68E4600A56760 /* MainSessionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainSessionDataSource.swift; path = Uptempo/ViewControllers/SubClass/MainSessionDataSource.swift; sourceTree = SOURCE_ROOT; };
+		C3095A561FF88D5C00A56760 /* ColorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorCollection.swift; path = Uptempo/Helpers/ColorCollection.swift; sourceTree = SOURCE_ROOT; };
+		C314F70D1FEE377800AC2B1B /* Uptempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uptempo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C314F7101FEE377800AC2B1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C314F7181FEE377800AC2B1B /* Tapper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tapper.xcdatamodel; sourceTree = "<group>"; };
+		C314F7181FEE377800AC2B1B /* Uptempo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Uptempo.xcdatamodel; sourceTree = "<group>"; };
 		C314F71D1FEE377800AC2B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C314F71F1FEE377800AC2B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C314F7241FEE377800AC2B1B /* TapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C314F7241FEE377800AC2B1B /* UptempoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UptempoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C314F7281FEE377800AC2B1B /* AccountManagerClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManagerClientTests.swift; sourceTree = "<group>"; };
 		C314F72A1FEE377800AC2B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C36767171FF3E46200F003CB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = tapper/ViewControllers/MainViewController.swift; sourceTree = SOURCE_ROOT; };
-		C36F835B1FFA304700F64FE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = tapper/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
-		C36F835D1FFA33D300F64FE1 /* BackendServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackendServiceLocator.swift; path = tapper/Managers/BackendServiceLocator.swift; sourceTree = SOURCE_ROOT; };
-		C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = tapper/ViewControllers/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
-		C37535A31FEEAE0000D8B4F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = tapper/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		C3554A951FFCCA23000B879E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		C3554A961FFCCA23000B879E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		C3554A9A1FFCCA86000B879E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		C3554A9C1FFCCA88000B879E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C3554A9D1FFCF903000B879E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C35B87FE1FFCC26D003EB6C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C36767171FF3E46200F003CB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Uptempo/ViewControllers/MainViewController.swift; sourceTree = SOURCE_ROOT; };
+		C36F835D1FFA33D300F64FE1 /* BackendServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackendServiceLocator.swift; path = Uptempo/Managers/BackendServiceLocator.swift; sourceTree = SOURCE_ROOT; };
+		C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Uptempo/ViewControllers/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		C37EBA2A1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCollectionDataSource.swift; sourceTree = "<group>"; };
-		C3A29E671FF2469900013C71 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = tapper/ViewControllers/SignInViewController.swift; sourceTree = SOURCE_ROOT; };
-		C3A29E6A1FF33F1A00013C71 /* OperationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OperationHelper.swift; path = tapper/Helpers/OperationHelper.swift; sourceTree = SOURCE_ROOT; };
-		C3A29E6C1FF36B4A00013C71 /* AccountManagerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountManagerClient.swift; path = tapper/Managers/AccountManagerClient.swift; sourceTree = SOURCE_ROOT; };
+		C3A29E671FF2469900013C71 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = Uptempo/ViewControllers/SignInViewController.swift; sourceTree = SOURCE_ROOT; };
+		C3A29E6A1FF33F1A00013C71 /* OperationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OperationHelper.swift; path = Uptempo/Helpers/OperationHelper.swift; sourceTree = SOURCE_ROOT; };
+		C3A29E6C1FF36B4A00013C71 /* AccountManagerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountManagerClient.swift; path = Uptempo/Managers/AccountManagerClient.swift; sourceTree = SOURCE_ROOT; };
 		C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeProtector.swift; sourceTree = "<group>"; };
-		C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIControlHelper.swift; path = Tapper/Helpers/UIControlHelper.swift; sourceTree = SOURCE_ROOT; };
-		C3BD324D1FFC985000E770F0 /* CredentialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CredentialManager.swift; path = tapper/Managers/CredentialManager.swift; sourceTree = SOURCE_ROOT; };
-		C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageHelper.swift; path = tapper/Helpers/ImageHelper.swift; sourceTree = SOURCE_ROOT; };
-		C3C802D11FF5083E00165B3C /* MainSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainSessionCell.swift; path = Tapper/ViewControllers/SubClass/MainSessionCell.swift; sourceTree = SOURCE_ROOT; };
+		C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIControlHelper.swift; path = Uptempo/Helpers/UIControlHelper.swift; sourceTree = SOURCE_ROOT; };
+		C3BD324D1FFC985000E770F0 /* CredentialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CredentialManager.swift; path = Uptempo/Managers/CredentialManager.swift; sourceTree = SOURCE_ROOT; };
+		C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageHelper.swift; path = Uptempo/Helpers/ImageHelper.swift; sourceTree = SOURCE_ROOT; };
+		C3C802D11FF5083E00165B3C /* MainSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainSessionCell.swift; path = Uptempo/ViewControllers/SubClass/MainSessionCell.swift; sourceTree = SOURCE_ROOT; };
 		C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebHelper.swift; sourceTree = "<group>"; };
-		D8D5E57818EA1622F67AECF4 /* Pods-TapperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TapperTests/Pods-TapperTests.release.xcconfig"; sourceTree = "<group>"; };
-		FEE3E93463A9ADEEC7E86EC7 /* Pods-Tapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tapper/Pods-Tapper.debug.xcconfig"; sourceTree = "<group>"; };
+		C3FC5F641FFCC52400083BF3 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
+		D8D5E57818EA1622F67AECF4 /* Pods-UptempoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UptempoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UptempoTests/Pods-UptempoTests.release.xcconfig"; sourceTree = "<group>"; };
+		FEE3E93463A9ADEEC7E86EC7 /* Pods-Uptempo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uptempo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Uptempo/Pods-Uptempo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B4AE3EB2ECADD2F2A68BBA /* Pods_Tapper.framework in Frameworks */,
+				05B4AE3EB2ECADD2F2A68BBA /* Pods_Uptempo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDA0185C2F07BD4F4AD3DF01 /* Pods_TapperTests.framework in Frameworks */,
+				CDA0185C2F07BD4F4AD3DF01 /* Pods_UptempoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,10 +110,10 @@
 		95C0D3BC99F98FC534AA1A5F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FEE3E93463A9ADEEC7E86EC7 /* Pods-Tapper.debug.xcconfig */,
-				919E59519FCE594F19203C14 /* Pods-Tapper.release.xcconfig */,
-				5E8E6B947C14963731CA3EF6 /* Pods-TapperTests.debug.xcconfig */,
-				D8D5E57818EA1622F67AECF4 /* Pods-TapperTests.release.xcconfig */,
+				FEE3E93463A9ADEEC7E86EC7 /* Pods-Uptempo.debug.xcconfig */,
+				919E59519FCE594F19203C14 /* Pods-Uptempo.release.xcconfig */,
+				5E8E6B947C14963731CA3EF6 /* Pods-UptempoTests.debug.xcconfig */,
+				D8D5E57818EA1622F67AECF4 /* Pods-UptempoTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -114,8 +121,8 @@
 		9CF3FF541F9A518BA96B52D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				950CE219F56FCC7E1A33D32D /* Pods_Tapper.framework */,
-				18E2008A163E56C883286B48 /* Pods_TapperTests.framework */,
+				950CE219F56FCC7E1A33D32D /* Pods_Uptempo.framework */,
+				18E2008A163E56C883286B48 /* Pods_UptempoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,8 +130,8 @@
 		C314F7041FEE377800AC2B1B = {
 			isa = PBXGroup;
 			children = (
-				C314F70F1FEE377800AC2B1B /* Tapper */,
-				C314F7271FEE377800AC2B1B /* TapperTests */,
+				C314F70F1FEE377800AC2B1B /* Uptempo */,
+				C314F7271FEE377800AC2B1B /* UptempoTests */,
 				C314F70E1FEE377800AC2B1B /* Products */,
 				95C0D3BC99F98FC534AA1A5F /* Pods */,
 				9CF3FF541F9A518BA96B52D9 /* Frameworks */,
@@ -134,35 +141,37 @@
 		C314F70E1FEE377800AC2B1B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C314F70D1FEE377800AC2B1B /* Tapper.app */,
-				C314F7241FEE377800AC2B1B /* TapperTests.xctest */,
+				C314F70D1FEE377800AC2B1B /* Uptempo.app */,
+				C314F7241FEE377800AC2B1B /* UptempoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C314F70F1FEE377800AC2B1B /* Tapper */ = {
+		C314F70F1FEE377800AC2B1B /* Uptempo */ = {
 			isa = PBXGroup;
 			children = (
-				C37535A31FEEAE0000D8B4F3 /* Assets.xcassets */,
+				C3FC5F631FFCC51200083BF3 /* Controls */,
 				C3A29E691FF33EFC00013C71 /* Helpers */,
 				C3AC0D6F1FEF9BBE00BDD8ED /* Managers */,
 				C3E360A41FEE8C7D00896586 /* ViewControllers */,
 				C314F7101FEE377800AC2B1B /* AppDelegate.swift */,
-				C36F835A1FFA304700F64FE1 /* Main.storyboard */,
+				C35B87FD1FFCC26D003EB6C6 /* Main.storyboard */,
 				C314F71C1FEE377800AC2B1B /* LaunchScreen.storyboard */,
 				C314F71F1FEE377800AC2B1B /* Info.plist */,
-				C314F7171FEE377800AC2B1B /* Tapper.xcdatamodeld */,
+				C314F7171FEE377800AC2B1B /* Uptempo.xcdatamodeld */,
+				C3554A9B1FFCCA86000B879E /* Localizable.strings */,
+				C3554A9D1FFCF903000B879E /* Assets.xcassets */,
 			);
-			path = Tapper;
+			path = Uptempo;
 			sourceTree = "<group>";
 		};
-		C314F7271FEE377800AC2B1B /* TapperTests */ = {
+		C314F7271FEE377800AC2B1B /* UptempoTests */ = {
 			isa = PBXGroup;
 			children = (
 				C314F7281FEE377800AC2B1B /* AccountManagerClientTests.swift */,
 				C314F72A1FEE377800AC2B1B /* Info.plist */,
 			);
-			path = TapperTests;
+			path = UptempoTests;
 			sourceTree = "<group>";
 		};
 		C3A29E691FF33EFC00013C71 /* Helpers */ = {
@@ -211,12 +220,20 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		C3FC5F631FFCC51200083BF3 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				C3FC5F641FFCC52400083BF3 /* UnderlineTextField.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C314F70C1FEE377800AC2B1B /* Tapper */ = {
+		C314F70C1FEE377800AC2B1B /* Uptempo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C314F72D1FEE377800AC2B1B /* Build configuration list for PBXNativeTarget "Tapper" */;
+			buildConfigurationList = C314F72D1FEE377800AC2B1B /* Build configuration list for PBXNativeTarget "Uptempo" */;
 			buildPhases = (
 				A084F1A0DF441B1F9600C26C /* [CP] Check Pods Manifest.lock */,
 				C314F7091FEE377800AC2B1B /* Sources */,
@@ -229,14 +246,14 @@
 			);
 			dependencies = (
 			);
-			name = Tapper;
-			productName = Tapper;
-			productReference = C314F70D1FEE377800AC2B1B /* Tapper.app */;
+			name = Uptempo;
+			productName = Uptempo;
+			productReference = C314F70D1FEE377800AC2B1B /* Uptempo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C314F7231FEE377800AC2B1B /* TapperTests */ = {
+		C314F7231FEE377800AC2B1B /* UptempoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C314F7301FEE377800AC2B1B /* Build configuration list for PBXNativeTarget "TapperTests" */;
+			buildConfigurationList = C314F7301FEE377800AC2B1B /* Build configuration list for PBXNativeTarget "UptempoTests" */;
 			buildPhases = (
 				1FD51C7D0E7684202395CB63 /* [CP] Check Pods Manifest.lock */,
 				C314F7201FEE377800AC2B1B /* Sources */,
@@ -250,9 +267,9 @@
 			dependencies = (
 				C314F7261FEE377800AC2B1B /* PBXTargetDependency */,
 			);
-			name = TapperTests;
-			productName = TapperTests;
-			productReference = C314F7241FEE377800AC2B1B /* TapperTests.xctest */;
+			name = UptempoTests;
+			productName = UptempoTests;
+			productReference = C314F7241FEE377800AC2B1B /* UptempoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -276,7 +293,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C314F7081FEE377800AC2B1B /* Build configuration list for PBXProject "tapper" */;
+			buildConfigurationList = C314F7081FEE377800AC2B1B /* Build configuration list for PBXProject "uptempo" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -289,8 +306,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C314F70C1FEE377800AC2B1B /* Tapper */,
-				C314F7231FEE377800AC2B1B /* TapperTests */,
+				C314F70C1FEE377800AC2B1B /* Uptempo */,
+				C314F7231FEE377800AC2B1B /* UptempoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -300,9 +317,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C36F835C1FFA304700F64FE1 /* Main.storyboard in Resources */,
 				C314F71E1FEE377800AC2B1B /* LaunchScreen.storyboard in Resources */,
-				C37535A41FEEAE0000D8B4F3 /* Assets.xcassets in Resources */,
+				C3554A991FFCCA86000B879E /* Localizable.strings in Resources */,
+				C3554A9E1FFCF903000B879E /* Assets.xcassets in Resources */,
+				C35B87FF1FFCC26D003EB6C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +340,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Tapper/Pods-Tapper-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Uptempo/Pods-Uptempo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Fusuma/Fusuma.framework",
 			);
@@ -333,7 +351,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tapper/Pods-Tapper-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Uptempo/Pods-Uptempo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1FD51C7D0E7684202395CB63 /* [CP] Check Pods Manifest.lock */ = {
@@ -347,7 +365,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TapperTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-UptempoTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -366,7 +384,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TapperTests/Pods-TapperTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UptempoTests/Pods-UptempoTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A084F1A0DF441B1F9600C26C /* [CP] Check Pods Manifest.lock */ = {
@@ -380,7 +398,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Tapper-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Uptempo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -399,7 +417,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TapperTests/Pods-TapperTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UptempoTests/Pods-UptempoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EEF88AA55B29076A526E7F26 /* [CP] Copy Pods Resources */ = {
@@ -414,7 +432,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tapper/Pods-Tapper-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Uptempo/Pods-Uptempo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -430,6 +448,7 @@
 				C36F835E1FFA33D300F64FE1 /* BackendServiceLocator.swift in Sources */,
 				C3095A571FF88D5C00A56760 /* ColorCollection.swift in Sources */,
 				C36767181FF3E46200F003CB /* MainViewController.swift in Sources */,
+				C3FC5F651FFCC52400083BF3 /* UnderlineTextField.swift in Sources */,
 				C37EBA2B1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift in Sources */,
 				C3048F901FF624900012A4AF /* MainMenuBarDataSource.swift in Sources */,
 				C3C802D21FF5083E00165B3C /* MainSessionCell.swift in Sources */,
@@ -440,7 +459,7 @@
 				C3A29E6D1FF36B4A00013C71 /* AccountManagerClient.swift in Sources */,
 				C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */,
 				C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */,
-				C314F7191FEE377800AC2B1B /* Tapper.xcdatamodeld in Sources */,
+				C314F7191FEE377800AC2B1B /* Uptempo.xcdatamodeld in Sources */,
 				C3C32DBB1FFA7B1100DEA5D8 /* ImageHelper.swift in Sources */,
 				C3BD324E1FFC985000E770F0 /* CredentialManager.swift in Sources */,
 			);
@@ -459,7 +478,7 @@
 /* Begin PBXTargetDependency section */
 		C314F7261FEE377800AC2B1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C314F70C1FEE377800AC2B1B /* Tapper */;
+			target = C314F70C1FEE377800AC2B1B /* Uptempo */;
 			targetProxy = C314F7251FEE377800AC2B1B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -469,14 +488,25 @@
 			isa = PBXVariantGroup;
 			children = (
 				C314F71D1FEE377800AC2B1B /* Base */,
+				C3554A961FFCCA23000B879E /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		C36F835A1FFA304700F64FE1 /* Main.storyboard */ = {
+		C3554A9B1FFCCA86000B879E /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C36F835B1FFA304700F64FE1 /* Base */,
+				C3554A9A1FFCCA86000B879E /* zh-Hans */,
+				C3554A9C1FFCCA88000B879E /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		C35B87FD1FFCC26D003EB6C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C35B87FE1FFCC26D003EB6C6 /* Base */,
+				C3554A951FFCCA23000B879E /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -488,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -545,6 +576,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -593,12 +625,12 @@
 		};
 		C314F72E1FEE377800AC2B1B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEE3E93463A9ADEEC7E86EC7 /* Pods-Tapper.debug.xcconfig */;
+			baseConfigurationReference = FEE3E93463A9ADEEC7E86EC7 /* Pods-Uptempo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NT8NN84PG3;
-				INFOPLIST_FILE = Tapper/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Uptempo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = m3dh.chatapp.uptempo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -609,12 +641,12 @@
 		};
 		C314F72F1FEE377800AC2B1B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 919E59519FCE594F19203C14 /* Pods-Tapper.release.xcconfig */;
+			baseConfigurationReference = 919E59519FCE594F19203C14 /* Pods-Uptempo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NT8NN84PG3;
-				INFOPLIST_FILE = Tapper/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Uptempo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = m3dh.chatapp.uptempo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -625,44 +657,44 @@
 		};
 		C314F7311FEE377800AC2B1B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E8E6B947C14963731CA3EF6 /* Pods-TapperTests.debug.xcconfig */;
+			baseConfigurationReference = 5E8E6B947C14963731CA3EF6 /* Pods-UptempoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NT8NN84PG3;
-				INFOPLIST_FILE = TapperTests/Info.plist;
+				INFOPLIST_FILE = UptempoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = m3dh.TapperTests;
+				PRODUCT_BUNDLE_IDENTIFIER = m3dh.UptempoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tapper.app/Tapper";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Uptempo.app/Uptempo";
 			};
 			name = Debug;
 		};
 		C314F7321FEE377800AC2B1B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8D5E57818EA1622F67AECF4 /* Pods-TapperTests.release.xcconfig */;
+			baseConfigurationReference = D8D5E57818EA1622F67AECF4 /* Pods-UptempoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NT8NN84PG3;
-				INFOPLIST_FILE = TapperTests/Info.plist;
+				INFOPLIST_FILE = UptempoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = m3dh.TapperTests;
+				PRODUCT_BUNDLE_IDENTIFIER = m3dh.UptempoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tapper.app/Tapper";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Uptempo.app/Uptempo";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C314F7081FEE377800AC2B1B /* Build configuration list for PBXProject "tapper" */ = {
+		C314F7081FEE377800AC2B1B /* Build configuration list for PBXProject "uptempo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C314F72B1FEE377800AC2B1B /* Debug */,
@@ -671,7 +703,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C314F72D1FEE377800AC2B1B /* Build configuration list for PBXNativeTarget "Tapper" */ = {
+		C314F72D1FEE377800AC2B1B /* Build configuration list for PBXNativeTarget "Uptempo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C314F72E1FEE377800AC2B1B /* Debug */,
@@ -680,7 +712,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C314F7301FEE377800AC2B1B /* Build configuration list for PBXNativeTarget "TapperTests" */ = {
+		C314F7301FEE377800AC2B1B /* Build configuration list for PBXNativeTarget "UptempoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C314F7311FEE377800AC2B1B /* Debug */,
@@ -692,13 +724,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C314F7171FEE377800AC2B1B /* Tapper.xcdatamodeld */ = {
+		C314F7171FEE377800AC2B1B /* Uptempo.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C314F7181FEE377800AC2B1B /* Tapper.xcdatamodel */,
+				C314F7181FEE377800AC2B1B /* Uptempo.xcdatamodel */,
 			);
-			currentVersion = C314F7181FEE377800AC2B1B /* Tapper.xcdatamodel */;
-			path = Tapper.xcdatamodeld;
+			currentVersion = C314F7181FEE377800AC2B1B /* Uptempo.xcdatamodel */;
+			path = Uptempo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

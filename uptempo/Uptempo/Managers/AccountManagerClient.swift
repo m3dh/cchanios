@@ -2,8 +2,10 @@ import Foundation
 import Alamofire
 
 class AccountResponse {
-    init(_ dict: NSDictionary) {
+    var name: String?
+    var displayName: String?
 
+    init(_ dict: NSDictionary) {
     }
 }
 

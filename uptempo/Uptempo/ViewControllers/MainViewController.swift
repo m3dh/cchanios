@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
         }
 
         // ui views initialization
-        self.subNavBarView.backgroundColor = ColorCollection.NavigationBarTintColor
+        self.subNavBarView.backgroundColor = ColorCollection.NavigationBarBackgroundColor
         self.subNavBarBottonShadowView.backgroundColor = UIColor.darkGray
         self.subNavBarBottonShadowView.alpha = 0.5
   

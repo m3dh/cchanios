@@ -1,14 +1,12 @@
 platform :ios, '9.0'
 
-target 'Tapper' do
+target 'Uptempo' do
   use_frameworks!
 
-  # Pods for Tapper
   pod 'Fusuma', :git => 'https://github.com/m3dh/Fusuma.git'
   pod 'Alamofire', '~> 4.5'
-  target 'TapperTests' do
+  target 'UptempoTests' do
     inherit! :search_paths
-    # Pods for testing
   end
 
 end
