@@ -17,8 +17,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: State transitions
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         self.navigationItem.setHidesBackButton(true, animated: false)
+        super.viewWillAppear(animated)
     }
 
     override func viewDidDisappear(_ animated: Bool) {

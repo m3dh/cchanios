@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if true /* no token found or auth failed */ {
+        if false /* no token found or auth failed */ {
             self.performSegue(withIdentifier: "mainNeedSignIn", sender: nil)
         }
 

@@ -14,6 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "AvenirNext-DemiBold", size: 18)!]
 
         application.statusBarStyle = .lightContent
+        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else {
+            fatalError("Status bar cannot be accessed")
+        }
+
+        statusBar.backgroundColor = ColorCollection.NavigationBarBackgroundColor
         return true
     }
 

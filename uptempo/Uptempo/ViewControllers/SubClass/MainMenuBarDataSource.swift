@@ -43,11 +43,11 @@ class MainMenuBarDataSource: NSObject, UICollectionViewDataSource, UICollectionV
         if let menuBarCell = cell as? MainMenuBarCell {
             switch indexPath.row {
             case 0:
-                menuBarCell.contentLabel.text = "Recent"
+                menuBarCell.contentLabel.text = NSLocalizedString("MainTabName_Recent", comment: "Recent tab")
             case 1:
-                menuBarCell.contentLabel.text = "Channel"
+                menuBarCell.contentLabel.text = NSLocalizedString("MainTabName_Channel", comment: "Channel tab")
             case 2:
-                menuBarCell.contentLabel.text = "Direct"
+                menuBarCell.contentLabel.text = NSLocalizedString("MainTabName_Direct", comment: "Direct msg tab")
             default:
                 fatalError("Not yet implemented for row \(indexPath.row)")
             }

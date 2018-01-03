@@ -137,7 +137,7 @@ class MainSessionCell: UITableViewCell {
         dateFormatter.timeZone = TimeZone.current
         let components: DateComponents = calender.dateComponents([.year, .day, .second], from: time, to: Date())
         if components.second! < 30 {
-            return "Now"
+            return NSLocalizedString("MessageTs_Now", comment: "Timestamp for now")
         } else if components.day! < 1 {
             dateFormatter.dateFormat = "HH:mm"
         } else if components.year! < 1 {

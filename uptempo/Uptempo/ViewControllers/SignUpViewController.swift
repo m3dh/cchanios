@@ -5,9 +5,9 @@ import os.log
 class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegate {
     static let ViewTagAvatarPicker = 0
     static let ViewTagSuperView = 1
+    static let ViewTagDisplayName = 2
 
-    @IBOutlet weak var cancelButton: UIButton!
-    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var signUpButton: ColorfulButton!
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var displayNameTextField: UITextField!
@@ -24,6 +24,11 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
     var allTextfields: [UITextField]! = nil
 
     // MARK: State transitions
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isTranslucent = false
+        super.viewWillAppear(animated)
+    }
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
@@ -46,6 +51,7 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
 
         // misc.
         self.errorMessageLabel.textColor = UIColor.red
+        self.signUpButton.isPrimary = true
 
         // load image for the default avatar
         if let defaultAvatar = UIImage(named: "Avatar - Default") {
@@ -72,6 +78,7 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
 
         // setup all text fields
         self.usernameTextField.delegate = self
+        self.displayNameTextField.tag = SignUpViewController.ViewTagDisplayName
         self.displayNameTextField.delegate = self
         self.passwordTextField.delegate = self
         self.verifyPasswordTextField.delegate = self
@@ -111,7 +118,7 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
             message: "Signing up...")
     }
 
-    @IBAction func cancelTouchUpInsideAction(_ sender: UIButton) {
+    @IBAction func cancelBarTouchInside(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
 

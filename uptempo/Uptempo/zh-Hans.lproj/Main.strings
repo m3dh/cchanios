@@ -1,30 +1,26 @@
-
-/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "2n0-3U-ZOf"; */
-"2n0-3U-ZOf.normalTitle" = "Cancel";
+/* Class = "UINavigationItem"; title = "Sign Up"; ObjectID = "iZk-d5-OmD"; */
+"iZk-d5-OmD.title" = "注册账号";
 
 /* Class = "UITextField"; placeholder = "Display Name"; ObjectID = "5TH-mz-aDF"; */
-"5TH-mz-aDF.placeholder" = "Display Name";
+"5TH-mz-aDF.placeholder" = "昵称";
 
 /* Class = "UIViewController"; title = "Sign In"; ObjectID = "BYZ-38-t0r"; */
-"BYZ-38-t0r.title" = "Sign In";
+"BYZ-38-t0r.title" = "登录";
 
 /* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "CXt-dK-GYX"; */
-"CXt-dK-GYX.normalTitle" = "注册一个新账号";
+"CXt-dK-GYX.normalTitle" = "注册";
 
 /* Class = "UILabel"; text = "Uptempo (ver 0.1)"; ObjectID = "DZn-1v-djd"; */
 "DZn-1v-djd.text" = "Uptempo (ver 0.1)";
 
 /* Class = "UITextField"; placeholder = "Username"; ObjectID = "Gnk-nm-Pck"; */
-"Gnk-nm-Pck.placeholder" = "Username";
+"Gnk-nm-Pck.placeholder" = "账号名";
 
 /* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "J7a-AD-shO"; */
 "J7a-AD-shO.normalTitle" = "注册一个新账号";
 
-/* Class = "UILabel"; text = "I don't have an account yet."; ObjectID = "QAU-kk-bzk"; */
-"QAU-kk-bzk.text" = "I don't have an account yet.";
-
 /* Class = "UITextField"; placeholder = "Username"; ObjectID = "Xzf-AA-4Fw"; */
-"Xzf-AA-4Fw.placeholder" = "Username";
+"Xzf-AA-4Fw.placeholder" = "账户名";
 
 /* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "c1P-Ch-JBW"; */
 "c1P-Ch-JBW.normalTitle" = "登录";
@@ -32,17 +28,15 @@
 /* Class = "UILabel"; text = "Please sign in with your user name and password."; ObjectID = "h3r-aP-lOW"; */
 "h3r-aP-lOW.text" = "请使用你的注册用户名和密码来登录.";
 
-/* Class = "UILabel"; text = "Create a new Account"; ObjectID = "hqw-hG-aQm"; */
-"hqw-hG-aQm.text" = "Create a new Account";
-
 /* Class = "UITextField"; placeholder = "Verify Password"; ObjectID = "mpM-p8-s3h"; */
-"mpM-p8-s3h.placeholder" = "Verify Password";
+"mpM-p8-s3h.placeholder" = "确认密码";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "pGG-v8-oA1"; */
-"pGG-v8-oA1.placeholder" = "Password";
+"pGG-v8-oA1.placeholder" = "登录密码（6-20 位）";
 
 /* Class = "UINavigationItem"; title = "Uptempo"; ObjectID = "w8Q-E8-mKJ"; */
 "w8Q-E8-mKJ.title" = "Uptempo";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "zZT-lx-E6y"; */
-"zZT-lx-E6y.placeholder" = "Password";
+"zZT-lx-E6y.placeholder" = "登录密码";
+
