@@ -1,6 +1,12 @@
 import Foundation
 import Alamofire
 
+class AccountResponse {
+    init(_ dict: NSDictionary) {
+
+    }
+}
+
 class AccountManagerClient {
     let url: URL
 
@@ -8,46 +14,37 @@ class AccountManagerClient {
         self.url = URL(string: baseUrl)!
     }
 
-    func retrieveAccountAvatar(uuid: String, completion: @escaping (Data) -> Void, failure: @escaping (String) -> Void) {
+    func createUserAccount(accountName: String, displayName: String, completion: @escaping (AccountResponse) -> Void, handler: WebErrorHandler) {
+        let accountPostUrl = URL(string: "/accounts", relativeTo: self.url)!
+        let params: Parameters = [:]
+
+        Alamofire
+            .request(accountPostUrl, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil)
+            .responseJSON { response -> Void in
+                WebHelper.handleAlamofireResponse(handler: handler, response: response, complete: { (resp: NSDictionary) -> () in
+                    completion(AccountResponse(resp)) })
+        }
+    }
+
+    func retrieveAccountAvatar(uuid: String, completion: @escaping (Data) -> Void, handler: WebErrorHandler) {
         let avatarGetUrl = URL(string: "/images/avatars/\(uuid)", relativeTo: self.url)!
         Alamofire
             .request(avatarGetUrl)
-            .responseData { response -> Void in
-                let (fail, msg) = WebHelper.tryGetWebErrorMessageFrom(response: response)
-                guard !fail else {
-                    failure(msg)
-                    return
-                }
-
-                if let result = response.result.value {
-                    completion(result)
-                } else {
-                    failure("Unexpected response from server")
-                }
-            }
+            .responseData { response -> Void in WebHelper.handleAlamofireResponse(handler: handler, response: response, complete: completion) }
     }
 
-    func createAccountAvatar(image: Data, completion: @escaping (String) -> Void,  failure: @escaping (String) -> Void) {
+    func createAccountAvatar(image: Data, completion: @escaping (String) -> Void,  handler: WebErrorHandler) {
         let avatarPostUrl = URL(string: "/images/avatars", relativeTo: self.url)!
         Alamofire
             .upload(image, to: avatarPostUrl, method: .post)
             .responseJSON { response -> Void in
-                let (fail, msg) = WebHelper.tryGetWebErrorMessageFrom(response: response)
-                guard !fail else {
-                    failure(msg)
-                    return
-                }
-
-                if let result = response.result.value {
-                    let resultDict = result as! [String:String]
-                    if let uuid = resultDict["UUID"] {
+                WebHelper.handleAlamofireResponse(handler: handler, response: response, complete: { (resp: NSDictionary) -> () in
+                    if let uuid = resp["UUID"] as? String {
                         completion(uuid)
                     } else {
-                        failure("Unexpected response from server : ID not found.")
+                        handler.generalError(message: "Unexpected response from server : avatar not created.")
                     }
-                } else {
-                    failure("Unexpected response from server")
-                }
+                })
         }
     }
 }

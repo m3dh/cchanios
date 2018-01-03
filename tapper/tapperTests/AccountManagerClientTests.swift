@@ -2,10 +2,6 @@ import XCTest
 @testable import Tapper
 
 class AccountManagerClientTests: XCTestCase {
-    func go(closure: ()->()) {
-        closure()
-    }
-
     func testUploadAndDownloadAvatarImage_ShallSuccess() {
         let e = expectation(description: "ImageHelper")
         let image = UIImage(named: "Avatar - Default")!
@@ -16,7 +12,7 @@ class AccountManagerClientTests: XCTestCase {
             resultUuid = uuid
             print(resultUuid)
             e.fulfill()
-        }, failure: {(msg)->Void in fatalError(msg)})
+        }, handler: WebErrorHandler())
 
         waitForExpectations(timeout: 5.0, handler: nil)
         XCTAssertEqual(resultUuid.count, 36)
@@ -26,7 +22,7 @@ class AccountManagerClientTests: XCTestCase {
         client.retrieveAccountAvatar(uuid: resultUuid, completion: {(d) -> () in
             resultData = d
             e1.fulfill()
-        }, failure: {(msg)->Void in fatalError(msg)})
+        }, handler: WebErrorHandler())
 
         waitForExpectations(timeout: 5.0, handler: nil)
         XCTAssertNotNil(resultData)

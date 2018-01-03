@@ -27,6 +27,7 @@
 		C3A29E6D1FF36B4A00013C71 /* AccountManagerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A29E6C1FF36B4A00013C71 /* AccountManagerClient.swift */; };
 		C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */; };
 		C3AC0D761FF222A000BDD8ED /* UIControlHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */; };
+		C3BD324E1FFC985000E770F0 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BD324D1FFC985000E770F0 /* CredentialManager.swift */; };
 		C3C32DBB1FFA7B1100DEA5D8 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */; };
 		C3C802D21FF5083E00165B3C /* MainSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C802D11FF5083E00165B3C /* MainSessionCell.swift */; };
 		C3E58C501FFBA72E0022E181 /* WebHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */; };
@@ -71,6 +72,7 @@
 		C3A29E6C1FF36B4A00013C71 /* AccountManagerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountManagerClient.swift; path = tapper/Managers/AccountManagerClient.swift; sourceTree = SOURCE_ROOT; };
 		C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeProtector.swift; sourceTree = "<group>"; };
 		C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIControlHelper.swift; path = Tapper/Helpers/UIControlHelper.swift; sourceTree = SOURCE_ROOT; };
+		C3BD324D1FFC985000E770F0 /* CredentialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CredentialManager.swift; path = tapper/Managers/CredentialManager.swift; sourceTree = SOURCE_ROOT; };
 		C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageHelper.swift; path = tapper/Helpers/ImageHelper.swift; sourceTree = SOURCE_ROOT; };
 		C3C802D11FF5083E00165B3C /* MainSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainSessionCell.swift; path = Tapper/ViewControllers/SubClass/MainSessionCell.swift; sourceTree = SOURCE_ROOT; };
 		C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebHelper.swift; sourceTree = "<group>"; };
@@ -178,9 +180,10 @@
 		C3AC0D6F1FEF9BBE00BDD8ED /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */,
 				C3A29E6C1FF36B4A00013C71 /* AccountManagerClient.swift */,
 				C36F835D1FFA33D300F64FE1 /* BackendServiceLocator.swift */,
+				C3BD324D1FFC985000E770F0 /* CredentialManager.swift */,
+				C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */,
 				C314F7191FEE377800AC2B1B /* Tapper.xcdatamodeld in Sources */,
 				C3C32DBB1FFA7B1100DEA5D8 /* ImageHelper.swift in Sources */,
+				C3BD324E1FFC985000E770F0 /* CredentialManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
