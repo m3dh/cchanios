@@ -9,7 +9,7 @@
 "BYZ-38-t0r.title" = "Sign In";
 
 /* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "CXt-dK-GYX"; */
-"CXt-dK-GYX.normalTitle" = "Sign Up";
+"CXt-dK-GYX.normalTitle" = "注册一个新账号";
 
 /* Class = "UILabel"; text = "Uptempo (ver 0.1)"; ObjectID = "DZn-1v-djd"; */
 "DZn-1v-djd.text" = "Uptempo (ver 0.1)";
@@ -18,7 +18,7 @@
 "Gnk-nm-Pck.placeholder" = "Username";
 
 /* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "J7a-AD-shO"; */
-"J7a-AD-shO.normalTitle" = "Sign Up";
+"J7a-AD-shO.normalTitle" = "注册一个新账号";
 
 /* Class = "UILabel"; text = "I don't have an account yet."; ObjectID = "QAU-kk-bzk"; */
 "QAU-kk-bzk.text" = "I don't have an account yet.";
@@ -27,10 +27,10 @@
 "Xzf-AA-4Fw.placeholder" = "Username";
 
 /* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "c1P-Ch-JBW"; */
-"c1P-Ch-JBW.normalTitle" = "Sign In";
+"c1P-Ch-JBW.normalTitle" = "登录";
 
 /* Class = "UILabel"; text = "Please sign in with your user name and password."; ObjectID = "h3r-aP-lOW"; */
-"h3r-aP-lOW.text" = "Please sign in with your user name and password.";
+"h3r-aP-lOW.text" = "请使用你的注册用户名和密码来登录.";
 
 /* Class = "UILabel"; text = "Create a new Account"; ObjectID = "hqw-hG-aQm"; */
 "hqw-hG-aQm.text" = "Create a new Account";

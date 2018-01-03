@@ -22,6 +22,7 @@
 		C36767181FF3E46200F003CB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36767171FF3E46200F003CB /* MainViewController.swift */; };
 		C36F835E1FFA33D300F64FE1 /* BackendServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36F835D1FFA33D300F64FE1 /* BackendServiceLocator.swift */; };
 		C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */; };
+		C375FFF61FFD02D900D8B331 /* ColorfulButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375FFF51FFD02D900D8B331 /* ColorfulButton.swift */; };
 		C37EBA2B1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37EBA2A1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift */; };
 		C3A29E681FF2469900013C71 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A29E671FF2469900013C71 /* SignInViewController.swift */; };
 		C3A29E6B1FF33F1A00013C71 /* OperationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A29E6A1FF33F1A00013C71 /* OperationHelper.swift */; };
@@ -72,6 +73,7 @@
 		C36767171FF3E46200F003CB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Uptempo/ViewControllers/MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		C36F835D1FFA33D300F64FE1 /* BackendServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackendServiceLocator.swift; path = Uptempo/Managers/BackendServiceLocator.swift; sourceTree = SOURCE_ROOT; };
 		C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Uptempo/ViewControllers/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
+		C375FFF51FFD02D900D8B331 /* ColorfulButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulButton.swift; sourceTree = "<group>"; };
 		C37EBA2A1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCollectionDataSource.swift; sourceTree = "<group>"; };
 		C3A29E671FF2469900013C71 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = Uptempo/ViewControllers/SignInViewController.swift; sourceTree = SOURCE_ROOT; };
 		C3A29E6A1FF33F1A00013C71 /* OperationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OperationHelper.swift; path = Uptempo/Helpers/OperationHelper.swift; sourceTree = SOURCE_ROOT; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				C3FC5F641FFCC52400083BF3 /* UnderlineTextField.swift */,
+				C375FFF51FFD02D900D8B331 /* ColorfulButton.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				C3095A551FF68E4600A56760 /* MainSessionDataSource.swift in Sources */,
 				C3A29E6B1FF33F1A00013C71 /* OperationHelper.swift in Sources */,
 				C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */,
+				C375FFF61FFD02D900D8B331 /* ColorfulButton.swift in Sources */,
 				C36F835E1FFA33D300F64FE1 /* BackendServiceLocator.swift in Sources */,
 				C3095A571FF88D5C00A56760 /* ColorCollection.swift in Sources */,
 				C36767181FF3E46200F003CB /* MainViewController.swift in Sources */,

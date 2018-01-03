@@ -7,4 +7,6 @@ class ColorCollection {
     static let NavigationItemTintColor = UIColor.white
 
     static let DisabledButtonBackgroundColor = UIColor.lightGray
+    static let EnabledPrimaryButtonBackgroundColor = UIColor(red: 101/255.0, green: 197/255.0, blue: 104/255.0, alpha: 1)
+    static let EnabledSecondaryButtonBackgroundColor = UIColor(red: 103/255.0, green: 111/255.0, blue: 135/255.0, alpha: 1)
 }

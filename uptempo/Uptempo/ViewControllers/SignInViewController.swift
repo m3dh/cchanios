@@ -4,7 +4,7 @@ import os.log
 class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signInButton: ColorfulButton!
 
     @IBOutlet weak var errorMessageLabel: UILabel!
     @IBOutlet weak var errorMessageLabelHeightConst: NSLayoutConstraint!
@@ -51,6 +51,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         self.passwordTextField.delegate = self
 
         // disable sign in button by default
+        self.signInButton.isPrimary = true
         self.signInButton.isEnabled = false
     }
 
