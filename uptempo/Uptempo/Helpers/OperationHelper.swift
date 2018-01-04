@@ -1,7 +1,7 @@
 import UIKit
 
 class OperationHelper {
-    static func startAsyncJobAndBlockCurrentWindow(window: UIViewController, task: @escaping ()->Void, message: String) {
+    static func startAsyncJobAndBlockCurrentWindow(window: UIViewController, task: @escaping ()->Bool, message: String, completion: @escaping ()->Void) {
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         alertController.view.tintColor = UIColor.black
 
@@ -12,14 +12,15 @@ class OperationHelper {
         alertController.view.addSubview(activityIndicator)
         window.present(alertController, animated: true, completion: nil)
 
-        print("Presented popup indicator")
-
         DispatchQueue.main.async(execute: {
-            task() // execute the real task
-
+            let suc = task() // execute the real task
             activityIndicator.stopAnimating()
             activityIndicator.removeFromSuperview()
-            alertController.dismiss(animated: true, completion: nil)
+            alertController.dismiss(animated: true, completion: {()->Void in
+                if suc {
+                    completion()
+                }
+            })
         })
     }
 }

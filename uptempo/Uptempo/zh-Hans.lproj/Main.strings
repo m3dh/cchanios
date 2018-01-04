@@ -5,7 +5,7 @@
 "5TH-mz-aDF.placeholder" = "昵称";
 
 /* Class = "UIViewController"; title = "Sign In"; ObjectID = "BYZ-38-t0r"; */
-"BYZ-38-t0r.title" = "登录";
+"5Ke-eo-rji.title" = "登录";
 
 /* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "CXt-dK-GYX"; */
 "CXt-dK-GYX.normalTitle" = "注册";
@@ -23,16 +23,16 @@
 "Xzf-AA-4Fw.placeholder" = "账户名";
 
 /* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "c1P-Ch-JBW"; */
-"c1P-Ch-JBW.normalTitle" = "登录";
+"c1P-Ch-JBW.normalTitle" = "确认";
 
 /* Class = "UILabel"; text = "Please sign in with your user name and password."; ObjectID = "h3r-aP-lOW"; */
-"h3r-aP-lOW.text" = "请使用你的注册用户名和密码来登录.";
+"h3r-aP-lOW.text" = "请使用您的注册用户名和密码来登录.";
 
 /* Class = "UITextField"; placeholder = "Verify Password"; ObjectID = "mpM-p8-s3h"; */
 "mpM-p8-s3h.placeholder" = "确认密码";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "pGG-v8-oA1"; */
-"pGG-v8-oA1.placeholder" = "登录密码（6-20 位）";
+"pGG-v8-oA1.placeholder" = "登录密码（6~20 位）";
 
 /* Class = "UINavigationItem"; title = "Uptempo"; ObjectID = "w8Q-E8-mKJ"; */
 "w8Q-E8-mKJ.title" = "Uptempo";

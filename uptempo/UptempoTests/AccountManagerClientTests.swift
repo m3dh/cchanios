@@ -1,5 +1,5 @@
 import XCTest
-@testable import Tapper
+@testable import Uptempo
 
 class AccountManagerClientTests: XCTestCase {
     func testUploadAndDownloadAvatarImage_ShallSuccess() {
@@ -30,6 +30,16 @@ class AccountManagerClientTests: XCTestCase {
 
         let retImage = UIImage(data: resultData)!
         XCTAssertEqual(retImage.size.width * retImage.scale, image.size.width * image.scale)
+    }
+
+    func testCreateAccountAndSetPassword_ShallSuccess() {
+        let e1 = expectation(description: "CreateAccount")
+        let client = BackendServiceLocator.instance.getAccountManagerClient()
+        client.createUserAccount(accountName: "xctestaccount", displayName: "XCode 测试账号", completion: { (response)->Void in
+            e1.fulfill()
+        }, handler: WebErrorHandler())
+
+        waitForExpectations(timeout: 5.0, handler: nil)
     }
     
     func testResizeAvatarImage_ShalSuccess() {

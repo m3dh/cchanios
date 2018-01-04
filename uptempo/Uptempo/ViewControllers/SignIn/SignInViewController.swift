@@ -64,7 +64,14 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func signInTouchUpInsideAction(_ sender: UIButton) {
-        self.tryEnableSignInButton()
+        self.resignAllTextFieldFirstResponder()
+        OperationHelper.startAsyncJobAndBlockCurrentWindow(
+            window: self,
+            task: { () -> Bool in
+                // TODO: shall use a real result
+                return true
+        },
+            message: "Signing in...", completion: { ()->() in self.performSegue(withIdentifier: "unwindToMainView", sender: nil)})
     }
 
     // MARK: Protocol UITextFieldDelegate
@@ -109,8 +116,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
     }
 
-    @IBAction func unwindToSignInViewNormally(sender: UIStoryboardSegue) {
-        if let source = sender.source as? SignUpViewController {
+    func unwindFromSignUpViewController(sourceViewController: SignUpViewController?) {
+        if let source = sourceViewController {
             UIControlHelper.safelySetUILabelText(
                 label: self.errorMessageLabel,
                 labelHeight: self.errorMessageLabelHeightConst,
@@ -120,7 +127,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             if let avatarImage = source.avatarImageView.image {
                 if self.avatarImageView == nil {
                     self.avatarImageView = UIImageView(image: avatarImage)
-                    self.inputStackView.insertArrangedSubview(self.avatarImageView!, at: 1)
+                    self.inputStackView.insertArrangedSubview(self.avatarImageView!, at: 2)
                     self.avatarImageView!.widthAnchor.constraint(equalToConstant: 100.0).isActive = true
                     self.avatarImageView!.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
                     self.avatarImageView!.layer.cornerRadius = 50.0

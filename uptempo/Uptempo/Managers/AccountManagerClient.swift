@@ -4,8 +4,15 @@ import Alamofire
 class AccountResponse {
     var name: String?
     var displayName: String?
+    var avatar: String?
+    var createdAt: Date?
 
     init(_ dict: NSDictionary) {
+        self.name = dict["Name"] as? String
+        self.displayName = dict["DisplayName"] as? String
+        self.avatar = dict["Avatar"] as? String
+        let item = dict["CreatedAt"]
+        print(item!)
     }
 }
 
@@ -19,7 +26,6 @@ class AccountManagerClient {
     func createUserAccount(accountName: String, displayName: String, completion: @escaping (AccountResponse) -> Void, handler: WebErrorHandler) {
         let accountPostUrl = URL(string: "/accounts", relativeTo: self.url)!
         let params: Parameters = [:]
-
         Alamofire
             .request(accountPostUrl, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil)
             .responseJSON { response -> Void in

@@ -4,10 +4,13 @@ class UnderlineTextField : UITextField {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         self.borderStyle = .none
+        self.tintColor = ColorCollection.TextfieldDefaultTintColor
     }
+
     required override init(frame: CGRect) {
         super.init(frame: frame)
         self.borderStyle = .none
+        self.tintColor = ColorCollection.TextfieldDefaultTintColor
     }
 
     override var tintColor: UIColor! {

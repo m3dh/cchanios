@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if false /* no token found or auth failed */ {
+        if true /* no token found or auth failed */ {
             self.performSegue(withIdentifier: "mainNeedSignIn", sender: nil)
         }
 
@@ -66,5 +66,8 @@ class MainViewController: UIViewController {
         self.mainCollectionView.reloadData()
 
         self.menuBarCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .top)
+    }
+
+    @IBAction func unwindToMainView(sender: UIStoryboardSegue) {
     }
 }

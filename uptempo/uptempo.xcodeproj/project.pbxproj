@@ -71,11 +71,11 @@
 		C35B87FE1FFCC26D003EB6C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C36767171FF3E46200F003CB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Uptempo/ViewControllers/MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		C36F835D1FFA33D300F64FE1 /* BackendServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackendServiceLocator.swift; path = Uptempo/Managers/BackendServiceLocator.swift; sourceTree = SOURCE_ROOT; };
-		C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Uptempo/ViewControllers/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
+		C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Uptempo/ViewControllers/SignIn/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		C375FFF51FFD02D900D8B331 /* ColorfulButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulButton.swift; sourceTree = "<group>"; };
 		C375FFF91FFD24A100D8B331 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		C37EBA2A1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCollectionDataSource.swift; sourceTree = "<group>"; };
-		C3A29E671FF2469900013C71 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = Uptempo/ViewControllers/SignInViewController.swift; sourceTree = SOURCE_ROOT; };
+		C3A29E671FF2469900013C71 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = Uptempo/ViewControllers/SignIn/SignInViewController.swift; sourceTree = SOURCE_ROOT; };
 		C3A29E6A1FF33F1A00013C71 /* OperationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OperationHelper.swift; path = Uptempo/Helpers/OperationHelper.swift; sourceTree = SOURCE_ROOT; };
 		C3A29E6C1FF36B4A00013C71 /* AccountManagerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountManagerClient.swift; path = Uptempo/Managers/AccountManagerClient.swift; sourceTree = SOURCE_ROOT; };
 		C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeProtector.swift; sourceTree = "<group>"; };
@@ -176,6 +176,15 @@
 			path = UptempoTests;
 			sourceTree = "<group>";
 		};
+		C375FFFA1FFDED6500D8B331 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				C3A29E671FF2469900013C71 /* SignInViewController.swift */,
+				C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		C3A29E691FF33EFC00013C71 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,9 +223,8 @@
 		C3E360A41FEE8C7D00896586 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C375FFFA1FFDED6500D8B331 /* SignIn */,
 				C3C802D31FF511C800165B3C /* SubClass */,
-				C3A29E671FF2469900013C71 /* SignInViewController.swift */,
-				C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */,
 				C36767171FF3E46200F003CB /* MainViewController.swift */,
 			);
 			path = ViewControllers;

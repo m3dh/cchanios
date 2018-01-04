@@ -105,6 +105,7 @@
                         <viewLayoutGuide key="safeArea" id="Glz-JE-P4A"/>
                     </view>
                     <navigationItem key="navigationItem" title="Uptempo" id="w8Q-E8-mKJ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="XAw-lQ-rZd"/>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="xFK-RM-lMy"/>
                             <barButtonItem systemItem="search" id="SE0-yh-auT"/>
@@ -115,8 +116,8 @@
                         <outlet property="menuBarCollectionView" destination="Znr-PF-8t7" id="t0l-oT-Sbc"/>
                         <outlet property="subNavBarBottonShadowView" destination="N4h-AC-TH3" id="jf7-L4-sXA"/>
                         <outlet property="subNavBarView" destination="AGp-cN-1Hm" id="Gy6-1b-blu"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="mainNeedSignIn" id="s5Q-5o-Thh"/>
                         <segue destination="pc4-cj-weF" kind="show" identifier="intoChatView" id="sbd-fX-cHg"/>
+                        <segue destination="DIQ-yd-cjI" kind="show" identifier="mainNeedSignIn" id="5vU-a5-KWL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROh-Z7-zuD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -240,7 +241,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2dQ-gJ-Jo0" kind="presentation" id="PgY-VF-gV0"/>
+                                    <segue destination="Tiq-Xa-cmF" kind="show" id="CvO-D7-vCM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -256,6 +257,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Sign In" id="5Ke-eo-rji">
+                        <barButtonItem key="backBarButtonItem" title=" " id="QMJ-xS-BmB"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="errorMessageLabel" destination="T3S-XB-eWG" id="idF-wR-ND7"/>
                         <outlet property="errorMessageLabelHeightConst" destination="dTY-q4-vs7" id="z5x-46-iBn"/>
@@ -264,22 +268,24 @@
                         <outlet property="passwordTextField" destination="zZT-lx-E6y" id="BNs-SZ-GgU"/>
                         <outlet property="signInButton" destination="c1P-Ch-JBW" id="Rpc-0l-CXm"/>
                         <outlet property="usernameTextField" destination="Xzf-AA-4Fw" id="e0f-rd-nFG"/>
+                        <segue destination="RV2-4G-pz1" kind="unwind" identifier="unwindToMainView" unwindAction="unwindToMainViewWithSender:" id="esE-st-Hbs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="RV2-4G-pz1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="534" y="150"/>
+            <point key="canvasLocation" x="533" y="150"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="xik-hh-uE1">
             <objects>
                 <viewController id="Tiq-Xa-cmF" customClass="SignUpViewController" customModule="Uptempo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zq3-wf-GoW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dXk-tq-Wiz">
-                                <rect key="frame" x="20" y="86" width="374" height="355"/>
+                                <rect key="frame" x="20" y="22" width="374" height="355"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xgc-bf-aTF">
                                         <rect key="frame" x="137" y="0.0" width="100" height="100"/>
@@ -383,11 +389,7 @@
                         <viewLayoutGuide key="safeArea" id="kaw-OS-f0E"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign Up" id="iZk-d5-OmD">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="CPC-xT-mVE">
-                            <connections>
-                                <action selector="cancelBarTouchInside:" destination="Tiq-Xa-cmF" id="KUe-ra-ynb"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="backBarButtonItem" title="    " id="a9q-Kv-Ul2"/>
                     </navigationItem>
                     <connections>
                         <outlet property="avatarImageView" destination="xgc-bf-aTF" id="lCj-BN-gkf"/>
@@ -400,13 +402,11 @@
                         <outlet property="signUpButton" destination="CXt-dK-GYX" id="ThC-Pg-6V2"/>
                         <outlet property="usernameTextField" destination="Gnk-nm-Pck" id="yYJ-av-2OQ"/>
                         <outlet property="verifyPasswordTextField" destination="mpM-p8-s3h" id="rcc-7a-3Fu"/>
-                        <segue destination="XHf-wk-vg9" kind="unwind" identifier="signInUnwindSegue" unwindAction="unwindToSignInViewNormallyWithSender:" id="O8l-jq-RZ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imo-s4-Blb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="XHf-wk-vg9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2328" y="150"/>
+            <point key="canvasLocation" x="1417" y="150"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FIP-Fu-wAN">
@@ -435,22 +435,22 @@
             <point key="canvasLocation" x="-371" y="-658"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="dEa-b3-bfx">
+        <scene sceneID="336-na-gh2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2dQ-gJ-Jo0" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DIQ-yd-cjI" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="deX-6j-dre">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="qrc-5m-fH1">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Tiq-Xa-cmF" kind="relationship" relationship="rootViewController" id="E5l-fy-yZQ"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="J90-k0-evD"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YEd-M3-AQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QFt-nt-bnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1418.840579710145" y="150"/>
+            <point key="canvasLocation" x="-371" y="150"/>
         </scene>
     </scenes>
 </document>

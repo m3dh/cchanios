@@ -74,7 +74,7 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
         self.view.addGestureRecognizer(viewTapGestureRecognizer)
 
         // disable signup button
-        self.signUpButton.isEnabled = false
+        // self.signUpButton.isEnabled = false
 
         // setup all text fields
         self.usernameTextField.delegate = self
@@ -100,26 +100,23 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
 
         let avatarImage = self.avatarImageView.image!
         let newImage = ImageHelper.resizeSquareImageForAvatarUsage(image: avatarImage)
-        print(">>> \(newImage.size.height * newImage.scale) x \(newImage.size.width * newImage.scale)")
-        self.avatarImageView.image = newImage
 
+        self.avatarImageView.image = newImage
+        self.resignAllTextFieldFirstResponder()
         OperationHelper.startAsyncJobAndBlockCurrentWindow(
             window: self,
-            task: {
+            task: { () -> Bool in
                 // TODO: shall use a real result
-                let success = true
-                if success {
-                    // perform segue when all checks passed and sign up completed.
-                    self.performSegue(withIdentifier: "signInUnwindSegue", sender: nil)
-                } else {
-                    // write error
-                }
+                return true
             },
-            message: "Signing up...")
-    }
-
-    @IBAction func cancelBarTouchInside(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+            message: "Signing up...", completion: { ()->() in
+                let controllers = self.navigationController!.viewControllers
+                for controller in controllers {
+                    if let c = controller as? SignInViewController {
+                        c.unwindFromSignUpViewController(sourceViewController: self)
+                        self.navigationController!.popToViewController(c, animated: true)
+                    }
+                }})
     }
 
     @objc func handleViewGestureTap(_ sender: UITapGestureRecognizer) {
