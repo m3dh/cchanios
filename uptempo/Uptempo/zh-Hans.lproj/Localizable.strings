@@ -3,3 +3,6 @@
 "MainTabName_Direct" = "个人会话";
 
 "MessageTs_Now" = "刚刚";
+
+"Popup_SigningUp" = "注册中...";
+"Popup_SigningIn" = "登录中...";

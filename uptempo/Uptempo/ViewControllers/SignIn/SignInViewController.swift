@@ -71,7 +71,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 // TODO: shall use a real result
                 return true
         },
-            message: "Signing in...", completion: { ()->() in self.performSegue(withIdentifier: "unwindToMainView", sender: nil)})
+            message: NSLocalizedString("Popup_SigningIn", comment: "SignInPop"), completion: { ()->() in self.performSegue(withIdentifier: "unwindToMainView", sender: nil)})
     }
 
     // MARK: Protocol UITextFieldDelegate

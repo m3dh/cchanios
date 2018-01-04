@@ -16,6 +16,7 @@
 		C314F7191FEE377800AC2B1B /* Uptempo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C314F7171FEE377800AC2B1B /* Uptempo.xcdatamodeld */; };
 		C314F71E1FEE377800AC2B1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C314F71C1FEE377800AC2B1B /* LaunchScreen.storyboard */; };
 		C314F7291FEE377800AC2B1B /* AccountManagerClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7281FEE377800AC2B1B /* AccountManagerClientTests.swift */; };
+		C3313ACA1FFE36FC002E7A83 /* SecretHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3313AC91FFE36FC002E7A83 /* SecretHelper.swift */; };
 		C3554A991FFCCA86000B879E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3554A9B1FFCCA86000B879E /* Localizable.strings */; };
 		C3554A9E1FFCF903000B879E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3554A9D1FFCF903000B879E /* Assets.xcassets */; };
 		C35B87FF1FFCC26D003EB6C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35B87FD1FFCC26D003EB6C6 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */; };
 		C375FFF61FFD02D900D8B331 /* ColorfulButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375FFF51FFD02D900D8B331 /* ColorfulButton.swift */; };
 		C37EBA2B1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37EBA2A1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift */; };
+		C383EFF51FFE67EA00085A1D /* HelperUnittests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C383EFF41FFE67EA00085A1D /* HelperUnittests.swift */; };
 		C3A29E681FF2469900013C71 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A29E671FF2469900013C71 /* SignInViewController.swift */; };
 		C3A29E6B1FF33F1A00013C71 /* OperationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A29E6A1FF33F1A00013C71 /* OperationHelper.swift */; };
 		C3A29E6D1FF36B4A00013C71 /* AccountManagerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A29E6C1FF36B4A00013C71 /* AccountManagerClient.swift */; };
@@ -64,6 +66,8 @@
 		C314F7241FEE377800AC2B1B /* UptempoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UptempoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C314F7281FEE377800AC2B1B /* AccountManagerClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManagerClientTests.swift; sourceTree = "<group>"; };
 		C314F72A1FEE377800AC2B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3313AC91FFE36FC002E7A83 /* SecretHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretHelper.swift; sourceTree = "<group>"; };
+		C3313ACC1FFE641E002E7A83 /* Uptempo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Uptempo-Bridging-Header.h"; sourceTree = "<group>"; };
 		C3554A961FFCCA23000B879E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		C3554A9A1FFCCA86000B879E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C3554A9C1FFCCA88000B879E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 		C375FFF51FFD02D900D8B331 /* ColorfulButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulButton.swift; sourceTree = "<group>"; };
 		C375FFF91FFD24A100D8B331 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		C37EBA2A1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCollectionDataSource.swift; sourceTree = "<group>"; };
+		C383EFF41FFE67EA00085A1D /* HelperUnittests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperUnittests.swift; sourceTree = "<group>"; };
 		C3A29E671FF2469900013C71 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = Uptempo/ViewControllers/SignIn/SignInViewController.swift; sourceTree = SOURCE_ROOT; };
 		C3A29E6A1FF33F1A00013C71 /* OperationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OperationHelper.swift; path = Uptempo/Helpers/OperationHelper.swift; sourceTree = SOURCE_ROOT; };
 		C3A29E6C1FF36B4A00013C71 /* AccountManagerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountManagerClient.swift; path = Uptempo/Managers/AccountManagerClient.swift; sourceTree = SOURCE_ROOT; };
@@ -170,8 +175,9 @@
 		C314F7271FEE377800AC2B1B /* UptempoTests */ = {
 			isa = PBXGroup;
 			children = (
-				C314F7281FEE377800AC2B1B /* AccountManagerClientTests.swift */,
 				C314F72A1FEE377800AC2B1B /* Info.plist */,
+				C314F7281FEE377800AC2B1B /* AccountManagerClientTests.swift */,
+				C383EFF41FFE67EA00085A1D /* HelperUnittests.swift */,
 			);
 			path = UptempoTests;
 			sourceTree = "<group>";
@@ -193,6 +199,8 @@
 				C3095A561FF88D5C00A56760 /* ColorCollection.swift */,
 				C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */,
 				C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */,
+				C3313AC91FFE36FC002E7A83 /* SecretHelper.swift */,
+				C3313ACC1FFE641E002E7A83 /* Uptempo-Bridging-Header.h */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -461,6 +469,7 @@
 				C36F835E1FFA33D300F64FE1 /* BackendServiceLocator.swift in Sources */,
 				C3095A571FF88D5C00A56760 /* ColorCollection.swift in Sources */,
 				C36767181FF3E46200F003CB /* MainViewController.swift in Sources */,
+				C3313ACA1FFE36FC002E7A83 /* SecretHelper.swift in Sources */,
 				C3FC5F651FFCC52400083BF3 /* UnderlineTextField.swift in Sources */,
 				C37EBA2B1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift in Sources */,
 				C3048F901FF624900012A4AF /* MainMenuBarDataSource.swift in Sources */,
@@ -483,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C314F7291FEE377800AC2B1B /* AccountManagerClientTests.swift in Sources */,
+				C383EFF51FFE67EA00085A1D /* HelperUnittests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +591,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -631,6 +642,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -647,6 +659,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = m3dh.chatapp.uptempo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Helpers/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -663,6 +676,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = m3dh.chatapp.uptempo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Helpers/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

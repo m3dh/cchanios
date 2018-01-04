@@ -1,4 +1,5 @@
 import XCTest
+import Foundation
 @testable import Uptempo
 
 class AccountManagerClientTests: XCTestCase {
@@ -33,23 +34,99 @@ class AccountManagerClientTests: XCTestCase {
     }
 
     func testCreateAccountAndSetPassword_ShallSuccess() {
-        let e1 = expectation(description: "CreateAccount")
+        XCTAssertNotNil(createTestUserAccount())
+    }
+
+    func testAuthAccount_ShallSuccess() {
+        let handler = WebErrorHandler()
+        handler.httpErrorHandler = { (s, e, m) -> Bool in
+            let msg: String = "St: \(s), Err: \(e), Msg: \(m)"
+            print(msg)
+            return false
+        }
+
+        let accountResp = createTestUserAccount()
         let client = BackendServiceLocator.instance.getAccountManagerClient()
-        client.createUserAccount(accountName: "xctestaccount", displayName: "XCode 测试账号", completion: { (response)->Void in
+        let e1 = expectation(description: "AuthAccount1")
+        let password = "passw0rd"
+        let passwordHash = SecretHelper.fillUserAccountPassword(account: accountResp, password: password)
+        var tokenResp: AccountTokenResponse!
+        client.logonUserAccount(accountName: accountResp.name!, passwordB64: passwordHash, deviceId: nil, completion: { (resp) in
+            tokenResp = resp
             e1.fulfill()
-        }, handler: WebErrorHandler())
+        }, handler: handler)
 
         waitForExpectations(timeout: 5.0, handler: nil)
-    }
-    
-    func testResizeAvatarImage_ShalSuccess() {
-        let image = UIImage(named: "Avatar - Default")!
-        let result = ImageHelper.resizeSquareImageForAvatarUsage(image: image)
-        XCTAssertEqual(result.scale, 2)
-        XCTAssertEqual(result.size.width, result.size.height)
-        XCTAssertEqual(result.size.width, 120)
+        XCTAssertNotNil(tokenResp.deviceId)
+        XCTAssertNotNil(tokenResp.token)
+        XCTAssertNotNil(tokenResp.serverTime)
 
-        let imageData = ImageHelper.compressImageToJpeg(image: image, maxSize: 64)!
-        XCTAssertLessThan(imageData.count, 64 * 1024)
+        let token = tokenResp.token!
+
+        // Auth again with device id, shall return the same token.
+        let e2 = expectation(description: "AuthAccount2")
+        client.logonUserAccount(accountName: accountResp.name!, passwordB64: passwordHash, deviceId: tokenResp.deviceId, completion: { (resp) in
+            tokenResp = resp
+            e2.fulfill()
+        }, handler: handler)
+        waitForExpectations(timeout: 5.0, handler: nil)
+        XCTAssertEqual(tokenResp.token, token)
+
+        // Auth again without device id, shall return a new token.
+        let e3 = expectation(description: "AuthAccount3")
+        client.logonUserAccount(accountName: accountResp.name!, passwordB64: passwordHash, deviceId: nil, completion: { (resp) in
+            tokenResp = resp
+            e3.fulfill()
+        }, handler: handler)
+        waitForExpectations(timeout: 5.0, handler: nil)
+        XCTAssertNotEqual(tokenResp.token, token)
+    }
+
+    func createTestUserAccount() -> AccountResponse {
+        let timeInterval = NSDate().timeIntervalSince1970
+        let testAccountName = "xctest-\(Int(timeInterval))"
+
+        // Create
+        let e1 = expectation(description: "CreateAccount")
+        let handler = WebErrorHandler()
+        handler.httpErrorHandler = { (s, e, m) -> Bool in
+            let msg: String = "St: \(s), Err: \(e), Msg: \(m)"
+            print(msg)
+            return false
+        }
+
+        let client = BackendServiceLocator.instance.getAccountManagerClient()
+        client.createUserAccount(accountName: testAccountName, displayName: "XCode 测试账号 \(Date())", completion: { (response)->Void in
+            e1.fulfill()
+        }, handler: handler)
+
+        waitForExpectations(timeout: 5.0, handler: nil)
+
+        // Retrieve
+        let e2 = expectation(description: "GetAccount")
+        var accountResp: AccountResponse!
+        client.retrieveUserAccount(accountName: testAccountName, completion: { (response)->Void in
+            accountResp = response
+            e2.fulfill()
+        }, handler: handler)
+
+        waitForExpectations(timeout: 5.0, handler: nil)
+
+        XCTAssertEqual(testAccountName, accountResp.name)
+        XCTAssertNotNil(accountResp.createdAt)
+
+        // Update password
+        let e3 = expectation(description: "UpdatePassword")
+        let password = "passw0rd"
+        let passwordHash = SecretHelper.fillUserAccountPassword(account: accountResp, password: password)
+        client.updateUserAccountPassword(accountName: testAccountName, passwordB64: passwordHash, completion: { (response)->Void in
+            accountResp = response
+            e3.fulfill()
+        }, handler: handler)
+        waitForExpectations(timeout: 5.0, handler: nil)
+
+        XCTAssertEqual(testAccountName, accountResp.name)
+        XCTAssertNotNil(accountResp.createdAt)
+        return accountResp
     }
 }

@@ -109,7 +109,7 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
                 // TODO: shall use a real result
                 return true
             },
-            message: "Signing up...", completion: { ()->() in
+            message: NSLocalizedString("Popup_SigningUp", comment: "SignUpPop"), completion: { ()->() in
                 let controllers = self.navigationController!.viewControllers
                 for controller in controllers {
                     if let c = controller as? SignInViewController {

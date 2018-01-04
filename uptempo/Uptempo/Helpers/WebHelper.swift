@@ -55,6 +55,12 @@ class WebErrorHandler {
 class WebHelper {
     private init() {}
 
+    static func parseJsonDateString(date: String) -> Date? {
+        let trimmedStr = date.replacingOccurrences(of: "\\.\\d+", with: "", options: .regularExpression)
+        let formatter = ISO8601DateFormatter()
+        return formatter.date(from: trimmedStr)
+    }
+
     static func handleAlamofireResponse<Input, Output>(handler: WebErrorHandler, response: DataResponse<Input>, complete: @escaping (Output)->(), function: String = #function) {
         if let error = response.error {
             // handle network issue

@@ -3,3 +3,6 @@
 "MainTabName_Direct" = "Direct";
 
 "MessageTs_Now" = "Now";
+
+"Popup_SigningUp" = "Signing up...";
+"Popup_SigningIn" = "Signing in...";
