@@ -13,7 +13,6 @@
 		C3095A551FF68E4600A56760 /* MainSessionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3095A541FF68E4600A56760 /* MainSessionDataSource.swift */; };
 		C3095A571FF88D5C00A56760 /* ColorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3095A561FF88D5C00A56760 /* ColorCollection.swift */; };
 		C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7101FEE377800AC2B1B /* AppDelegate.swift */; };
-		C314F7191FEE377800AC2B1B /* Uptempo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C314F7171FEE377800AC2B1B /* Uptempo.xcdatamodeld */; };
 		C314F71E1FEE377800AC2B1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C314F71C1FEE377800AC2B1B /* LaunchScreen.storyboard */; };
 		C314F7291FEE377800AC2B1B /* AccountManagerClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7281FEE377800AC2B1B /* AccountManagerClientTests.swift */; };
 		C3313ACA1FFE36FC002E7A83 /* SecretHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3313AC91FFE36FC002E7A83 /* SecretHelper.swift */; };
@@ -60,7 +59,6 @@
 		C3095A561FF88D5C00A56760 /* ColorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorCollection.swift; path = Uptempo/Helpers/ColorCollection.swift; sourceTree = SOURCE_ROOT; };
 		C314F70D1FEE377800AC2B1B /* Uptempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uptempo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C314F7101FEE377800AC2B1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C314F7181FEE377800AC2B1B /* Uptempo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Uptempo.xcdatamodel; sourceTree = "<group>"; };
 		C314F71D1FEE377800AC2B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C314F71F1FEE377800AC2B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C314F7241FEE377800AC2B1B /* UptempoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UptempoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,7 +163,6 @@
 				C35B87FD1FFCC26D003EB6C6 /* Main.storyboard */,
 				C314F71C1FEE377800AC2B1B /* LaunchScreen.storyboard */,
 				C314F71F1FEE377800AC2B1B /* Info.plist */,
-				C314F7171FEE377800AC2B1B /* Uptempo.xcdatamodeld */,
 				C3554A9B1FFCCA86000B879E /* Localizable.strings */,
 				C3554A9D1FFCF903000B879E /* Assets.xcassets */,
 			);
@@ -363,11 +360,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Uptempo/Pods-Uptempo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Fusuma/Fusuma.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fusuma.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -481,7 +482,6 @@
 				C3A29E6D1FF36B4A00013C71 /* AccountManagerClient.swift in Sources */,
 				C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */,
 				C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */,
-				C314F7191FEE377800AC2B1B /* Uptempo.xcdatamodeld in Sources */,
 				C3C32DBB1FFA7B1100DEA5D8 /* ImageHelper.swift in Sources */,
 				C3BD324E1FFC985000E770F0 /* CredentialManager.swift in Sources */,
 			);
@@ -749,19 +749,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		C314F7171FEE377800AC2B1B /* Uptempo.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				C314F7181FEE377800AC2B1B /* Uptempo.xcdatamodel */,
-			);
-			currentVersion = C314F7181FEE377800AC2B1B /* Uptempo.xcdatamodel */;
-			path = Uptempo.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = C314F7051FEE377800AC2B1B /* Project object */;
 }
