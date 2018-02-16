@@ -2,13 +2,13 @@ import Foundation
 
 class BackendServiceLocator {
     static let instance = BackendServiceLocator()
-
+    
     private init() {}
-
-    func getAccountManagerClient() -> AccountManagerClient {
-        return AccountManagerClient(self.getHostServiceBaseUrl())
+    
+    func getAccountClient() -> AccountServiceClient {
+        return AccountServiceClient(self.getHostServiceBaseUrl())
     }
-
+    
     func getHostServiceBaseUrl() -> String {
         return "http://localhost:8080"
     }

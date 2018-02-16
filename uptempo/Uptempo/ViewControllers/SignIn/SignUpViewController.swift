@@ -113,8 +113,8 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
                 let controllers = self.navigationController!.viewControllers
                 for controller in controllers {
                     if let c = controller as? SignInViewController {
-                        c.unwindFromSignUpViewController(sourceViewController: self)
                         self.navigationController!.popToViewController(c, animated: true)
+                        c.unwindFromSignUpViewController(sourceViewController: self)
                     }
                 }})
     }

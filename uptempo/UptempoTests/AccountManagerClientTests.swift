@@ -2,11 +2,11 @@ import XCTest
 import Foundation
 @testable import Uptempo
 
-class AccountManagerClientTests: XCTestCase {
+class AccountServiceClientTests: XCTestCase {
     func testUploadAndDownloadAvatarImage_ShallSuccess() {
         let e = expectation(description: "ImageHelper")
         let image = UIImage(named: "Avatar - Default")!
-        let client = BackendServiceLocator.instance.getAccountManagerClient()
+        let client = BackendServiceLocator.instance.getAccountClient()
         let imageData = ImageHelper.compressImageToJpeg(image: image, maxSize: 64)!
         var resultUuid: String! = "empty"
         client.createAccountAvatar(image: imageData, completion:  {(uuid)-> () in
@@ -46,7 +46,7 @@ class AccountManagerClientTests: XCTestCase {
         }
 
         let accountResp = createTestUserAccount()
-        let client = BackendServiceLocator.instance.getAccountManagerClient()
+        let client = BackendServiceLocator.instance.getAccountClient()
         let e1 = expectation(description: "AuthAccount1")
         let password = "passw0rd"
         let passwordHash = SecretHelper.fillUserAccountPassword(account: accountResp, password: password)
@@ -95,7 +95,7 @@ class AccountManagerClientTests: XCTestCase {
             return false
         }
 
-        let client = BackendServiceLocator.instance.getAccountManagerClient()
+        let client = BackendServiceLocator.instance.getAccountClient()
         client.createUserAccount(accountName: testAccountName, displayName: "XCode 测试账号 \(Date())", completion: { (response)->Void in
             e1.fulfill()
         }, handler: handler)

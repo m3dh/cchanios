@@ -31,7 +31,7 @@ class AccountTokenResponse {
     }
 }
 
-class AccountManagerClient {
+class AccountServiceClient {
     let url: URL
 
     init(_ baseUrl: String) {
