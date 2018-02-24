@@ -12,7 +12,6 @@
 		C3048F921FF66E490012A4AF /* TableViewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3048F911FF66E490012A4AF /* TableViewsManager.swift */; };
 		C3095A551FF68E4600A56760 /* MainSessionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3095A541FF68E4600A56760 /* MainSessionDataSource.swift */; };
 		C3095A571FF88D5C00A56760 /* ColorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3095A561FF88D5C00A56760 /* ColorCollection.swift */; };
-		C30FEE31200152A200AE49FD /* PersistStoreClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30FEE30200152A200AE49FD /* PersistStoreClient.swift */; };
 		C30FEE3320015F8500AE49FD /* StoreManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30FEE3220015F8500AE49FD /* StoreManagerTests.swift */; };
 		C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7101FEE377800AC2B1B /* AppDelegate.swift */; };
 		C314F71E1FEE377800AC2B1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C314F71C1FEE377800AC2B1B /* LaunchScreen.storyboard */; };
@@ -22,20 +21,19 @@
 		C3554A9E1FFCF903000B879E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3554A9D1FFCF903000B879E /* Assets.xcassets */; };
 		C35B87FF1FFCC26D003EB6C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35B87FD1FFCC26D003EB6C6 /* Main.storyboard */; };
 		C36767181FF3E46200F003CB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36767171FF3E46200F003CB /* MainViewController.swift */; };
-		C36F835E1FFA33D300F64FE1 /* BackendServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36F835D1FFA33D300F64FE1 /* BackendServiceLocator.swift */; };
 		C3745AB5200258B8006B51D0 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3745AB4200258B8006B51D0 /* AccountManager.swift */; };
-		C3745AB7200258F8006B51D0 /* ResourceManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3745AB6200258F8006B51D0 /* ResourceManagers.swift */; };
+		C3745AB7200258F8006B51D0 /* ResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3745AB6200258F8006B51D0 /* ResourceManager.swift */; };
 		C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */; };
 		C375FFF61FFD02D900D8B331 /* ColorfulButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375FFF51FFD02D900D8B331 /* ColorfulButton.swift */; };
 		C37EBA2B1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37EBA2A1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift */; };
 		C383EFF51FFE67EA00085A1D /* HelperUnittests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C383EFF41FFE67EA00085A1D /* HelperUnittests.swift */; };
 		C3A29E681FF2469900013C71 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A29E671FF2469900013C71 /* SignInViewController.swift */; };
-		C3A29E6B1FF33F1A00013C71 /* OperationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A29E6A1FF33F1A00013C71 /* OperationHelper.swift */; };
-		C3A29E6D1FF36B4A00013C71 /* AccountManagerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A29E6C1FF36B4A00013C71 /* AccountManagerClient.swift */; };
 		C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */; };
 		C3AC0D761FF222A000BDD8ED /* UIControlHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */; };
 		C3C32DBB1FFA7B1100DEA5D8 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */; };
 		C3C802D21FF5083E00165B3C /* MainSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C802D11FF5083E00165B3C /* MainSessionCell.swift */; };
+		C3D8D104203D61190027DBFF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8D103203D61190027DBFF /* ChatViewController.swift */; };
+		C3D8D106203D7CA30027DBFF /* ObjectModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8D105203D7CA30027DBFF /* ObjectModels.swift */; };
 		C3E58C501FFBA72E0022E181 /* WebHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */; };
 		C3FC5F651FFCC52400083BF3 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5F641FFCC52400083BF3 /* UnderlineTextField.swift */; };
 		CDA0185C2F07BD4F4AD3DF01 /* Pods_UptempoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E2008A163E56C883286B48 /* Pods_UptempoTests.framework */; };
@@ -60,7 +58,6 @@
 		C3048F911FF66E490012A4AF /* TableViewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewsManager.swift; path = Uptempo/ViewControllers/SubClass/TableViewsManager.swift; sourceTree = SOURCE_ROOT; };
 		C3095A541FF68E4600A56760 /* MainSessionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainSessionDataSource.swift; path = Uptempo/ViewControllers/SubClass/MainSessionDataSource.swift; sourceTree = SOURCE_ROOT; };
 		C3095A561FF88D5C00A56760 /* ColorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorCollection.swift; path = Uptempo/Helpers/ColorCollection.swift; sourceTree = SOURCE_ROOT; };
-		C30FEE30200152A200AE49FD /* PersistStoreClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistStoreClient.swift; sourceTree = "<group>"; };
 		C30FEE3220015F8500AE49FD /* StoreManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagerTests.swift; sourceTree = "<group>"; };
 		C314F70D1FEE377800AC2B1B /* Uptempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uptempo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C314F7101FEE377800AC2B1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,21 +74,20 @@
 		C3554A9D1FFCF903000B879E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C35B87FE1FFCC26D003EB6C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C36767171FF3E46200F003CB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Uptempo/ViewControllers/MainViewController.swift; sourceTree = SOURCE_ROOT; };
-		C36F835D1FFA33D300F64FE1 /* BackendServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackendServiceLocator.swift; path = Uptempo/External/BackendServiceLocator.swift; sourceTree = SOURCE_ROOT; };
 		C3745AB4200258B8006B51D0 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
-		C3745AB6200258F8006B51D0 /* ResourceManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManagers.swift; sourceTree = "<group>"; };
+		C3745AB6200258F8006B51D0 /* ResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManager.swift; sourceTree = "<group>"; };
 		C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Uptempo/ViewControllers/SignIn/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		C375FFF51FFD02D900D8B331 /* ColorfulButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulButton.swift; sourceTree = "<group>"; };
 		C375FFF91FFD24A100D8B331 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		C37EBA2A1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCollectionDataSource.swift; sourceTree = "<group>"; };
 		C383EFF41FFE67EA00085A1D /* HelperUnittests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperUnittests.swift; sourceTree = "<group>"; };
 		C3A29E671FF2469900013C71 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = Uptempo/ViewControllers/SignIn/SignInViewController.swift; sourceTree = SOURCE_ROOT; };
-		C3A29E6A1FF33F1A00013C71 /* OperationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OperationHelper.swift; path = Uptempo/Helpers/OperationHelper.swift; sourceTree = SOURCE_ROOT; };
-		C3A29E6C1FF36B4A00013C71 /* AccountManagerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountManagerClient.swift; path = Uptempo/External/AccountManagerClient.swift; sourceTree = SOURCE_ROOT; };
 		C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeProtector.swift; sourceTree = "<group>"; };
 		C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIControlHelper.swift; path = Uptempo/Helpers/UIControlHelper.swift; sourceTree = SOURCE_ROOT; };
 		C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageHelper.swift; path = Uptempo/Helpers/ImageHelper.swift; sourceTree = SOURCE_ROOT; };
 		C3C802D11FF5083E00165B3C /* MainSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainSessionCell.swift; path = Uptempo/ViewControllers/SubClass/MainSessionCell.swift; sourceTree = SOURCE_ROOT; };
+		C3D8D103203D61190027DBFF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		C3D8D105203D7CA30027DBFF /* ObjectModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectModels.swift; sourceTree = "<group>"; };
 		C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebHelper.swift; sourceTree = "<group>"; };
 		C3FC5F641FFCC52400083BF3 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
 		D8D5E57818EA1622F67AECF4 /* Pods-UptempoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UptempoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UptempoTests/Pods-UptempoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,7 +159,6 @@
 			children = (
 				C3FC5F631FFCC51200083BF3 /* Controls */,
 				C3A29E691FF33EFC00013C71 /* Helpers */,
-				C3745AB320025426006B51D0 /* External */,
 				C3AC0D6F1FEF9BBE00BDD8ED /* Managers */,
 				C3E360A41FEE8C7D00896586 /* ViewControllers */,
 				C314F7101FEE377800AC2B1B /* AppDelegate.swift */,
@@ -187,16 +182,6 @@
 			path = UptempoTests;
 			sourceTree = "<group>";
 		};
-		C3745AB320025426006B51D0 /* External */ = {
-			isa = PBXGroup;
-			children = (
-				C36F835D1FFA33D300F64FE1 /* BackendServiceLocator.swift */,
-				C3A29E6C1FF36B4A00013C71 /* AccountManagerClient.swift */,
-				C30FEE30200152A200AE49FD /* PersistStoreClient.swift */,
-			);
-			path = External;
-			sourceTree = "<group>";
-		};
 		C375FFFA1FFDED6500D8B331 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,7 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */,
-				C3A29E6A1FF33F1A00013C71 /* OperationHelper.swift */,
 				C3095A561FF88D5C00A56760 /* ColorCollection.swift */,
 				C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */,
 				C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */,
@@ -224,8 +208,9 @@
 		C3AC0D6F1FEF9BBE00BDD8ED /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C3D8D105203D7CA30027DBFF /* ObjectModels.swift */,
 				C3745AB4200258B8006B51D0 /* AccountManager.swift */,
-				C3745AB6200258F8006B51D0 /* ResourceManagers.swift */,
+				C3745AB6200258F8006B51D0 /* ResourceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -248,6 +233,7 @@
 				C375FFFA1FFDED6500D8B331 /* SignIn */,
 				C3C802D31FF511C800165B3C /* SubClass */,
 				C36767171FF3E46200F003CB /* MainViewController.swift */,
+				C3D8D103203D61190027DBFF /* ChatViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -482,24 +468,22 @@
 			files = (
 				C3095A551FF68E4600A56760 /* MainSessionDataSource.swift in Sources */,
 				C3745AB5200258B8006B51D0 /* AccountManager.swift in Sources */,
-				C3A29E6B1FF33F1A00013C71 /* OperationHelper.swift in Sources */,
 				C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */,
 				C375FFF61FFD02D900D8B331 /* ColorfulButton.swift in Sources */,
-				C36F835E1FFA33D300F64FE1 /* BackendServiceLocator.swift in Sources */,
 				C3095A571FF88D5C00A56760 /* ColorCollection.swift in Sources */,
 				C36767181FF3E46200F003CB /* MainViewController.swift in Sources */,
 				C3313ACA1FFE36FC002E7A83 /* SecretHelper.swift in Sources */,
+				C3D8D104203D61190027DBFF /* ChatViewController.swift in Sources */,
 				C3FC5F651FFCC52400083BF3 /* UnderlineTextField.swift in Sources */,
 				C37EBA2B1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift in Sources */,
 				C3048F901FF624900012A4AF /* MainMenuBarDataSource.swift in Sources */,
 				C3C802D21FF5083E00165B3C /* MainSessionCell.swift in Sources */,
-				C30FEE31200152A200AE49FD /* PersistStoreClient.swift in Sources */,
 				C3AC0D761FF222A000BDD8ED /* UIControlHelper.swift in Sources */,
 				C3A29E681FF2469900013C71 /* SignInViewController.swift in Sources */,
 				C3048F921FF66E490012A4AF /* TableViewsManager.swift in Sources */,
 				C3E58C501FFBA72E0022E181 /* WebHelper.swift in Sources */,
-				C3A29E6D1FF36B4A00013C71 /* AccountManagerClient.swift in Sources */,
-				C3745AB7200258F8006B51D0 /* ResourceManagers.swift in Sources */,
+				C3D8D106203D7CA30027DBFF /* ObjectModels.swift in Sources */,
+				C3745AB7200258F8006B51D0 /* ResourceManager.swift in Sources */,
 				C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */,
 				C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */,
 				C3C32DBB1FFA7B1100DEA5D8 /* ImageHelper.swift in Sources */,

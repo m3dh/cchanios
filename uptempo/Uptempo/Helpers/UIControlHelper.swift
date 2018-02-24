@@ -46,4 +46,31 @@ class UIControlHelper {
             }
         }
     }
+
+    static func startAsyncTaskAndBlockCurrentWindow(window: UIViewController, task: @escaping (@escaping(Bool)->Void)->Void, message: String, completion: @escaping ()->Void) {
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alertController.view.tintColor = UIColor.black
+
+        // Present a blocker view
+        let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 5, width: 50, height: 50))
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = .gray
+        activityIndicator.startAnimating();
+        alertController.view.addSubview(activityIndicator)
+        window.present(alertController, animated: true, completion: nil)
+
+        // Create the completion task
+        let completion = {(succeeded: Bool)->Void in
+            activityIndicator.stopAnimating()
+            activityIndicator.removeFromSuperview()
+            alertController.dismiss(animated: true, completion: {()->Void in
+                if succeeded {
+                    completion()
+                }
+            })
+        }
+
+        // Start the real task
+        task(completion)
+    }
 }

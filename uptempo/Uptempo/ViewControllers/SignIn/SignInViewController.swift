@@ -65,11 +65,10 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func signInTouchUpInsideAction(_ sender: UIButton) {
         self.resignAllTextFieldFirstResponder()
-        OperationHelper.startAsyncJobAndBlockCurrentWindow(
+        UIControlHelper.startAsyncTaskAndBlockCurrentWindow(
             window: self,
-            task: { () -> Bool in
+            task: { (completion: @escaping(Bool)->Void) -> Void in
                 // TODO: shall use a real result
-                return true
         },
             message: NSLocalizedString("Popup_SigningIn", comment: "SignInPop"), completion: { ()->() in self.performSegue(withIdentifier: "unwindToMainView", sender: nil)})
     }

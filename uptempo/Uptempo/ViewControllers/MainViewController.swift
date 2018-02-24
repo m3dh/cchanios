@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if true /* no token found or auth failed */ {
+        if ResourceManager.accountMgr.getActiveMainAccount() == nil {
             self.performSegue(withIdentifier: "mainNeedSignIn", sender: nil)
         }
 

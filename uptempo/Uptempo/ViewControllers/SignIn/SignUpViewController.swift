@@ -74,7 +74,7 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
         self.view.addGestureRecognizer(viewTapGestureRecognizer)
 
         // disable signup button
-        // self.signUpButton.isEnabled = false
+        self.signUpButton.isEnabled = false
 
         // setup all text fields
         self.usernameTextField.delegate = self
@@ -103,20 +103,36 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
 
         self.avatarImageView.image = newImage
         self.resignAllTextFieldFirstResponder()
-        OperationHelper.startAsyncJobAndBlockCurrentWindow(
+        UIControlHelper.startAsyncTaskAndBlockCurrentWindow(
             window: self,
-            task: { () -> Bool in
-                // TODO: shall use a real result
-                return true
-            },
-            message: NSLocalizedString("Popup_SigningUp", comment: "SignUpPop"), completion: { ()->() in
+            task: { (completion: @escaping (Bool)->Void) -> Void in
+                let webErrorHandler = WebErrorHandler()
+                webErrorHandler.upperCompletion = completion
+                webErrorHandler.addHandler(code: 40900, handler: { (msg) -> Bool in
+                    UIControlHelper.safelySetUILabelText(
+                        label: self.errorMessageLabel,
+                        labelHeight: self.errorMessageLabelHeightConst,
+                        text: NSLocalizedString("SignUp_Conflict", comment: "UserNameConflict"))
+                    UIControlHelper.markTextFieldError(textfield: self.usernameTextField)
+                    return true
+                })
+
+                ResourceManager.accountMgr.createMainAccount(
+                    accountName: self.usernameTextField.text!,
+                    displayName: self.displayNameTextField.text!,
+                    completion: { (account) in
+                        // do nothing...
+                        completion(true)
+                }, handler: webErrorHandler)
+        },
+            message: NSLocalizedString("Popup_SigningUp", comment: "SignUpPop"),
+            completion: { ()->() in
                 let controllers = self.navigationController!.viewControllers
                 for controller in controllers {
                     if let c = controller as? SignInViewController {
                         self.navigationController!.popToViewController(c, animated: true)
                         c.unwindFromSignUpViewController(sourceViewController: self)
-                    }
-                }})
+                    }}})
     }
 
     @objc func handleViewGestureTap(_ sender: UITapGestureRecognizer) {
@@ -207,7 +223,7 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
                 UIControlHelper.safelySetUILabelText(
                     label: self.errorMessageLabel,
                     labelHeight: self.errorMessageLabelHeightConst,
-                    text: "Invalid avatar picture : shall be bigger than 240pix x 240pix.")
+                    text: NSLocalizedString("SignUp_InvalidAvatar", comment: "InvalidAvatar"))
                 return false
             } else {
                 print("Sign up with image size : \(imgSize.height * self.avatarImageView.image!.scale) x \(imgSize.width * self.avatarImageView.image!.scale)")
@@ -218,7 +234,7 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
             UIControlHelper.safelySetUILabelText(
                 label: self.errorMessageLabel,
                 labelHeight: self.errorMessageLabelHeightConst,
-                text: "Invalid username: user name shall be 4-10 alphanumeric strings.")
+                text: NSLocalizedString("SignUp_InvalidUserName", comment: "InvalidUserName"))
             UIControlHelper.markTextFieldError(textfield: self.usernameTextField)
             return false
         }
@@ -227,7 +243,7 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
             UIControlHelper.safelySetUILabelText(
                 label: self.errorMessageLabel,
                 labelHeight: self.errorMessageLabelHeightConst,
-                text: "Invalid password: password shall be 6-20 with only alphanumeric or @, #, $, %, ^, & charactors")
+                text: NSLocalizedString("SignUp_InvalidPassword", comment: "InvalidPassword"))
             UIControlHelper.markTextFieldError(textfield: self.passwordTextField)
             return false
         }
@@ -236,7 +252,7 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
             UIControlHelper.safelySetUILabelText(
                 label: self.errorMessageLabel,
                 labelHeight: self.errorMessageLabelHeightConst,
-                text: "Invalid display name: display name shall have less than 20 charactors")
+                text: NSLocalizedString("SignUp_InvalidDisplayName", comment: "InvalidDisplayName"))
             UIControlHelper.markTextFieldError(textfield: self.displayNameTextField)
             return false
         }
@@ -245,7 +261,7 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
             UIControlHelper.safelySetUILabelText(
                 label: self.errorMessageLabel,
                 labelHeight: self.errorMessageLabelHeightConst,
-                text: "Confirm password does not match the password.")
+                text: NSLocalizedString("SignUp_PasswordNotMatch", comment: "PasswordNotMatch"))
             UIControlHelper.markTextFieldError(textfield: self.verifyPasswordTextField)
             return false
         }

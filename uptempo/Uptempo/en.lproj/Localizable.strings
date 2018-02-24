@@ -6,3 +6,10 @@
 
 "Popup_SigningUp" = "Signing up...";
 "Popup_SigningIn" = "Signing in...";
+
+"SignUp_Conflict" = "Account name already exists";
+"SignUp_InvalidAvatar" = "Invalid avatar picture : shall be bigger than 240pix x 240pix.";
+"SignUp_InvalidUserName" = "Invalid username: user name shall be 4-10 alphanumeric strings.";
+"SignUp_InvalidPassword" = "Invalid password: password shall be 6-20 with only alphanumeric or @, #, $, %, ^, & charactors";
+"SignUp_InvalidDisplayName" = "Invalid display name: display name shall have less than 20 charactors";
+"SignUp_PasswordNotMatch" = "Confirm password does not match the password.";

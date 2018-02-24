@@ -6,3 +6,10 @@
 
 "Popup_SigningUp" = "注册中...";
 "Popup_SigningIn" = "登录中...";
+
+"SignUp_Conflict" = "用户名已被占用";
+"SignUp_InvalidAvatar" = "头像图片太小：尺寸应该大于 240pix x 240pix";
+"SignUp_InvalidUserName" = "用户名应该由 4-10 个纯英文字母组成";
+"SignUp_InvalidPassword" = "密码应该由 6-20 个英文字母或 @, #, $, %, ^, & 符号构成";
+"SignUp_InvalidDisplayName" = "用户名应当为小于 20 个字符的词组";
+"SignUp_PasswordNotMatch" = "确认密码与输入的密码不符";
