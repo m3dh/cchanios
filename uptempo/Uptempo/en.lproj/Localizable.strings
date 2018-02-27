@@ -13,3 +13,6 @@
 "SignUp_InvalidPassword" = "Invalid password: password shall be 6-20 with only alphanumeric or @, #, $, %, ^, & charactors";
 "SignUp_InvalidDisplayName" = "Invalid display name: display name shall have less than 20 charactors";
 "SignUp_PasswordNotMatch" = "Confirm password does not match the password.";
+
+"SignIn_NotFound" = "Username not found.";
+"SignIn_Unauthorized" = "Incorrect password.";

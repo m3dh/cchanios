@@ -13,3 +13,6 @@
 "SignUp_InvalidPassword" = "密码应该由 6-20 个英文字母或 @, #, $, %, ^, & 符号构成";
 "SignUp_InvalidDisplayName" = "用户名应当为小于 20 个字符的词组";
 "SignUp_PasswordNotMatch" = "确认密码与输入的密码不符";
+
+"SignIn_NotFound" = "用户未找到";
+"SignIn_Unauthorized" = "用户密码错误";

@@ -30,10 +30,10 @@
 		C3A29E681FF2469900013C71 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A29E671FF2469900013C71 /* SignInViewController.swift */; };
 		C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */; };
 		C3AC0D761FF222A000BDD8ED /* UIControlHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */; };
+		C3B92508204436D10061039F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B92507204436D10061039F /* ImageManager.swift */; };
 		C3C32DBB1FFA7B1100DEA5D8 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */; };
 		C3C802D21FF5083E00165B3C /* MainSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C802D11FF5083E00165B3C /* MainSessionCell.swift */; };
 		C3D8D104203D61190027DBFF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8D103203D61190027DBFF /* ChatViewController.swift */; };
-		C3D8D106203D7CA30027DBFF /* ObjectModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8D105203D7CA30027DBFF /* ObjectModels.swift */; };
 		C3E58C501FFBA72E0022E181 /* WebHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */; };
 		C3FC5F651FFCC52400083BF3 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5F641FFCC52400083BF3 /* UnderlineTextField.swift */; };
 		CDA0185C2F07BD4F4AD3DF01 /* Pods_UptempoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E2008A163E56C883286B48 /* Pods_UptempoTests.framework */; };
@@ -84,10 +84,10 @@
 		C3A29E671FF2469900013C71 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = Uptempo/ViewControllers/SignIn/SignInViewController.swift; sourceTree = SOURCE_ROOT; };
 		C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeProtector.swift; sourceTree = "<group>"; };
 		C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIControlHelper.swift; path = Uptempo/Helpers/UIControlHelper.swift; sourceTree = SOURCE_ROOT; };
+		C3B92507204436D10061039F /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageHelper.swift; path = Uptempo/Helpers/ImageHelper.swift; sourceTree = SOURCE_ROOT; };
 		C3C802D11FF5083E00165B3C /* MainSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainSessionCell.swift; path = Uptempo/ViewControllers/SubClass/MainSessionCell.swift; sourceTree = SOURCE_ROOT; };
 		C3D8D103203D61190027DBFF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		C3D8D105203D7CA30027DBFF /* ObjectModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectModels.swift; sourceTree = "<group>"; };
 		C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebHelper.swift; sourceTree = "<group>"; };
 		C3FC5F641FFCC52400083BF3 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
 		D8D5E57818EA1622F67AECF4 /* Pods-UptempoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UptempoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UptempoTests/Pods-UptempoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -208,9 +208,9 @@
 		C3AC0D6F1FEF9BBE00BDD8ED /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				C3D8D105203D7CA30027DBFF /* ObjectModels.swift */,
 				C3745AB4200258B8006B51D0 /* AccountManager.swift */,
 				C3745AB6200258F8006B51D0 /* ResourceManager.swift */,
+				C3B92507204436D10061039F /* ImageManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -475,6 +475,7 @@
 				C3313ACA1FFE36FC002E7A83 /* SecretHelper.swift in Sources */,
 				C3D8D104203D61190027DBFF /* ChatViewController.swift in Sources */,
 				C3FC5F651FFCC52400083BF3 /* UnderlineTextField.swift in Sources */,
+				C3B92508204436D10061039F /* ImageManager.swift in Sources */,
 				C37EBA2B1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift in Sources */,
 				C3048F901FF624900012A4AF /* MainMenuBarDataSource.swift in Sources */,
 				C3C802D21FF5083E00165B3C /* MainSessionCell.swift in Sources */,
@@ -482,7 +483,6 @@
 				C3A29E681FF2469900013C71 /* SignInViewController.swift in Sources */,
 				C3048F921FF66E490012A4AF /* TableViewsManager.swift in Sources */,
 				C3E58C501FFBA72E0022E181 /* WebHelper.swift in Sources */,
-				C3D8D106203D7CA30027DBFF /* ObjectModels.swift in Sources */,
 				C3745AB7200258F8006B51D0 /* ResourceManager.swift in Sources */,
 				C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */,
 				C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */,

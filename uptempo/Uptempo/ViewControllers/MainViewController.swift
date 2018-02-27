@@ -9,6 +9,7 @@ class MainViewController: UIViewController {
     var menuBarCollectionViewSource: MainMenuBarDataSource!
     var mainCollectionViewSource: MainViewCollectionDataSource!
     var tableViewsManager: TableViewsManager!
+    var activeMainAccount: MainAccount! // Should be read from realm DB (linked).
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -23,8 +24,14 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if ResourceManager.accountMgr.getActiveMainAccount() == nil {
+        let mainAccount = ResourceManager.accountMgr.getStoreActiveMainAccount()
+        if mainAccount == nil || mainAccount?.authToken == nil {
             self.performSegue(withIdentifier: "mainNeedSignIn", sender: nil)
+        } else {
+            self.activeMainAccount = mainAccount!
+
+            // TEST ONLY
+            ResourceManager.accountMgr.resetStoreMainAccountAuthInfo(account: self.activeMainAccount)
         }
 
         // ui views initialization
@@ -68,6 +75,14 @@ class MainViewController: UIViewController {
         self.menuBarCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .top)
     }
 
+    func handleAuthenticationError() {
+        
+    }
+
     @IBAction func unwindToMainView(sender: UIStoryboardSegue) {
+        self.activeMainAccount = ResourceManager.accountMgr.getStoreActiveMainAccount()!
+        if self.activeMainAccount.authToken == nil {
+            fatalError("Unexpected auth token status after sign-in / sign-up(s)")
+        }
     }
 }

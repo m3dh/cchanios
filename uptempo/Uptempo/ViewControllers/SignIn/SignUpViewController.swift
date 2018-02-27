@@ -106,6 +106,7 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
         UIControlHelper.startAsyncTaskAndBlockCurrentWindow(
             window: self,
             task: { (completion: @escaping (Bool)->Void) -> Void in
+                // Step 1 : Create account
                 let webErrorHandler = WebErrorHandler()
                 webErrorHandler.upperCompletion = completion
                 webErrorHandler.addHandler(code: 40900, handler: { (msg) -> Bool in
@@ -121,8 +122,16 @@ class SignUpViewController: UIViewController, FusumaDelegate, UITextFieldDelegat
                     accountName: self.usernameTextField.text!,
                     displayName: self.displayNameTextField.text!,
                     completion: { (account) in
-                        // do nothing...
-                        completion(true)
+                        // Step 2 : Update password
+                        let webErrorHandler1 = WebErrorHandler()
+                        webErrorHandler1.upperCompletion = completion
+                        let passwordHash = SecretHelper.fillUserAccountPassword(createdAt: account.createdAt, password: self.passwordTextField.text!)
+                        ResourceManager.accountMgr.setMainAccountPassword(
+                            accountName: account.accountId,
+                            passwordHash: passwordHash,
+                            completion: { (_) in
+                                completion(true)
+                        }, handler: webErrorHandler1)
                 }, handler: webErrorHandler)
         },
             message: NSLocalizedString("Popup_SigningUp", comment: "SignUpPop"),

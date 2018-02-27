@@ -73,6 +73,9 @@ class WebErrorHandler {
 }
 
 class WebHelper {
+    static let authHeaderUserId = "X-Cchan-UserId"
+    static let authHeaderToken = "X-Cchan-Token"
+
     private init() {}
 
     static func parseJsonDateString(date: String?) -> Date? {
@@ -85,9 +88,15 @@ class WebHelper {
         }
     }
 
-    static func getResponseField<T>(data: T?, handler: WebErrorHandler) -> T {
+    static func getAuthHeader(account: MainAccount) -> HTTPHeaders {
+        var ret = HTTPHeaders()
+        ret[WebHelper.authHeaderUserId] = account.accountId
+        ret[WebHelper.authHeaderToken] = "\(account.authDeviceId.value!):\(account.authToken!)"
+        return ret
+    }
+
+    static func getResponseField<T>(_ data: T?) -> T {
         if data == nil {
-            handler.generalError(message: "Unexpected response received from remote server.")
             fatalError("Unexpected response received from remote server.")
         } else {
             return data!
