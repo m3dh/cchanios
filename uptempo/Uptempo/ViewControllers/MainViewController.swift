@@ -33,15 +33,6 @@ class MainViewController: UIViewController {
         } else {
             self.activeMainAccount = mainAccount!
             self.activeMainAccountAvatar = UIImage(data: self.activeMainAccount.avatarImageData!)!
-//
-//            let leftBarAvatarView = UIImageView(image: self.activeMainAccountAvatar)
-//            leftBarAvatarView.widthAnchor.constraint(equalToConstant: 35).isActive = true
-//            leftBarAvatarView.heightAnchor.constraint(equalToConstant: 35).isActive = true
-//            leftBarAvatarView.translatesAutoresizingMaskIntoConstraints = false
-//            leftBarAvatarView.layer.cornerRadius = 17.0
-//            leftBarAvatarView.layer.masksToBounds = true
-//            leftBarAvatarView.layer.borderWidth = 0.7
-//            leftBarAvatarView.layer.borderColor = UIColor.gray.cgColor
 
             let leftBarBaseButton = UIButton(type: .custom)
             leftBarBaseButton.setImage(self.activeMainAccountAvatar, for: .normal)
@@ -107,10 +98,6 @@ class MainViewController: UIViewController {
         
     }
 
-    func reperformPreviousSideMenuSegue() {
-
-    }
-
     @IBAction func unwindToMainView(sender: UIStoryboardSegue) {
         self.activeMainAccount = ResourceManager.accountMgr.getStoreActiveMainAccount()!
         if self.activeMainAccount.authToken == nil {
@@ -123,7 +110,7 @@ class MainViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let dest = segue.destination as? CreateSessionViewController {
+        if let dest = segue.destination as? CreateSessionMenuViewController {
             self.sideMenuActivatedDirection = .Right
             dest.transitioningDelegate = self
         } else if let dest = segue.destination as? AccountSettingMenuViewController {

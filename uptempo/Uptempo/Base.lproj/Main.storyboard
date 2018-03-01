@@ -37,7 +37,7 @@
         <!--Create Session-->
         <scene sceneID="iWQ-e4-q0B">
             <objects>
-                <viewController title="Create Session" id="1d5-vr-GNf" customClass="CreateSessionViewController" customModule="Uptempo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Create Session" id="1d5-vr-GNf" customClass="CreateSessionMenuViewController" customModule="Uptempo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eb1-uD-nez">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,7 +64,11 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="TGb-3h-Fgq">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="1EI-2N-efm"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="1EI-2N-efm">
+                                            <connections>
+                                                <action selector="navigationCancelAction:" destination="OFc-kU-UC6" id="GxD-NR-zN9"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -77,6 +81,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QDt-Pf-6LJ"/>
                     </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="Itc-yB-3i5" id="Pnn-TK-9YQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LDf-y8-AoL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

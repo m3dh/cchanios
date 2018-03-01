@@ -31,10 +31,11 @@
 		C3ABF0F12047E8150044A84C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ABF0EF2047E8150044A84C /* SignInViewController.swift */; };
 		C3ABF0F22047E8150044A84C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ABF0F02047E8150044A84C /* SignUpViewController.swift */; };
 		C3ABF0F42047E8E10044A84C /* AccountSettingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ABF0F32047E8E10044A84C /* AccountSettingMenuViewController.swift */; };
+		C3ABF0F6204821CE0044A84C /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ABF0F5204821CE0044A84C /* MenuTableViewCell.swift */; };
 		C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */; };
 		C3AC0D761FF222A000BDD8ED /* UIControlHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */; };
 		C3B92508204436D10061039F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B92507204436D10061039F /* ImageManager.swift */; };
-		C3B9250B2046F2090061039F /* CreateSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9250A2046F2090061039F /* CreateSessionViewController.swift */; };
+		C3B9250B2046F2090061039F /* CreateSessionMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9250A2046F2090061039F /* CreateSessionMenuViewController.swift */; };
 		C3C32DBB1FFA7B1100DEA5D8 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */; };
 		C3C802D21FF5083E00165B3C /* MainSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C802D11FF5083E00165B3C /* MainSessionCell.swift */; };
 		C3D8D104203D61190027DBFF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8D103203D61190027DBFF /* ChatViewController.swift */; };
@@ -89,10 +90,11 @@
 		C3ABF0EF2047E8150044A84C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C3ABF0F02047E8150044A84C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C3ABF0F32047E8E10044A84C /* AccountSettingMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingMenuViewController.swift; sourceTree = "<group>"; };
+		C3ABF0F5204821CE0044A84C /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeProtector.swift; sourceTree = "<group>"; };
 		C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIControlHelper.swift; path = Uptempo/Helpers/UIControlHelper.swift; sourceTree = SOURCE_ROOT; };
 		C3B92507204436D10061039F /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
-		C3B9250A2046F2090061039F /* CreateSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionViewController.swift; sourceTree = "<group>"; };
+		C3B9250A2046F2090061039F /* CreateSessionMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionMenuViewController.swift; sourceTree = "<group>"; };
 		C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageHelper.swift; path = Uptempo/Helpers/ImageHelper.swift; sourceTree = SOURCE_ROOT; };
 		C3C802D11FF5083E00165B3C /* MainSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainSessionCell.swift; path = Uptempo/ViewControllers/SubClass/MainSessionCell.swift; sourceTree = SOURCE_ROOT; };
 		C3D8D103203D61190027DBFF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -214,12 +216,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		C3ABF0EC2047D5820044A84C /* Animation */ = {
+		C3ABF0EC2047D5820044A84C /* Menu */ = {
 			isa = PBXGroup;
 			children = (
 				C3ABF0ED2047D5B00044A84C /* SideMenuAnimation.swift */,
+				C3ABF0F5204821CE0044A84C /* MenuTableViewCell.swift */,
 			);
-			path = Animation;
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		C3AC0D6F1FEF9BBE00BDD8ED /* Managers */ = {
@@ -235,7 +238,7 @@
 		C3B925092046F1760061039F /* CreateSession */ = {
 			isa = PBXGroup;
 			children = (
-				C3B9250A2046F2090061039F /* CreateSessionViewController.swift */,
+				C3B9250A2046F2090061039F /* CreateSessionMenuViewController.swift */,
 				C3ABF0EA2047CB0E0044A84C /* FindUserOrGroupViewController.swift */,
 			);
 			path = CreateSession;
@@ -256,7 +259,7 @@
 		C3E360A41FEE8C7D00896586 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C3ABF0EC2047D5820044A84C /* Animation */,
+				C3ABF0EC2047D5820044A84C /* Menu */,
 				C3B925092046F1760061039F /* CreateSession */,
 				C375FFFA1FFDED6500D8B331 /* Account */,
 				C3C802D31FF511C800165B3C /* SubClass */,
@@ -496,7 +499,7 @@
 			files = (
 				C3095A551FF68E4600A56760 /* MainSessionDataSource.swift in Sources */,
 				C3745AB5200258B8006B51D0 /* AccountManager.swift in Sources */,
-				C3B9250B2046F2090061039F /* CreateSessionViewController.swift in Sources */,
+				C3B9250B2046F2090061039F /* CreateSessionMenuViewController.swift in Sources */,
 				C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */,
 				C375FFF61FFD02D900D8B331 /* ColorfulButton.swift in Sources */,
 				C3095A571FF88D5C00A56760 /* ColorCollection.swift in Sources */,
@@ -516,6 +519,7 @@
 				C3ABF0F22047E8150044A84C /* SignUpViewController.swift in Sources */,
 				C3745AB7200258F8006B51D0 /* ResourceManager.swift in Sources */,
 				C3ABF0EB2047CB0E0044A84C /* FindUserOrGroupViewController.swift in Sources */,
+				C3ABF0F6204821CE0044A84C /* MenuTableViewCell.swift in Sources */,
 				C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */,
 				C3ABF0F12047E8150044A84C /* SignInViewController.swift in Sources */,
 				C3C32DBB1FFA7B1100DEA5D8 /* ImageHelper.swift in Sources */,
