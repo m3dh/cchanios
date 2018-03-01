@@ -10,6 +10,9 @@ class MainViewController: UIViewController {
     var mainCollectionViewSource: MainViewCollectionDataSource!
     var tableViewsManager: TableViewsManager!
     var activeMainAccount: MainAccount! // Should be read from realm DB (linked).
+    var activeMainAccountAvatar: UIImage!
+
+    var sideMenuActivatedDirection: SideMenuSlideDirection? = nil
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,9 +32,17 @@ class MainViewController: UIViewController {
             self.performSegue(withIdentifier: "mainNeedSignIn", sender: nil)
         } else {
             self.activeMainAccount = mainAccount!
+            self.activeMainAccountAvatar = UIImage(data: self.activeMainAccount.avatarImageData!)!
 
-            // TEST ONLY
-            ResourceManager.accountMgr.resetStoreMainAccountAuthInfo(account: self.activeMainAccount)
+            let leftBarAvatarView = UIImageView(image: self.activeMainAccountAvatar)
+            leftBarAvatarView.widthAnchor.constraint(equalToConstant: 35).isActive = true
+            leftBarAvatarView.heightAnchor.constraint(equalToConstant: 35).isActive = true
+            leftBarAvatarView.translatesAutoresizingMaskIntoConstraints = false
+            leftBarAvatarView.layer.cornerRadius = 17.0
+            leftBarAvatarView.layer.masksToBounds = true
+            leftBarAvatarView.layer.borderWidth = 0.7
+            leftBarAvatarView.layer.borderColor = UIColor.gray.cgColor
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBarAvatarView)
         }
 
         // ui views initialization
@@ -84,5 +95,18 @@ class MainViewController: UIViewController {
         if self.activeMainAccount.authToken == nil {
             fatalError("Unexpected auth token status after sign-in / sign-up(s)")
         }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? CreateSessionViewController {
+            self.sideMenuActivatedDirection = .Right
+            dest.transitioningDelegate = self
+        }
+    }
+}
+
+extension MainViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SidePresentMenuAnimator(direction: self.sideMenuActivatedDirection!)
     }
 }

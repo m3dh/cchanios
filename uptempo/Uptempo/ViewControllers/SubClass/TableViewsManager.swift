@@ -33,11 +33,5 @@ class TableViewsManager {
         self.directSessionsTable.dataSource = self.directSessionsSource
         self.directSessionsTable.delegate = self.directSessionsSource
         self.directSessionsTable.register(MainSessionCell.self, forCellReuseIdentifier: MainSessionDataSource.CellReuseIdentifier)
-
-        self.fillInitialData()
-    }
-
-    func fillInitialData() {
-
     }
 }

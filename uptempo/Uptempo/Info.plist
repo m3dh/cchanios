@@ -26,8 +26,9 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSAllowsLocalNetworking</key>
-		<true/>
+		<!--<key>NSAllowsLocalNetworking</key>
+		<true/>-->
+		<key>NSAllowsArbitraryLoads</key><true/> <!-- TEST ONLY -->
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Want to access your gallery and camera.</string>

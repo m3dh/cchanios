@@ -19,6 +19,54 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Create Session-->
+        <scene sceneID="iWQ-e4-q0B">
+            <objects>
+                <viewController title="Create Session" id="1d5-vr-GNf" customClass="CreateSessionViewController" customModule="Uptempo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eb1-uD-nez">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="h9a-cU-t8d"/>
+                    </view>
+                    <connections>
+                        <segue destination="OFc-kU-UC6" kind="presentation" identifier="searchUserSegue" id="Io3-oP-BF8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o7l-bN-z1D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="477" y="-1801"/>
+        </scene>
+        <!--Find User Or Group View Controller-->
+        <scene sceneID="uoa-lp-Age">
+            <objects>
+                <viewController id="OFc-kU-UC6" customClass="FindUserOrGroupViewController" customModule="Uptempo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hcS-z9-hmo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Itc-yB-3i5">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="TGb-3h-Fgq">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="1EI-2N-efm"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Itc-yB-3i5" firstAttribute="leading" secondItem="QDt-Pf-6LJ" secondAttribute="leading" id="HSa-pT-Wq8"/>
+                            <constraint firstAttribute="trailing" secondItem="Itc-yB-3i5" secondAttribute="trailing" id="NA1-e7-vCx"/>
+                            <constraint firstItem="Itc-yB-3i5" firstAttribute="top" secondItem="QDt-Pf-6LJ" secondAttribute="top" id="OMm-CS-Gxd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QDt-Pf-6LJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LDf-y8-AoL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1210" y="-1802"/>
+        </scene>
         <!--Uptempo-->
         <scene sceneID="YLz-ML-bDI">
             <objects>
@@ -105,9 +153,12 @@
                         <viewLayoutGuide key="safeArea" id="Glz-JE-P4A"/>
                     </view>
                     <navigationItem key="navigationItem" title="Uptempo" id="w8Q-E8-mKJ">
-                        <barButtonItem key="backBarButtonItem" title=" " id="XAw-lQ-rZd"/>
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="xFK-RM-lMy"/>
+                            <barButtonItem systemItem="add" id="xFK-RM-lMy">
+                                <connections>
+                                    <segue destination="1d5-vr-GNf" kind="presentation" id="DFS-JR-Ygo"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem systemItem="search" id="SE0-yh-auT"/>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -122,12 +173,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROh-Z7-zuD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="534.375" y="-658.09859154929575"/>
+            <point key="canvasLocation" x="-709" y="-903"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="LuR-IN-eFF">
             <objects>
-                <viewController id="pc4-cj-weF" sceneMemberID="viewController">
+                <viewController id="pc4-cj-weF" customClass="ChatViewController" customModule="Uptempo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y6S-nV-mpd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQw-NY-jTb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1418" y="-658"/>
+            <point key="canvasLocation" x="477" y="-1071"/>
         </scene>
         <!--Sign In-->
         <scene sceneID="tne-QT-ifu">
@@ -432,7 +483,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrJ-j5-2aL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-371" y="-658"/>
+            <point key="canvasLocation" x="-1436" y="-903"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="336-na-gh2">
