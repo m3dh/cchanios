@@ -33,16 +33,33 @@ class MainViewController: UIViewController {
         } else {
             self.activeMainAccount = mainAccount!
             self.activeMainAccountAvatar = UIImage(data: self.activeMainAccount.avatarImageData!)!
+//
+//            let leftBarAvatarView = UIImageView(image: self.activeMainAccountAvatar)
+//            leftBarAvatarView.widthAnchor.constraint(equalToConstant: 35).isActive = true
+//            leftBarAvatarView.heightAnchor.constraint(equalToConstant: 35).isActive = true
+//            leftBarAvatarView.translatesAutoresizingMaskIntoConstraints = false
+//            leftBarAvatarView.layer.cornerRadius = 17.0
+//            leftBarAvatarView.layer.masksToBounds = true
+//            leftBarAvatarView.layer.borderWidth = 0.7
+//            leftBarAvatarView.layer.borderColor = UIColor.gray.cgColor
 
-            let leftBarAvatarView = UIImageView(image: self.activeMainAccountAvatar)
-            leftBarAvatarView.widthAnchor.constraint(equalToConstant: 35).isActive = true
-            leftBarAvatarView.heightAnchor.constraint(equalToConstant: 35).isActive = true
-            leftBarAvatarView.translatesAutoresizingMaskIntoConstraints = false
-            leftBarAvatarView.layer.cornerRadius = 17.0
-            leftBarAvatarView.layer.masksToBounds = true
-            leftBarAvatarView.layer.borderWidth = 0.7
-            leftBarAvatarView.layer.borderColor = UIColor.gray.cgColor
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBarAvatarView)
+            let leftBarBaseButton = UIButton(type: .custom)
+            leftBarBaseButton.setImage(self.activeMainAccountAvatar, for: .normal)
+            leftBarBaseButton.imageView!.translatesAutoresizingMaskIntoConstraints = false
+            leftBarBaseButton.imageView!.widthAnchor.constraint(equalToConstant: 35).isActive = true
+            leftBarBaseButton.imageView!.heightAnchor.constraint(equalToConstant: 35).isActive = true
+            leftBarBaseButton.imageView!.layer.cornerRadius = 17.0
+            leftBarBaseButton.imageView!.layer.masksToBounds = true
+            leftBarBaseButton.imageView!.layer.borderWidth = 0.7
+            leftBarBaseButton.imageView!.layer.borderColor = UIColor.gray.cgColor
+            leftBarBaseButton.addTarget(self, action: #selector(self.segueToAccountSettingMenu), for: UIControlEvents.allTouchEvents)
+
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBarBaseButton)
+            self.navigationItem.leftBarButtonItem!.customView!.translatesAutoresizingMaskIntoConstraints = false
+            self.navigationItem.leftBarButtonItem!.customView!.widthAnchor.constraint(equalToConstant: 35).isActive = true
+            self.navigationItem.leftBarButtonItem!.customView!.heightAnchor.constraint(equalToConstant: 35).isActive = true
+            self.navigationItem.leftBarButtonItem!.style = .plain
+            self.navigationItem.leftBarButtonItem!.isEnabled = true
         }
 
         // ui views initialization
@@ -90,6 +107,10 @@ class MainViewController: UIViewController {
         
     }
 
+    func reperformPreviousSideMenuSegue() {
+
+    }
+
     @IBAction func unwindToMainView(sender: UIStoryboardSegue) {
         self.activeMainAccount = ResourceManager.accountMgr.getStoreActiveMainAccount()!
         if self.activeMainAccount.authToken == nil {
@@ -97,9 +118,16 @@ class MainViewController: UIViewController {
         }
     }
 
+    @objc func segueToAccountSettingMenu() {
+        self.performSegue(withIdentifier: "intoAccountSetting", sender: nil)
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? CreateSessionViewController {
             self.sideMenuActivatedDirection = .Right
+            dest.transitioningDelegate = self
+        } else if let dest = segue.destination as? AccountSettingMenuViewController {
+            self.sideMenuActivatedDirection = .Left
             dest.transitioningDelegate = self
         }
     }
@@ -108,5 +136,9 @@ class MainViewController: UIViewController {
 extension MainViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return SidePresentMenuAnimator(direction: self.sideMenuActivatedDirection!)
+    }
+
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SideDismissMenuAnimator()
     }
 }

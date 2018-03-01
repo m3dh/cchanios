@@ -12,7 +12,36 @@ enum SideMenuSlideDirection {
     case Right
 }
 
-class SidePresentMenuAnimator : NSObject, UIViewControllerAnimatedTransitioning {
+class SideDismissMenuAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+    func transitionDuration(using: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return 0.2
+    }
+
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        guard
+            let snapshot = transitionContext.containerView.viewWithTag(SideMenuHelper.snapshotTagNumber),
+            let fromController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from),
+            let toController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
+            else {
+                return
+        }
+
+        UIView.animate(
+            withDuration: self.transitionDuration(using: transitionContext),
+            animations: {
+                snapshot.frame = CGRect(origin: CGPoint.zero, size: UIScreen.main.bounds.size)
+        },
+            completion: { _ in
+                if !transitionContext.transitionWasCancelled {
+                    transitionContext.containerView.insertSubview(toController.view, aboveSubview: fromController.view)
+                    snapshot.removeFromSuperview()
+                }
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+        })
+    }
+}
+
+class SidePresentMenuAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     var direction: SideMenuSlideDirection
 
     init(direction: SideMenuSlideDirection) {
@@ -27,7 +56,6 @@ class SidePresentMenuAnimator : NSObject, UIViewControllerAnimatedTransitioning 
         guard
             let fromController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from),
             let toController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
-            // let containerView = transitionContext.containerView
             else {
                 return
         }

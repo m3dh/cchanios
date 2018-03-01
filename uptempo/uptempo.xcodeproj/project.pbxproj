@@ -23,13 +23,14 @@
 		C36767181FF3E46200F003CB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36767171FF3E46200F003CB /* MainViewController.swift */; };
 		C3745AB5200258B8006B51D0 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3745AB4200258B8006B51D0 /* AccountManager.swift */; };
 		C3745AB7200258F8006B51D0 /* ResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3745AB6200258F8006B51D0 /* ResourceManager.swift */; };
-		C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */; };
 		C375FFF61FFD02D900D8B331 /* ColorfulButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375FFF51FFD02D900D8B331 /* ColorfulButton.swift */; };
 		C37EBA2B1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37EBA2A1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift */; };
 		C383EFF51FFE67EA00085A1D /* HelperUnittests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C383EFF41FFE67EA00085A1D /* HelperUnittests.swift */; };
-		C3A29E681FF2469900013C71 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A29E671FF2469900013C71 /* SignInViewController.swift */; };
 		C3ABF0EB2047CB0E0044A84C /* FindUserOrGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ABF0EA2047CB0E0044A84C /* FindUserOrGroupViewController.swift */; };
 		C3ABF0EE2047D5B00044A84C /* SideMenuAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ABF0ED2047D5B00044A84C /* SideMenuAnimation.swift */; };
+		C3ABF0F12047E8150044A84C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ABF0EF2047E8150044A84C /* SignInViewController.swift */; };
+		C3ABF0F22047E8150044A84C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ABF0F02047E8150044A84C /* SignUpViewController.swift */; };
+		C3ABF0F42047E8E10044A84C /* AccountSettingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ABF0F32047E8E10044A84C /* AccountSettingMenuViewController.swift */; };
 		C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */; };
 		C3AC0D761FF222A000BDD8ED /* UIControlHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */; };
 		C3B92508204436D10061039F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B92507204436D10061039F /* ImageManager.swift */; };
@@ -79,14 +80,15 @@
 		C36767171FF3E46200F003CB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Uptempo/ViewControllers/MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		C3745AB4200258B8006B51D0 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		C3745AB6200258F8006B51D0 /* ResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManager.swift; sourceTree = "<group>"; };
-		C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Uptempo/ViewControllers/SignIn/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		C375FFF51FFD02D900D8B331 /* ColorfulButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulButton.swift; sourceTree = "<group>"; };
 		C375FFF91FFD24A100D8B331 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		C37EBA2A1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCollectionDataSource.swift; sourceTree = "<group>"; };
 		C383EFF41FFE67EA00085A1D /* HelperUnittests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperUnittests.swift; sourceTree = "<group>"; };
-		C3A29E671FF2469900013C71 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = Uptempo/ViewControllers/SignIn/SignInViewController.swift; sourceTree = SOURCE_ROOT; };
 		C3ABF0EA2047CB0E0044A84C /* FindUserOrGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindUserOrGroupViewController.swift; sourceTree = "<group>"; };
 		C3ABF0ED2047D5B00044A84C /* SideMenuAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuAnimation.swift; sourceTree = "<group>"; };
+		C3ABF0EF2047E8150044A84C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		C3ABF0F02047E8150044A84C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C3ABF0F32047E8E10044A84C /* AccountSettingMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingMenuViewController.swift; sourceTree = "<group>"; };
 		C3AC0D721FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeProtector.swift; sourceTree = "<group>"; };
 		C3AC0D751FF222A000BDD8ED /* UIControlHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIControlHelper.swift; path = Uptempo/Helpers/UIControlHelper.swift; sourceTree = SOURCE_ROOT; };
 		C3B92507204436D10061039F /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
@@ -188,13 +190,14 @@
 			path = UptempoTests;
 			sourceTree = "<group>";
 		};
-		C375FFFA1FFDED6500D8B331 /* SignIn */ = {
+		C375FFFA1FFDED6500D8B331 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				C3A29E671FF2469900013C71 /* SignInViewController.swift */,
-				C37535A11FEEAD1800D8B4F3 /* SignUpViewController.swift */,
+				C3ABF0EF2047E8150044A84C /* SignInViewController.swift */,
+				C3ABF0F02047E8150044A84C /* SignUpViewController.swift */,
+				C3ABF0F32047E8E10044A84C /* AccountSettingMenuViewController.swift */,
 			);
-			path = SignIn;
+			path = Account;
 			sourceTree = "<group>";
 		};
 		C3A29E691FF33EFC00013C71 /* Helpers */ = {
@@ -255,7 +258,7 @@
 			children = (
 				C3ABF0EC2047D5820044A84C /* Animation */,
 				C3B925092046F1760061039F /* CreateSession */,
-				C375FFFA1FFDED6500D8B331 /* SignIn */,
+				C375FFFA1FFDED6500D8B331 /* Account */,
 				C3C802D31FF511C800165B3C /* SubClass */,
 				C36767171FF3E46200F003CB /* MainViewController.swift */,
 				C3D8D103203D61190027DBFF /* ChatViewController.swift */,
@@ -497,6 +500,7 @@
 				C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */,
 				C375FFF61FFD02D900D8B331 /* ColorfulButton.swift in Sources */,
 				C3095A571FF88D5C00A56760 /* ColorCollection.swift in Sources */,
+				C3ABF0F42047E8E10044A84C /* AccountSettingMenuViewController.swift in Sources */,
 				C36767181FF3E46200F003CB /* MainViewController.swift in Sources */,
 				C3313ACA1FFE36FC002E7A83 /* SecretHelper.swift in Sources */,
 				C3D8D104203D61190027DBFF /* ChatViewController.swift in Sources */,
@@ -507,13 +511,13 @@
 				C3048F901FF624900012A4AF /* MainMenuBarDataSource.swift in Sources */,
 				C3C802D21FF5083E00165B3C /* MainSessionCell.swift in Sources */,
 				C3AC0D761FF222A000BDD8ED /* UIControlHelper.swift in Sources */,
-				C3A29E681FF2469900013C71 /* SignInViewController.swift in Sources */,
 				C3048F921FF66E490012A4AF /* TableViewsManager.swift in Sources */,
 				C3E58C501FFBA72E0022E181 /* WebHelper.swift in Sources */,
+				C3ABF0F22047E8150044A84C /* SignUpViewController.swift in Sources */,
 				C3745AB7200258F8006B51D0 /* ResourceManager.swift in Sources */,
 				C3ABF0EB2047CB0E0044A84C /* FindUserOrGroupViewController.swift in Sources */,
 				C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */,
-				C37535A21FEEAD1800D8B4F3 /* SignUpViewController.swift in Sources */,
+				C3ABF0F12047E8150044A84C /* SignInViewController.swift in Sources */,
 				C3C32DBB1FFA7B1100DEA5D8 /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
