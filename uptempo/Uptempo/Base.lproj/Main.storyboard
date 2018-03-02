@@ -45,7 +45,7 @@
                         <viewLayoutGuide key="safeArea" id="h9a-cU-t8d"/>
                     </view>
                     <connections>
-                        <segue destination="OFc-kU-UC6" kind="presentation" identifier="searchUserSegue" id="Io3-oP-BF8"/>
+                        <segue destination="OFc-kU-UC6" kind="presentation" identifier="searchUserSegue" modalPresentationStyle="overFullScreen" id="Io3-oP-BF8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o7l-bN-z1D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -87,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LDf-y8-AoL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1210" y="-1802"/>
+            <point key="canvasLocation" x="1291" y="-1802"/>
         </scene>
         <!--Uptempo-->
         <scene sceneID="YLz-ML-bDI">

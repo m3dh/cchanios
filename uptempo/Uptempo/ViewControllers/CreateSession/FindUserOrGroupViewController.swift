@@ -4,12 +4,7 @@ class FindUserOrGroupViewController: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationBar!
 
     @IBAction func navigationCancelAction(_ sender: Any) {
-        let controllers = self.navigationController!.viewControllers
-        for controller in controllers {
-            if let c = controller as? MainViewController {
-                self.navigationController!.popToViewController(c, animated: true)
-                // c.unwindFromSignUpViewController(sourceViewController: self)
-            }}
+        self.dismiss(animated: true, completion: nil)
     }
 
     override func viewDidLoad() {

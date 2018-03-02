@@ -36,6 +36,10 @@ class CreateSessionMenuViewController: UIViewController, UITableViewDataSource, 
         self.menuTableView.delegate = self
     }
 
+    func setCoverSnapshot(snapshot: UIView) {
+
+    }
+
     @objc func dismissToMain() {
         self.dismiss(animated: true, completion: nil)
     }

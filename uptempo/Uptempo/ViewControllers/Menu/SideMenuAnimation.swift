@@ -71,6 +71,10 @@ class SidePresentMenuAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         transitionContext.containerView.insertSubview(snapshot, aboveSubview: toController.view)
         fromController.view.isHidden = true
 
+        if let createSessionController = toController as? CreateSessionMenuViewController {
+            createSessionController.setCoverSnapshot(snapshot: snapshot)
+        }
+
         UIView.animate(
             withDuration: self.transitionDuration(using: transitionContext),
             animations: {
