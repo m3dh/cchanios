@@ -7,6 +7,8 @@ class CreateSessionMenuViewController: UIViewController, UITableViewDataSource, 
     var menuItemDict: [String:[MenuTableViewCellModel]]!
     var menuItemKeys: [String]!
 
+    var mainViewController: MainViewController!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.menuItemDict = [
@@ -36,8 +38,17 @@ class CreateSessionMenuViewController: UIViewController, UITableViewDataSource, 
         self.menuTableView.delegate = self
     }
 
-    func setCoverSnapshot(snapshot: UIView) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationNav = segue.destination as? UINavigationController {
+            if let destinationFinder = destinationNav.viewControllers[0] as? FindUserOrGroupViewController {
+                destinationFinder.createSessionController = self
+            }
+        }
+    }
 
+    func dismissToMainAndIntoChat() {
+        self.dismiss(animated: true, completion: nil)
+        self.mainViewController.performSegue(withIdentifier: "intoChatView", sender: nil)
     }
 
     @objc func dismissToMain() {

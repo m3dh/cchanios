@@ -71,10 +71,6 @@ class SidePresentMenuAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         transitionContext.containerView.insertSubview(snapshot, aboveSubview: toController.view)
         fromController.view.isHidden = true
 
-        if let createSessionController = toController as? CreateSessionMenuViewController {
-            createSessionController.setCoverSnapshot(snapshot: snapshot)
-        }
-
         UIView.animate(
             withDuration: self.transitionDuration(using: transitionContext),
             animations: {
@@ -93,7 +89,7 @@ class SidePresentMenuAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 }
 
 struct SideMenuHelper {
-    static let menuWidthPercent: CGFloat = 0.6
+    static let menuWidthPercent: CGFloat = 0.85
     static let percentThreshold:CGFloat = 0.3
     static let snapshotTagNumber = 10001
 }

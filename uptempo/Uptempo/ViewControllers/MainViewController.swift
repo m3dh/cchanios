@@ -113,6 +113,7 @@ class MainViewController: UIViewController {
         if let dest = segue.destination as? CreateSessionMenuViewController {
             self.sideMenuActivatedDirection = .Right
             dest.transitioningDelegate = self
+            dest.mainViewController = self
         } else if let dest = segue.destination as? AccountSettingMenuViewController {
             self.sideMenuActivatedDirection = .Left
             dest.transitioningDelegate = self

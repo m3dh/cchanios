@@ -1,13 +1,15 @@
 import UIKit
 
 class FindUserOrGroupViewController: UIViewController {
+    var createSessionController: CreateSessionMenuViewController!
+
     @IBAction func navigationCancel(_ sender: Any)  {
         self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func navigationTest(_ sender: Any) {
-        let mainViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController
-        self.navigationController?.pushViewController(mainViewController!, animated: true)
+        self.dismiss(animated: true, completion: nil)
+        self.createSessionController.dismissToMainAndIntoChat()
     }
 
     override func viewDidLoad() {
