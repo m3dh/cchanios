@@ -73,7 +73,7 @@ class MainViewController: UIViewController {
         }
 
         // background collection view
-        self.tableViewsManager = TableViewsManager()
+        self.tableViewsManager = TableViewsManager(mainViewController: self)
         self.mainCollectionViewSource = MainViewCollectionDataSource(parentView: self.mainCollectionView, menuBar: self.menuBarCollectionViewSource, menuBarView: self.menuBarCollectionView, tableViewsMgr: tableViewsManager)
         self.mainCollectionView.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
         self.mainCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: MainViewCollectionDataSource.CollectionCellId)

@@ -4,9 +4,11 @@ class MainSessionDataSource: NSObject, UITableViewDataSource, UITableViewDelegat
     static let CellReuseIdentifier = "mainSessionCell"
 
     let rowHeight: CGFloat
+    let mainViewController: MainViewController
 
-    init(rowHeight: CGFloat) {
+    init(rowHeight: CGFloat, mainViewController: MainViewController) {
         self.rowHeight = rowHeight
+        self.mainViewController = mainViewController
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -19,6 +21,7 @@ class MainSessionDataSource: NSObject, UITableViewDataSource, UITableViewDelegat
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        self.mainViewController.performSegue(withIdentifier: "intoChatView", sender: nil)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -45,49 +45,55 @@
                         <viewLayoutGuide key="safeArea" id="h9a-cU-t8d"/>
                     </view>
                     <connections>
-                        <segue destination="OFc-kU-UC6" kind="presentation" identifier="searchUserSegue" modalPresentationStyle="overFullScreen" id="Io3-oP-BF8"/>
+                        <segue destination="Gwg-bf-8fb" kind="presentation" identifier="searchUserSegue" modalPresentationStyle="overFullScreen" id="Mrl-4o-Zzr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o7l-bN-z1D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="477" y="-1801"/>
+            <point key="canvasLocation" x="581" y="-1825"/>
         </scene>
         <!--Find User Or Group View Controller-->
         <scene sceneID="uoa-lp-Age">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LDf-y8-AoL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="OFc-kU-UC6" customClass="FindUserOrGroupViewController" customModule="Uptempo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hcS-z9-hmo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Itc-yB-3i5">
-                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="TGb-3h-Fgq">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="1EI-2N-efm">
-                                            <connections>
-                                                <action selector="navigationCancelAction:" destination="OFc-kU-UC6" id="GxD-NR-zN9"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Itc-yB-3i5" firstAttribute="leading" secondItem="QDt-Pf-6LJ" secondAttribute="leading" id="HSa-pT-Wq8"/>
-                            <constraint firstAttribute="trailing" secondItem="Itc-yB-3i5" secondAttribute="trailing" id="NA1-e7-vCx"/>
-                            <constraint firstItem="Itc-yB-3i5" firstAttribute="top" secondItem="QDt-Pf-6LJ" secondAttribute="top" id="OMm-CS-Gxd"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QDt-Pf-6LJ"/>
                     </view>
-                    <connections>
-                        <outlet property="navigationBar" destination="Itc-yB-3i5" id="Pnn-TK-9YQ"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="ENn-6d-YiX">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Lsd-Y6-yCT">
+                            <connections>
+                                <action selector="navigationCancel:" destination="OFc-kU-UC6" id="ygu-9l-h56"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Test" id="4pf-ZH-5p1">
+                            <connections>
+                                <action selector="navigationTest:" destination="OFc-kU-UC6" id="nLA-Uq-YNW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LDf-y8-AoL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1291" y="-1802"/>
+            <point key="canvasLocation" x="2261" y="-1825"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2W7-Aj-qcz">
+            <objects>
+                <navigationController id="Gwg-bf-8fb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="egK-82-Tmr">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OFc-kU-UC6" kind="relationship" relationship="rootViewController" id="Ccu-Bl-rm9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ony-rA-cje" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1416" y="-1825"/>
         </scene>
         <!--Uptempo-->
         <scene sceneID="YLz-ML-bDI">

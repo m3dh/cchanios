@@ -7,13 +7,17 @@ class TableViewsManager {
     let channelSessionsTable = UITableView()
     let directSessionsTable = UITableView()
 
-    let recentSessionsSource = MainSessionDataSource(rowHeight: 72)
-    let channelSessionsSource = MainSessionDataSource(rowHeight: 72)
-    let directSessionsSource = MainSessionDataSource(rowHeight: 72)
+    let recentSessionsSource: MainSessionDataSource
+    let channelSessionsSource: MainSessionDataSource
+    let directSessionsSource: MainSessionDataSource
 
     let tables: [UITableView]
 
-    init() {
+    init(mainViewController: MainViewController) {
+        self.recentSessionsSource = MainSessionDataSource(rowHeight: 72, mainViewController: mainViewController)
+        self.channelSessionsSource = MainSessionDataSource(rowHeight: 72, mainViewController: mainViewController)
+        self.directSessionsSource = MainSessionDataSource(rowHeight: 72, mainViewController: mainViewController)
+
         self.tables = [self.recentSessionsTable, self.channelSessionsTable, self.directSessionsTable]
         self.recentSessionsTable.translatesAutoresizingMaskIntoConstraints = false
         self.recentSessionsTable.dataSource = self.recentSessionsSource
