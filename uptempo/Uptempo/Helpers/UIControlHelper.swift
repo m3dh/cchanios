@@ -47,6 +47,11 @@ class UIControlHelper {
         }
     }
 
+    static func delayAndDo(delay: Double, task: @escaping ()->Void) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: task)
+    }
+
     static func startAsyncTaskAndBlockCurrentWindow(window: UIViewController, task: @escaping (@escaping(Bool)->Void)->Void, message: String, completion: @escaping ()->Void) {
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         alertController.view.tintColor = UIColor.black

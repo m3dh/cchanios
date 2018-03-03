@@ -31,26 +31,7 @@ class MainViewController: UIViewController {
         if mainAccount == nil || mainAccount?.authToken == nil {
             self.performSegue(withIdentifier: "mainNeedSignIn", sender: nil)
         } else {
-            self.activeMainAccount = mainAccount!
-            self.activeMainAccountAvatar = UIImage(data: self.activeMainAccount.avatarImageData!)!
-
-            let leftBarBaseButton = UIButton(type: .custom)
-            leftBarBaseButton.setImage(self.activeMainAccountAvatar, for: .normal)
-            leftBarBaseButton.imageView!.translatesAutoresizingMaskIntoConstraints = false
-            leftBarBaseButton.imageView!.widthAnchor.constraint(equalToConstant: 35).isActive = true
-            leftBarBaseButton.imageView!.heightAnchor.constraint(equalToConstant: 35).isActive = true
-            leftBarBaseButton.imageView!.layer.cornerRadius = 17.0
-            leftBarBaseButton.imageView!.layer.masksToBounds = true
-            leftBarBaseButton.imageView!.layer.borderWidth = 0.7
-            leftBarBaseButton.imageView!.layer.borderColor = UIColor.gray.cgColor
-            leftBarBaseButton.addTarget(self, action: #selector(self.segueToAccountSettingMenu), for: UIControlEvents.allTouchEvents)
-
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBarBaseButton)
-            self.navigationItem.leftBarButtonItem!.customView!.translatesAutoresizingMaskIntoConstraints = false
-            self.navigationItem.leftBarButtonItem!.customView!.widthAnchor.constraint(equalToConstant: 35).isActive = true
-            self.navigationItem.leftBarButtonItem!.customView!.heightAnchor.constraint(equalToConstant: 35).isActive = true
-            self.navigationItem.leftBarButtonItem!.style = .plain
-            self.navigationItem.leftBarButtonItem!.isEnabled = true
+            self.setMainAccount(mainAccount: mainAccount!)
         }
 
         // ui views initialization
@@ -98,11 +79,38 @@ class MainViewController: UIViewController {
         
     }
 
-    @IBAction func unwindToMainView(sender: UIStoryboardSegue) {
-        self.activeMainAccount = ResourceManager.accountMgr.getStoreActiveMainAccount()!
+    func setMainAccount(mainAccount: MainAccount) {
+        self.activeMainAccount = mainAccount
+        self.activeMainAccountAvatar = UIImage(data: self.activeMainAccount.avatarImageData!)!
+
         if self.activeMainAccount.authToken == nil {
             fatalError("Unexpected auth token status after sign-in / sign-up(s)")
         }
+
+        let leftBarBaseButton = UIButton(type: .custom)
+        leftBarBaseButton.setImage(self.activeMainAccountAvatar, for: .normal)
+        leftBarBaseButton.imageView!.translatesAutoresizingMaskIntoConstraints = false
+        leftBarBaseButton.translatesAutoresizingMaskIntoConstraints = false
+        leftBarBaseButton.imageView!.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        leftBarBaseButton.imageView!.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        leftBarBaseButton.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        leftBarBaseButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        leftBarBaseButton.imageView!.layer.cornerRadius = 17.0
+        leftBarBaseButton.imageView!.layer.masksToBounds = true
+        leftBarBaseButton.imageView!.layer.borderWidth = 0.7
+        leftBarBaseButton.imageView!.layer.borderColor = UIColor.gray.cgColor
+        leftBarBaseButton.addTarget(self, action: #selector(self.segueToAccountSettingMenu), for: UIControlEvents.allTouchEvents)
+
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBarBaseButton)
+        self.navigationItem.leftBarButtonItem!.customView!.translatesAutoresizingMaskIntoConstraints = false
+        self.navigationItem.leftBarButtonItem!.customView!.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        self.navigationItem.leftBarButtonItem!.customView!.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        self.navigationItem.leftBarButtonItem!.style = .plain
+        self.navigationItem.leftBarButtonItem!.isEnabled = true
+    }
+
+    @IBAction func unwindToMainView(sender: UIStoryboardSegue) {
+        self.setMainAccount(mainAccount: ResourceManager.accountMgr.getStoreActiveMainAccount()!)
     }
 
     @objc func segueToAccountSettingMenu() {

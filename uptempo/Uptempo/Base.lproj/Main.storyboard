@@ -55,27 +55,16 @@
         <!--Find User Or Group View Controller-->
         <scene sceneID="uoa-lp-Age">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LDf-y8-AoL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="OFc-kU-UC6" customClass="FindUserOrGroupViewController" customModule="Uptempo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hcS-z9-hmo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="QDt-Pf-6LJ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ENn-6d-YiX">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Lsd-Y6-yCT">
-                            <connections>
-                                <action selector="navigationCancel:" destination="OFc-kU-UC6" id="ygu-9l-h56"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Test" id="4pf-ZH-5p1">
-                            <connections>
-                                <action selector="navigationTest:" destination="OFc-kU-UC6" id="nLA-Uq-YNW"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="ENn-6d-YiX"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LDf-y8-AoL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2568.1159420289855" y="-1825.271739130435"/>
         </scene>
@@ -521,7 +510,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r9v-uv-2rP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g33-mE-0tO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="g33-mE-0tO">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
