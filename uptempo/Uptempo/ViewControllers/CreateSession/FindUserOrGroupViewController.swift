@@ -17,7 +17,7 @@ class SearchResultTableViewCell : UITableViewCell {
             self.avatarImageView!.layer.borderColor = ColorCollection.UserAvatarBorder0.cgColor
             self.initialized = true
 
-            self.registeredAtLabel.textColor = ColorCollection.tableViewTimestamp
+            self.registeredAtLabel.textColor = ColorCollection.TableViewTimestamp
         }
 
         self.avatarImageView!.image = UIImage(data: account.avatarImageData!)

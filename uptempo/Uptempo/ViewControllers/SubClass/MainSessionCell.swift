@@ -48,7 +48,7 @@ class MainSessionCell: UITableViewCell {
         self.timestampTextView.topAnchor.constraint(equalTo: self.timeAndOtherSymbolView.topAnchor).isActive = true
         self.timestampTextView.font = UIFont.init(name: "AvenirNext-DemiBold", size: 12)
         self.timestampTextView.text = self.getRightDateString(time: lastMsgTime)
-        self.timestampTextView.textColor = ColorCollection.tableViewTimestamp
+        self.timestampTextView.textColor = ColorCollection.TableViewTimestamp
         let size = self.timestampTextView.sizeThatFits(self.timestampTextView.bounds.size)
         self.timestampTextView.heightAnchor.constraint(equalToConstant: size.height).isActive = true
         self.timeAndOtherSymbolViewWidthConst = self.timeAndOtherSymbolView.widthAnchor.constraint(equalToConstant: 10)

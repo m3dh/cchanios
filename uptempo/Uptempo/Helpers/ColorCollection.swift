@@ -13,7 +13,13 @@ class ColorCollection {
     static let TextfieldDefaultTintColor = UIColor(white: 0.9, alpha: 1)
 
     // Group avatar has a, while normal users are in light blue
-    static let UserAvatarBorder0 = UIColor(red: 200/255.0, green: 227/255.0, blue: 233/255.0, alpha: 1)
+    static let UserAvatarBorder0 = UIColor(red: 98/255.0, green: 114/255.0, blue: 164/255.0, alpha: 1)
 
-    static let tableViewTimestamp = UIColor(red: 98/255.0, green: 114/255.0, blue: 164/255.0, alpha: 1)
+    static let TableViewTimestamp = UIColor(red: 98/255.0, green: 114/255.0, blue: 164/255.0, alpha: 1)
+
+    // Chat view colors...
+    static let ChatViewBackground0 = UIColor(red: 185/255.0, green: 203/255.0, blue: 204/255.0, alpha: 1)
+    static let ChatViewBackground1 = UIColor(red: 121/255.0, green: 147/255.0, blue: 191/255.0, alpha: 1)
+
+    static let ChatElementViewBackground = UIColor(red: 235/255.0, green: 237/255.0, blue: 235/255.0, alpha: 1)
 }
