@@ -21,14 +21,14 @@ class SearchResultTableViewCell : UITableViewCell {
         }
 
         self.avatarImageView!.image = UIImage(data: account.avatarImageData!)
-        self.userNameLabel.text = account.accountId
+        self.userNameLabel.text = "\(UIControlHelper.removeTypePartFromId(id: account.accountId))"
         self.displayNameLabel.text = account.displayName
 
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone.current
         dateFormatter.dateFormat = "yyyy/MM/dd"
         let timeStr = dateFormatter.string(from: account.createdAt)
-        self.registeredAtLabel.text = timeStr
+        self.registeredAtLabel.text = "\(timeStr)"
     }
 }
 
@@ -52,29 +52,19 @@ UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
 
         // Set search controller
-        self.navigationItem.title = nil
         self.searchController = UISearchController(searchResultsController: nil)
         self.searchController.searchResultsUpdater = self
         self.searchController.searchBar.sizeToFit()
         self.searchController.searchBar.delegate = self
         self.searchController.delegate = self
-
-        self.navigationItem.titleView = searchController.searchBar
-
         self.searchController.dimsBackgroundDuringPresentation = false
         self.searchController.hidesNavigationBarDuringPresentation = false
-
         self.searchController.searchBar.placeholder = "Search by user or group name..."
+        self.searchController.searchBar.autocapitalizationType = .none
 
-        // Set result table view
-//        self.searchResultTable = UITableView()
-//        self.baseView.addSubview(self.searchResultTable)
-//        self.searchResultTable.translatesAutoresizingMaskIntoConstraints = false
-//        self.searchResultTable.topAnchor.constraint(equalTo: self.baseView.topAnchor).isActive = true
-//        self.searchResultTable.bottomAnchor.constraint(equalTo: self.baseView.bottomAnchor).isActive = true
-//        self.searchResultTable.leftAnchor.constraint(equalTo: self.baseView.leftAnchor).isActive = true
-//        self.searchResultTable.rightAnchor.constraint(equalTo: self.baseView.rightAnchor).isActive = true
-//        self.searchResultTable.register(SearchResultTableViewCell.self, forCellReuseIdentifier: FindUserOrGroupViewController.SearchResultViewCellIdentifier)
+        self.navigationItem.title = nil
+        self.navigationItem.titleView = searchController.searchBar
+
         self.searchResultTable.delegate = self
         self.searchResultTable.dataSource = self
         self.searchResultTable.backgroundColor = UIColor(white: 0.98, alpha: 1)
@@ -161,6 +151,8 @@ UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        // Create channel
+        // Dismiss back and jump into chat view
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

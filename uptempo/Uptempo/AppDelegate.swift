@@ -7,10 +7,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.tintColor = ColorCollection.NavigationItemTintColor
-        navigationBarAppearace.barTintColor = ColorCollection.NavigationBarBackgroundColor
-        navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "AvenirNext-DemiBold", size: 18)!]
+        let navigationBarAppearance = UINavigationBar.appearance()
+        navigationBarAppearance.tintColor = ColorCollection.NavigationItemTintColor
+        navigationBarAppearance.barTintColor = ColorCollection.NavigationBarBackgroundColor
+        navigationBarAppearance.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "AvenirNext-DemiBold", size: 18)!]
+        let barButtonAppearance = UIBarButtonItem.appearance()
+        barButtonAppearance.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "AvenirNext-Medium", size: 16)!], for: .normal)
 
         application.statusBarStyle = .lightContent
         guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else {

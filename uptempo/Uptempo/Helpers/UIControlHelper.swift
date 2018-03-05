@@ -78,4 +78,14 @@ class UIControlHelper {
         // Start the real task
         task(completion)
     }
+
+    static func removeTypePartFromId(id: String) -> String {
+        let possibleSpliter = id.index(of: ":")
+        if let spliter = possibleSpliter {
+            return String(id[id.index(after: spliter)...])
+        }
+        else {
+            return id
+        }
+    }
 }
