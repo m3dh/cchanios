@@ -11,4 +11,9 @@ class ColorCollection {
     static let EnabledSecondaryButtonBackgroundColor = UIColor(red: 103/255.0, green: 111/255.0, blue: 135/255.0, alpha: 1)
 
     static let TextfieldDefaultTintColor = UIColor(white: 0.9, alpha: 1)
+
+    // Group avatar has a, while normal users are in light blue
+    static let UserAvatarBorder0 = UIColor(red: 200/255.0, green: 227/255.0, blue: 233/255.0, alpha: 1)
+
+    static let tableViewTimestamp = UIColor(red: 98/255.0, green: 114/255.0, blue: 164/255.0, alpha: 1)
 }

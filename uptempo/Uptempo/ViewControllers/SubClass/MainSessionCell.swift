@@ -30,8 +30,8 @@ class MainSessionCell: UITableViewCell {
         self.avatarImageView.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 5).isActive = true
         self.avatarImageView.layer.cornerRadius = 62 / 2
         self.avatarImageView.layer.masksToBounds = true
-        self.avatarImageView.layer.borderWidth = 1
-        self.avatarImageView.layer.borderColor = UIColor(white: 0.92, alpha: 1).cgColor
+        self.avatarImageView.layer.borderWidth = 2
+        self.avatarImageView.layer.borderColor = ColorCollection.UserAvatarBorder0.cgColor // UIColor(white: 0.92, alpha: 1).cgColor
 
         // time and other symbol view
         self.contentView.addSubview(self.timeAndOtherSymbolView)
@@ -48,7 +48,7 @@ class MainSessionCell: UITableViewCell {
         self.timestampTextView.topAnchor.constraint(equalTo: self.timeAndOtherSymbolView.topAnchor).isActive = true
         self.timestampTextView.font = UIFont.init(name: "AvenirNext-DemiBold", size: 12)
         self.timestampTextView.text = self.getRightDateString(time: lastMsgTime)
-        self.timestampTextView.textColor = UIColor(red: 98/255.0, green: 114/255.0, blue: 164/255.0, alpha: 1)
+        self.timestampTextView.textColor = ColorCollection.tableViewTimestamp
         let size = self.timestampTextView.sizeThatFits(self.timestampTextView.bounds.size)
         self.timestampTextView.heightAnchor.constraint(equalToConstant: size.height).isActive = true
         self.timeAndOtherSymbolViewWidthConst = self.timeAndOtherSymbolView.widthAnchor.constraint(equalToConstant: 10)

@@ -95,10 +95,10 @@ class MainViewController: UIViewController {
         leftBarBaseButton.imageView!.heightAnchor.constraint(equalToConstant: 35).isActive = true
         leftBarBaseButton.widthAnchor.constraint(equalToConstant: 35).isActive = true
         leftBarBaseButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        leftBarBaseButton.imageView!.layer.cornerRadius = 17.0
+        leftBarBaseButton.imageView!.layer.cornerRadius = 17.5
         leftBarBaseButton.imageView!.layer.masksToBounds = true
-        leftBarBaseButton.imageView!.layer.borderWidth = 0.7
-        leftBarBaseButton.imageView!.layer.borderColor = UIColor.gray.cgColor
+        leftBarBaseButton.imageView!.layer.borderWidth = 1.7
+        leftBarBaseButton.imageView!.layer.borderColor = ColorCollection.UserAvatarBorder0.cgColor
         leftBarBaseButton.addTarget(self, action: #selector(self.segueToAccountSettingMenu), for: UIControlEvents.allTouchEvents)
 
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBarBaseButton)
