@@ -1,6 +1,11 @@
 import UIKit
 
-class ChatViewController: UIViewController {
+/* TODO List:
+    - Complete chat input text field keyboard dismiss animations. [>]
+    - Input text field cross line: view integrations.             [>]
+*/
+
+class ChatViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var chatBottomElementsView: UIView!
     @IBOutlet weak var chatInputTextField: UITextField!
@@ -16,38 +21,30 @@ class ChatViewController: UIViewController {
         self.chatTableView.tableFooterView = nil
         self.chatTableView.separatorStyle = .none
         self.chatTableView.backgroundColor = ColorCollection.ChatViewBackground0
+        self.chatTableView.keyboardDismissMode = .interactive
         self.chatBottomElementsView.backgroundColor = ColorCollection.ChatElementViewBackground
         self.chatInputTextField.returnKeyType = .send
+        self.chatInputTextField.borderStyle = .none
 
+        /* Uncomment this to set text field border color */
+        // self.chatInputTextField.layer.borderWidth = 1;
+        // self.chatInputTextField.layer.borderColor = UIColor.red.cgColor
+
+        self.chatInputTextField.placeholder = "Message"
+        self.chatInputTextField.font = UIFont.init(name: "AvenirNext-DemiBold", size: 13)
+
+        // Manage keyboard interactions.
+        let rootViewMaxY = self.view.bounds.maxY
         let navBarHeight = self.navigationController!.navigationBar.frame.height
         let statusHeight = UIApplication.shared.statusBarFrame.height
-        let knownContainerHeight = self.chatContainerView.frame.height
-        self.fullTableViewHeight = knownContainerHeight - navBarHeight - statusHeight - 40 /* height of bottom elements */
+        self.fullTableViewHeight = rootViewMaxY - navBarHeight - statusHeight - 40 /* height of bottom elements */
         self.chatTableViewHeight.constant = self.fullTableViewHeight
-    }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
-    }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
-    }
-
-    @objc func keyboardWillShow(_ notification: Notification) {
-        if let keyboardFrame: NSValue = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
-            let keyboardHeight = keyboardFrame.cgRectValue.height
-            self.chatTableViewHeight.constant = self.fullTableViewHeight - keyboardHeight
-            UIView.animate(withDuration: 0.1, animations: { self.view.layoutIfNeeded() })
-        }
-    }
-
-    @objc func keyboardWillHide(_ notification: Notification) {
-        self.chatTableViewHeight.constant = self.fullTableViewHeight
-        UIView.animate(withDuration: 0.2, animations: { self.view.layoutIfNeeded() })
+        let tracker = TrackingInputAccessoryView(
+            width: self.chatContainerView.bounds.width,
+            viewInitMinY: rootViewMaxY,
+            adjustableConst: self.chatTableViewHeight,
+            animationRootView: self.view)
+        self.chatInputTextField.inputAccessoryView = tracker
     }
 }

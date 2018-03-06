@@ -17,6 +17,7 @@
 		C314F71E1FEE377800AC2B1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C314F71C1FEE377800AC2B1B /* LaunchScreen.storyboard */; };
 		C314F7291FEE377800AC2B1B /* AccountManagerClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7281FEE377800AC2B1B /* AccountManagerClientTests.swift */; };
 		C3313ACA1FFE36FC002E7A83 /* SecretHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3313AC91FFE36FC002E7A83 /* SecretHelper.swift */; };
+		C342E99A204FE1920064190A /* ChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C342E999204FE1920064190A /* ChannelManager.swift */; };
 		C3554A991FFCCA86000B879E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3554A9B1FFCCA86000B879E /* Localizable.strings */; };
 		C3554A9E1FFCF903000B879E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3554A9D1FFCF903000B879E /* Assets.xcassets */; };
 		C35B87FF1FFCC26D003EB6C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35B87FD1FFCC26D003EB6C6 /* Main.storyboard */; };
@@ -73,6 +74,7 @@
 		C314F72A1FEE377800AC2B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3313AC91FFE36FC002E7A83 /* SecretHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretHelper.swift; sourceTree = "<group>"; };
 		C3313ACC1FFE641E002E7A83 /* Uptempo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Uptempo-Bridging-Header.h"; sourceTree = "<group>"; };
+		C342E999204FE1920064190A /* ChannelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelManager.swift; sourceTree = "<group>"; };
 		C3554A961FFCCA23000B879E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		C3554A9A1FFCCA86000B879E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C3554A9C1FFCCA88000B879E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				C3745AB4200258B8006B51D0 /* AccountManager.swift */,
 				C3745AB6200258F8006B51D0 /* ResourceManager.swift */,
 				C3B92507204436D10061039F /* ImageManager.swift */,
+				C342E999204FE1920064190A /* ChannelManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				C3095A571FF88D5C00A56760 /* ColorCollection.swift in Sources */,
 				C3ABF0F42047E8E10044A84C /* AccountSettingMenuViewController.swift in Sources */,
 				C36767181FF3E46200F003CB /* MainViewController.swift in Sources */,
+				C342E99A204FE1920064190A /* ChannelManager.swift in Sources */,
 				C3313ACA1FFE36FC002E7A83 /* SecretHelper.swift in Sources */,
 				C3D8D104203D61190027DBFF /* ChatViewController.swift in Sources */,
 				C3FC5F651FFCC52400083BF3 /* UnderlineTextField.swift in Sources */,

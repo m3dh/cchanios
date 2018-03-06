@@ -65,3 +65,45 @@ class KeyboardFrameChangeProtector {
         })
     }
 }
+
+class TrackingInputAccessoryView: UIView {
+    var viewInitMinY: CGFloat!
+    var adjustableConst: NSLayoutConstraint!
+    var adjustableConstInitValue: CGFloat!
+    var animationRootView: UIView!
+
+    init(width: CGFloat, viewInitMinY: CGFloat, adjustableConst: NSLayoutConstraint, animationRootView: UIView) {
+        super.init(frame: CGRect(x: 0, y: 0, width: width, height: 0))
+        self.backgroundColor = UIColor.red
+        self.viewInitMinY = viewInitMinY
+        self.adjustableConst = adjustableConst
+        self.adjustableConstInitValue = adjustableConst.constant
+        self.animationRootView = animationRootView
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
+    override func willMove(toSuperview newSuperview: UIView?) {
+        if let superviewObj = self.superview {
+            superviewObj.removeObserver(self, forKeyPath: "center")
+        }
+
+        if let newSuperviewObj = newSuperview {
+            newSuperviewObj.addObserver(self, forKeyPath: "center", options: .new, context: nil)
+        }
+    }
+
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if let superviewObj = self.superview {
+            if (object as? UIView == superviewObj && keyPath?.elementsEqual("center") ?? false) {
+                let kbFrame = superviewObj.convert(superviewObj.bounds, to: nil)
+                let distance = self.viewInitMinY - kbFrame.minY
+                self.adjustableConst.constant = self.adjustableConstInitValue - distance
+                let duration = TimeInterval(distance / 5000)
+                UIView.animate(withDuration: duration, animations: { self.animationRootView.layoutIfNeeded() })
+            }
+        }
+    }
+}

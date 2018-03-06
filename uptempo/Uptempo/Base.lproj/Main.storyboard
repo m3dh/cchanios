@@ -289,7 +289,7 @@
                                 <rect key="frame" x="0.0" y="200" width="320" height="40"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t6C-ik-2Wq">
-                                        <rect key="frame" x="7" y="4" width="306" height="32"/>
+                                        <rect key="frame" x="17" y="4" width="296" height="32"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -300,7 +300,7 @@
                                     <constraint firstItem="t6C-ik-2Wq" firstAttribute="top" secondItem="eWi-r9-c3A" secondAttribute="top" constant="4" id="Iqo-i7-VtG"/>
                                     <constraint firstAttribute="bottom" secondItem="t6C-ik-2Wq" secondAttribute="bottom" constant="4" id="O9W-b0-oBx"/>
                                     <constraint firstAttribute="height" constant="40" id="XTi-Z9-868"/>
-                                    <constraint firstItem="t6C-ik-2Wq" firstAttribute="leading" secondItem="eWi-r9-c3A" secondAttribute="leading" constant="7" id="zHa-QJ-OJk"/>
+                                    <constraint firstItem="t6C-ik-2Wq" firstAttribute="leading" secondItem="eWi-r9-c3A" secondAttribute="leading" constant="17" id="zHa-QJ-OJk"/>
                                     <constraint firstAttribute="trailing" secondItem="t6C-ik-2Wq" secondAttribute="trailing" constant="7" id="zY3-3B-y5v"/>
                                 </constraints>
                             </view>
