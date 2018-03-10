@@ -288,20 +288,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWi-r9-c3A">
                                 <rect key="frame" x="0.0" y="200" width="320" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t6C-ik-2Wq">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XSF-da-uVK">
                                         <rect key="frame" x="17" y="4" width="296" height="32"/>
-                                        <nil key="textColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="t6C-ik-2Wq" firstAttribute="top" secondItem="eWi-r9-c3A" secondAttribute="top" constant="4" id="Iqo-i7-VtG"/>
-                                    <constraint firstAttribute="bottom" secondItem="t6C-ik-2Wq" secondAttribute="bottom" constant="4" id="O9W-b0-oBx"/>
+                                    <constraint firstAttribute="bottom" secondItem="XSF-da-uVK" secondAttribute="bottom" constant="4" id="GjT-fx-TXx"/>
                                     <constraint firstAttribute="height" constant="40" id="XTi-Z9-868"/>
-                                    <constraint firstItem="t6C-ik-2Wq" firstAttribute="leading" secondItem="eWi-r9-c3A" secondAttribute="leading" constant="17" id="zHa-QJ-OJk"/>
-                                    <constraint firstAttribute="trailing" secondItem="t6C-ik-2Wq" secondAttribute="trailing" constant="7" id="zY3-3B-y5v"/>
+                                    <constraint firstAttribute="trailing" secondItem="XSF-da-uVK" secondAttribute="trailing" constant="7" id="dW0-5I-Mhw"/>
+                                    <constraint firstItem="XSF-da-uVK" firstAttribute="top" secondItem="eWi-r9-c3A" secondAttribute="top" constant="4" id="lAb-dc-f5T"/>
+                                    <constraint firstItem="XSF-da-uVK" firstAttribute="leading" secondItem="eWi-r9-c3A" secondAttribute="leading" constant="17" id="nY0-TZ-18j"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xqg-vL-Yof">
@@ -324,16 +324,17 @@
                         <viewLayoutGuide key="safeArea" id="iYw-GI-wvX"/>
                     </view>
                     <connections>
+                        <outlet property="bottomElementsViewHeight" destination="XTi-Z9-868" id="1fe-aA-ou7"/>
                         <outlet property="chatBottomElementsView" destination="eWi-r9-c3A" id="6bw-Xy-dW3"/>
                         <outlet property="chatContainerView" destination="y6S-nV-mpd" id="Mow-E0-hF1"/>
-                        <outlet property="chatInputTextField" destination="t6C-ik-2Wq" id="zcg-24-2B5"/>
+                        <outlet property="chatInputTextView" destination="XSF-da-uVK" id="k55-7L-YKA"/>
                         <outlet property="chatTableView" destination="Xqg-vL-Yof" id="r4r-FG-52T"/>
                         <outlet property="chatTableViewHeight" destination="I9Y-pc-ulC" id="QGL-Kn-A18"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQw-NY-jTb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476.81159420289856" y="-1072.0108695652175"/>
+            <point key="canvasLocation" x="476.25" y="-1072.1830985915492"/>
         </scene>
         <!--Sign In-->
         <scene sceneID="tne-QT-ifu">

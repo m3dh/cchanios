@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		05B4AE3EB2ECADD2F2A68BBA /* Pods_Uptempo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950CE219F56FCC7E1A33D32D /* Pods_Uptempo.framework */; };
 		C3048F901FF624900012A4AF /* MainMenuBarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3048F8F1FF624900012A4AF /* MainMenuBarDataSource.swift */; };
-		C3048F921FF66E490012A4AF /* TableViewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3048F911FF66E490012A4AF /* TableViewsManager.swift */; };
-		C3095A551FF68E4600A56760 /* MainSessionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3095A541FF68E4600A56760 /* MainSessionDataSource.swift */; };
 		C3095A571FF88D5C00A56760 /* ColorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3095A561FF88D5C00A56760 /* ColorCollection.swift */; };
 		C30FEE3320015F8500AE49FD /* StoreManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30FEE3220015F8500AE49FD /* StoreManagerTests.swift */; };
 		C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314F7101FEE377800AC2B1B /* AppDelegate.swift */; };
@@ -38,7 +36,9 @@
 		C3B92508204436D10061039F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B92507204436D10061039F /* ImageManager.swift */; };
 		C3B9250B2046F2090061039F /* CreateSessionMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9250A2046F2090061039F /* CreateSessionMenuViewController.swift */; };
 		C3C32DBB1FFA7B1100DEA5D8 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */; };
-		C3C802D21FF5083E00165B3C /* MainSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C802D11FF5083E00165B3C /* MainSessionCell.swift */; };
+		C3C8DDEE2053F62A0081C458 /* TableViewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C8DDEB2053F62A0081C458 /* TableViewsManager.swift */; };
+		C3C8DDEF2053F62A0081C458 /* MainSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C8DDEC2053F62A0081C458 /* MainSessionCell.swift */; };
+		C3C8DDF02053F62A0081C458 /* MainSessionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C8DDED2053F62A0081C458 /* MainSessionDataSource.swift */; };
 		C3D8D104203D61190027DBFF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8D103203D61190027DBFF /* ChatViewController.swift */; };
 		C3E58C501FFBA72E0022E181 /* WebHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */; };
 		C3FC5F651FFCC52400083BF3 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5F641FFCC52400083BF3 /* UnderlineTextField.swift */; };
@@ -61,8 +61,6 @@
 		919E59519FCE594F19203C14 /* Pods-Uptempo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uptempo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Uptempo/Pods-Uptempo.release.xcconfig"; sourceTree = "<group>"; };
 		950CE219F56FCC7E1A33D32D /* Pods_Uptempo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uptempo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3048F8F1FF624900012A4AF /* MainMenuBarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuBarDataSource.swift; sourceTree = "<group>"; };
-		C3048F911FF66E490012A4AF /* TableViewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewsManager.swift; path = Uptempo/ViewControllers/SubClass/TableViewsManager.swift; sourceTree = SOURCE_ROOT; };
-		C3095A541FF68E4600A56760 /* MainSessionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainSessionDataSource.swift; path = Uptempo/ViewControllers/SubClass/MainSessionDataSource.swift; sourceTree = SOURCE_ROOT; };
 		C3095A561FF88D5C00A56760 /* ColorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorCollection.swift; path = Uptempo/Helpers/ColorCollection.swift; sourceTree = SOURCE_ROOT; };
 		C30FEE3220015F8500AE49FD /* StoreManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagerTests.swift; sourceTree = "<group>"; };
 		C314F70D1FEE377800AC2B1B /* Uptempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uptempo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +96,9 @@
 		C3B92507204436D10061039F /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		C3B9250A2046F2090061039F /* CreateSessionMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionMenuViewController.swift; sourceTree = "<group>"; };
 		C3C32DBA1FFA7B1100DEA5D8 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageHelper.swift; path = Uptempo/Helpers/ImageHelper.swift; sourceTree = SOURCE_ROOT; };
-		C3C802D11FF5083E00165B3C /* MainSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainSessionCell.swift; path = Uptempo/ViewControllers/SubClass/MainSessionCell.swift; sourceTree = SOURCE_ROOT; };
+		C3C8DDEB2053F62A0081C458 /* TableViewsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewsManager.swift; sourceTree = "<group>"; };
+		C3C8DDEC2053F62A0081C458 /* MainSessionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSessionCell.swift; sourceTree = "<group>"; };
+		C3C8DDED2053F62A0081C458 /* MainSessionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSessionDataSource.swift; sourceTree = "<group>"; };
 		C3D8D103203D61190027DBFF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebHelper.swift; sourceTree = "<group>"; };
 		C3FC5F641FFCC52400083BF3 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
@@ -247,16 +247,16 @@
 			path = CreateSession;
 			sourceTree = "<group>";
 		};
-		C3C802D31FF511C800165B3C /* SubClass */ = {
+		C3C802D31FF511C800165B3C /* MainSession */ = {
 			isa = PBXGroup;
 			children = (
-				C3095A541FF68E4600A56760 /* MainSessionDataSource.swift */,
-				C3048F911FF66E490012A4AF /* TableViewsManager.swift */,
-				C3C802D11FF5083E00165B3C /* MainSessionCell.swift */,
+				C3C8DDEC2053F62A0081C458 /* MainSessionCell.swift */,
+				C3C8DDED2053F62A0081C458 /* MainSessionDataSource.swift */,
+				C3C8DDEB2053F62A0081C458 /* TableViewsManager.swift */,
 				C37EBA2A1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift */,
 				C3048F8F1FF624900012A4AF /* MainMenuBarDataSource.swift */,
 			);
-			path = SubClass;
+			path = MainSession;
 			sourceTree = "<group>";
 		};
 		C3E360A41FEE8C7D00896586 /* ViewControllers */ = {
@@ -265,7 +265,7 @@
 				C3ABF0EC2047D5820044A84C /* Menu */,
 				C3B925092046F1760061039F /* CreateSession */,
 				C375FFFA1FFDED6500D8B331 /* Account */,
-				C3C802D31FF511C800165B3C /* SubClass */,
+				C3C802D31FF511C800165B3C /* MainSession */,
 				C36767171FF3E46200F003CB /* MainViewController.swift */,
 				C3D8D103203D61190027DBFF /* ChatViewController.swift */,
 			);
@@ -500,7 +500,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3095A551FF68E4600A56760 /* MainSessionDataSource.swift in Sources */,
 				C3745AB5200258B8006B51D0 /* AccountManager.swift in Sources */,
 				C3B9250B2046F2090061039F /* CreateSessionMenuViewController.swift in Sources */,
 				C3AC0D731FF0E2F100BDD8ED /* KeyboardFrameChangeProtector.swift in Sources */,
@@ -509,6 +508,7 @@
 				C3ABF0F42047E8E10044A84C /* AccountSettingMenuViewController.swift in Sources */,
 				C36767181FF3E46200F003CB /* MainViewController.swift in Sources */,
 				C342E99A204FE1920064190A /* ChannelManager.swift in Sources */,
+				C3C8DDF02053F62A0081C458 /* MainSessionDataSource.swift in Sources */,
 				C3313ACA1FFE36FC002E7A83 /* SecretHelper.swift in Sources */,
 				C3D8D104203D61190027DBFF /* ChatViewController.swift in Sources */,
 				C3FC5F651FFCC52400083BF3 /* UnderlineTextField.swift in Sources */,
@@ -516,9 +516,7 @@
 				C37EBA2B1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift in Sources */,
 				C3ABF0EE2047D5B00044A84C /* SideMenuAnimation.swift in Sources */,
 				C3048F901FF624900012A4AF /* MainMenuBarDataSource.swift in Sources */,
-				C3C802D21FF5083E00165B3C /* MainSessionCell.swift in Sources */,
 				C3AC0D761FF222A000BDD8ED /* UIControlHelper.swift in Sources */,
-				C3048F921FF66E490012A4AF /* TableViewsManager.swift in Sources */,
 				C3E58C501FFBA72E0022E181 /* WebHelper.swift in Sources */,
 				C3ABF0F22047E8150044A84C /* SignUpViewController.swift in Sources */,
 				C3745AB7200258F8006B51D0 /* ResourceManager.swift in Sources */,
@@ -527,6 +525,8 @@
 				C314F7111FEE377800AC2B1B /* AppDelegate.swift in Sources */,
 				C3ABF0F12047E8150044A84C /* SignInViewController.swift in Sources */,
 				C3C32DBB1FFA7B1100DEA5D8 /* ImageHelper.swift in Sources */,
+				C3C8DDEE2053F62A0081C458 /* TableViewsManager.swift in Sources */,
+				C3C8DDEF2053F62A0081C458 /* MainSessionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
