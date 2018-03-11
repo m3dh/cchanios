@@ -39,6 +39,7 @@
 		C3C8DDEE2053F62A0081C458 /* TableViewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C8DDEB2053F62A0081C458 /* TableViewsManager.swift */; };
 		C3C8DDEF2053F62A0081C458 /* MainSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C8DDEC2053F62A0081C458 /* MainSessionCell.swift */; };
 		C3C8DDF02053F62A0081C458 /* MainSessionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C8DDED2053F62A0081C458 /* MainSessionDataSource.swift */; };
+		C3C8DDF32055598B0081C458 /* ChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C8DDF22055598B0081C458 /* ChatTableCell.swift */; };
 		C3D8D104203D61190027DBFF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8D103203D61190027DBFF /* ChatViewController.swift */; };
 		C3E58C501FFBA72E0022E181 /* WebHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */; };
 		C3FC5F651FFCC52400083BF3 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5F641FFCC52400083BF3 /* UnderlineTextField.swift */; };
@@ -99,6 +100,7 @@
 		C3C8DDEB2053F62A0081C458 /* TableViewsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewsManager.swift; sourceTree = "<group>"; };
 		C3C8DDEC2053F62A0081C458 /* MainSessionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSessionCell.swift; sourceTree = "<group>"; };
 		C3C8DDED2053F62A0081C458 /* MainSessionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSessionDataSource.swift; sourceTree = "<group>"; };
+		C3C8DDF22055598B0081C458 /* ChatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableCell.swift; sourceTree = "<group>"; };
 		C3D8D103203D61190027DBFF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebHelper.swift; sourceTree = "<group>"; };
 		C3FC5F641FFCC52400083BF3 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
@@ -259,9 +261,18 @@
 			path = MainSession;
 			sourceTree = "<group>";
 		};
+		C3C8DDF12053F6550081C458 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				C3C8DDF22055598B0081C458 /* ChatTableCell.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		C3E360A41FEE8C7D00896586 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C3C8DDF12053F6550081C458 /* Chat */,
 				C3ABF0EC2047D5820044A84C /* Menu */,
 				C3B925092046F1760061039F /* CreateSession */,
 				C375FFFA1FFDED6500D8B331 /* Account */,
@@ -510,6 +521,7 @@
 				C342E99A204FE1920064190A /* ChannelManager.swift in Sources */,
 				C3C8DDF02053F62A0081C458 /* MainSessionDataSource.swift in Sources */,
 				C3313ACA1FFE36FC002E7A83 /* SecretHelper.swift in Sources */,
+				C3C8DDF32055598B0081C458 /* ChatTableCell.swift in Sources */,
 				C3D8D104203D61190027DBFF /* ChatViewController.swift in Sources */,
 				C3FC5F651FFCC52400083BF3 /* UnderlineTextField.swift in Sources */,
 				C3B92508204436D10061039F /* ImageManager.swift in Sources */,
