@@ -125,6 +125,8 @@ class MainViewController: UIViewController {
         } else if let dest = segue.destination as? AccountSettingMenuViewController {
             self.sideMenuActivatedDirection = .Left
             dest.transitioningDelegate = self
+        } else if let dest = segue.destination as? ChatViewController {
+            dest.currentUserAccount = self.activeMainAccount
         }
     }
 }
