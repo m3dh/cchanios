@@ -285,8 +285,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeQ-um-gGa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="4sr-ew-YA6"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWi-r9-c3A">
-                                <rect key="frame" x="0.0" y="200" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="201" width="320" height="40"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XSF-da-uVK">
                                         <rect key="frame" x="17" y="4" width="296" height="32"/>
@@ -305,7 +312,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xqg-vL-Yof">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                <rect key="frame" x="0.0" y="1" width="320" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="I9Y-pc-ulC"/>
@@ -316,10 +323,14 @@
                         <constraints>
                             <constraint firstItem="Xqg-vL-Yof" firstAttribute="leading" secondItem="iYw-GI-wvX" secondAttribute="leading" id="802-ea-zQP"/>
                             <constraint firstItem="eWi-r9-c3A" firstAttribute="leading" secondItem="iYw-GI-wvX" secondAttribute="leading" id="LOM-Yd-rQH"/>
+                            <constraint firstItem="eWi-r9-c3A" firstAttribute="top" secondItem="Xqg-vL-Yof" secondAttribute="bottom" id="LmI-k4-NUD"/>
                             <constraint firstItem="eWi-r9-c3A" firstAttribute="trailing" secondItem="iYw-GI-wvX" secondAttribute="trailing" id="Zma-A0-a0b"/>
-                            <constraint firstItem="Xqg-vL-Yof" firstAttribute="top" secondItem="iYw-GI-wvX" secondAttribute="top" id="c5a-UW-5uE"/>
+                            <constraint firstItem="IeQ-um-gGa" firstAttribute="top" secondItem="iYw-GI-wvX" secondAttribute="top" id="byF-1b-3zP"/>
+                            <constraint firstItem="Xqg-vL-Yof" firstAttribute="top" secondItem="IeQ-um-gGa" secondAttribute="bottom" id="c5a-UW-5uE"/>
+                            <constraint firstItem="IeQ-um-gGa" firstAttribute="leading" secondItem="iYw-GI-wvX" secondAttribute="leading" id="cDT-3z-5mP"/>
                             <constraint firstItem="Xqg-vL-Yof" firstAttribute="trailing" secondItem="iYw-GI-wvX" secondAttribute="trailing" id="mqM-ov-DbT"/>
                             <constraint firstItem="eWi-r9-c3A" firstAttribute="top" secondItem="Xqg-vL-Yof" secondAttribute="bottom" id="wKf-Cc-i3t"/>
+                            <constraint firstItem="iYw-GI-wvX" firstAttribute="trailing" secondItem="IeQ-um-gGa" secondAttribute="trailing" id="xJF-Wq-VVa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iYw-GI-wvX"/>
                     </view>
@@ -330,6 +341,7 @@
                         <outlet property="chatInputTextView" destination="XSF-da-uVK" id="k55-7L-YKA"/>
                         <outlet property="chatTableView" destination="Xqg-vL-Yof" id="r4r-FG-52T"/>
                         <outlet property="chatTableViewHeight" destination="I9Y-pc-ulC" id="QGL-Kn-A18"/>
+                        <outlet property="topShadowView" destination="IeQ-um-gGa" id="SLd-w6-OFM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQw-NY-jTb" userLabel="First Responder" sceneMemberID="firstResponder"/>

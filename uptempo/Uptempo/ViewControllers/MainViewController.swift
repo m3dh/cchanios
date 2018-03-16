@@ -68,6 +68,13 @@ class MainViewController: UIViewController {
             flowLayout.minimumLineSpacing = 0
         }
 
+        // Order views & create shadow
+        self.view.bringSubview(toFront: self.subNavBarView)
+        self.subNavBarView.layer.masksToBounds = false
+        self.subNavBarView.layer.shadowOpacity = 0.3
+        self.subNavBarView.layer.shadowColor = UIColor.black.cgColor
+        self.subNavBarView.layer.shadowOffset = CGSize(width: 0, height: 0.5)
+
         // trigger data reload
         self.menuBarCollectionView.reloadData()
         self.mainCollectionView.reloadData()

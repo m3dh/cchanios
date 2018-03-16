@@ -2,6 +2,7 @@ import UIKit
 
 class MainSessionCell: UITableViewCell {
     var avatarImageView: UIImageView!
+    var avatarShadowView: UIView!
     var titleTextView: UILabel!
     var messageTextView: UILabel!
     var timestampTextView: UILabel!
@@ -21,16 +22,31 @@ class MainSessionCell: UITableViewCell {
         self.titleAndMessageView = UIView()
 
         // avatar view
-        self.avatarImageView = UIImageView(image: avatar)
-        self.contentView.addSubview(self.avatarImageView)
+        self.avatarShadowView = UIView()
+        self.contentView.addSubview(self.avatarShadowView)
+        self.avatarShadowView.translatesAutoresizingMaskIntoConstraints = false
+        self.avatarShadowView.heightAnchor.constraint(equalToConstant: 62).isActive = true
+        self.avatarShadowView.widthAnchor.constraint(equalToConstant: 62).isActive = true
+        self.avatarShadowView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5).isActive = true
+        self.avatarShadowView.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 5).isActive = true
+        self.avatarShadowView.backgroundColor = UIColor.red
+        self.avatarShadowView.layer.cornerRadius = 62 / 2
+        self.avatarShadowView.layer.shadowOpacity = 0.3
+        self.avatarShadowView.layer.shadowRadius = 1.0
+        self.avatarShadowView.layer.shadowOffset = CGSize(width: 0.5, height: 2)
+        self.avatarShadowView.layer.shadowColor = UIColor.black.cgColor
+
+        self.avatarImageView = UIImageView(frame: self.avatarShadowView.frame)
+        self.avatarShadowView.addSubview(self.avatarImageView)
         self.avatarImageView.translatesAutoresizingMaskIntoConstraints = false
         self.avatarImageView.heightAnchor.constraint(equalToConstant: 62).isActive = true
         self.avatarImageView.widthAnchor.constraint(equalToConstant: 62).isActive = true
-        self.avatarImageView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5).isActive = true
-        self.avatarImageView.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 5).isActive = true
+        self.avatarImageView.topAnchor.constraint(equalTo: self.avatarShadowView.topAnchor, constant: 0).isActive = true
+        self.avatarImageView.leftAnchor.constraint(equalTo: self.avatarShadowView.leftAnchor, constant: 0).isActive = true
+        self.avatarImageView.image = avatar
         self.avatarImageView.layer.cornerRadius = 62 / 2
         self.avatarImageView.layer.masksToBounds = true
-        self.avatarImageView.layer.borderWidth = 2
+        self.avatarImageView.layer.borderWidth = 3.0
         self.avatarImageView.layer.borderColor = ColorCollection.UserAvatarBorder0.cgColor // UIColor(white: 0.92, alpha: 1).cgColor
 
         // time and other symbol view

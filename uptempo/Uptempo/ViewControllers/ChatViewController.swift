@@ -80,6 +80,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var chatBottomElementsView: UIView!
     @IBOutlet weak var chatInputTextView: UITextView!
+    @IBOutlet weak var topShadowView: UIView!
 
     @IBOutlet var chatContainerView: UIView!
 
@@ -91,6 +92,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
 
         self.chatTableView.register(ChatSentMessageTableCell.self, forCellReuseIdentifier: ChatViewController.ChatSentMessageCellId)
         self.chatTableView.register(ChatRecvMessageTableCell.self, forCellReuseIdentifier: ChatViewController.ChatRecvMessageCellId)
@@ -135,6 +137,13 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             containerViewFullHeight: rootViewMaxY - navBarHeight - statusHeight,
             messageTableViewHeightConst: self.chatTableViewHeight,
             bottomElementsViewHeightConst: self.bottomElementsViewHeight)
+
+        // Order views & create shadow
+        self.chatContainerView.bringSubview(toFront: self.topShadowView)
+        self.topShadowView.backgroundColor = ColorCollection.NavigationBarBackgroundColor
+        self.topShadowView.layer.shadowOpacity = 0.8
+        self.topShadowView.layer.shadowColor = UIColor.black.cgColor
+        self.topShadowView.layer.shadowOffset = CGSize(width: 0, height: 0.5)
 
         self.loadInitChatMessages()
     }
