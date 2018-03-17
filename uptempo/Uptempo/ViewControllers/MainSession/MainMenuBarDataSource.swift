@@ -18,7 +18,7 @@ class MainMenuBarDataSource: NSObject, UICollectionViewDataSource, UICollectionV
 
         // initialize horizontal bar
         let horizontalBarView = UIView()
-        horizontalBarView.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        horizontalBarView.backgroundColor = ColorCollection.NavigationBarTextColor
         horizontalBarView.translatesAutoresizingMaskIntoConstraints = false
         self.containerView.addSubview(horizontalBarView)
 

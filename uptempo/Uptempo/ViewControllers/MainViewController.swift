@@ -36,7 +36,7 @@ class MainViewController: UIViewController {
 
         // ui views initialization
         self.subNavBarView.backgroundColor = ColorCollection.NavigationBarBackgroundColor
-        self.subNavBarBottonShadowView.backgroundColor = UIColor.darkGray
+        self.subNavBarBottonShadowView.backgroundColor = ColorCollection.NavigationBarBackgroundColor
         self.subNavBarBottonShadowView.alpha = 0.5
   
         // initialize top menu bar
@@ -94,24 +94,24 @@ class MainViewController: UIViewController {
             fatalError("Unexpected auth token status after sign-in / sign-up(s)")
         }
 
+        let leftBarButtonSize: CGFloat = 35
         let leftBarBaseButton = UIButton(type: .custom)
-        leftBarBaseButton.setImage(self.activeMainAccountAvatar, for: .normal)
-        leftBarBaseButton.imageView!.translatesAutoresizingMaskIntoConstraints = false
-        leftBarBaseButton.translatesAutoresizingMaskIntoConstraints = false
-        leftBarBaseButton.imageView!.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        leftBarBaseButton.imageView!.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        leftBarBaseButton.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        leftBarBaseButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        leftBarBaseButton.imageView!.layer.cornerRadius = 17.5
-        leftBarBaseButton.imageView!.layer.masksToBounds = true
-        leftBarBaseButton.imageView!.layer.borderWidth = 1.7
-        leftBarBaseButton.imageView!.layer.borderColor = ColorCollection.UserAvatarBorder0.cgColor
+        let avatarView = ShadowAvatarView()
+        leftBarBaseButton.addSubview(avatarView)
+        avatarView.initialize(size: leftBarButtonSize, shadowPercent: 0.7)
+        avatarView.avatarImage = self.activeMainAccountAvatar
+        avatarView.borderColor = ColorCollection.UserAvatarBorder0.cgColor
+
+        leftBarBaseButton.widthAnchor.constraint(equalToConstant: leftBarButtonSize).isActive = true
+        leftBarBaseButton.heightAnchor.constraint(equalToConstant: leftBarButtonSize).isActive = true
+        avatarView.frame = CGRect(x: 0, y: 0, width: leftBarButtonSize, height: leftBarButtonSize)
+        avatarView.setNonInteractivable()
         leftBarBaseButton.addTarget(self, action: #selector(self.segueToAccountSettingMenu), for: UIControlEvents.allTouchEvents)
 
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBarBaseButton)
         self.navigationItem.leftBarButtonItem!.customView!.translatesAutoresizingMaskIntoConstraints = false
-        self.navigationItem.leftBarButtonItem!.customView!.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        self.navigationItem.leftBarButtonItem!.customView!.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        self.navigationItem.leftBarButtonItem!.customView!.widthAnchor.constraint(equalToConstant: leftBarButtonSize).isActive = true
+        self.navigationItem.leftBarButtonItem!.customView!.heightAnchor.constraint(equalToConstant: leftBarButtonSize).isActive = true
         self.navigationItem.leftBarButtonItem!.style = .plain
         self.navigationItem.leftBarButtonItem!.isEnabled = true
     }

@@ -293,22 +293,34 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWi-r9-c3A">
-                                <rect key="frame" x="0.0" y="201" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="201" width="320" height="45"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XSF-da-uVK">
-                                        <rect key="frame" x="17" y="4" width="296" height="32"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvL-La-j6u">
+                                        <rect key="frame" x="15" y="5" width="290" height="35"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XSF-da-uVK">
+                                                <rect key="frame" x="20" y="0.0" width="230" height="35"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="XSF-da-uVK" firstAttribute="leading" secondItem="fvL-La-j6u" secondAttribute="leading" constant="20" id="4tw-uW-uLX"/>
+                                            <constraint firstItem="XSF-da-uVK" firstAttribute="top" secondItem="fvL-La-j6u" secondAttribute="top" id="Blo-wS-5Q3"/>
+                                            <constraint firstAttribute="bottom" secondItem="XSF-da-uVK" secondAttribute="bottom" id="Y6d-aM-7nM"/>
+                                            <constraint firstAttribute="trailing" secondItem="XSF-da-uVK" secondAttribute="trailing" constant="40" id="YNr-bj-951"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="XSF-da-uVK" secondAttribute="bottom" constant="4" id="GjT-fx-TXx"/>
-                                    <constraint firstAttribute="height" constant="40" id="XTi-Z9-868"/>
-                                    <constraint firstAttribute="trailing" secondItem="XSF-da-uVK" secondAttribute="trailing" constant="7" id="dW0-5I-Mhw"/>
-                                    <constraint firstItem="XSF-da-uVK" firstAttribute="top" secondItem="eWi-r9-c3A" secondAttribute="top" constant="4" id="lAb-dc-f5T"/>
-                                    <constraint firstItem="XSF-da-uVK" firstAttribute="leading" secondItem="eWi-r9-c3A" secondAttribute="leading" constant="17" id="nY0-TZ-18j"/>
+                                    <constraint firstAttribute="trailing" secondItem="fvL-La-j6u" secondAttribute="trailing" constant="15" id="4Ag-N2-6pC"/>
+                                    <constraint firstItem="fvL-La-j6u" firstAttribute="top" secondItem="eWi-r9-c3A" secondAttribute="top" constant="5" id="O9Q-L7-spx"/>
+                                    <constraint firstAttribute="height" constant="45" id="XTi-Z9-868"/>
+                                    <constraint firstItem="fvL-La-j6u" firstAttribute="leading" secondItem="eWi-r9-c3A" secondAttribute="leading" constant="15" id="g67-mc-HSA"/>
+                                    <constraint firstAttribute="bottom" secondItem="fvL-La-j6u" secondAttribute="bottom" constant="5" id="y6a-Bu-MoY"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xqg-vL-Yof">
@@ -323,7 +335,6 @@
                         <constraints>
                             <constraint firstItem="Xqg-vL-Yof" firstAttribute="leading" secondItem="iYw-GI-wvX" secondAttribute="leading" id="802-ea-zQP"/>
                             <constraint firstItem="eWi-r9-c3A" firstAttribute="leading" secondItem="iYw-GI-wvX" secondAttribute="leading" id="LOM-Yd-rQH"/>
-                            <constraint firstItem="eWi-r9-c3A" firstAttribute="top" secondItem="Xqg-vL-Yof" secondAttribute="bottom" id="LmI-k4-NUD"/>
                             <constraint firstItem="eWi-r9-c3A" firstAttribute="trailing" secondItem="iYw-GI-wvX" secondAttribute="trailing" id="Zma-A0-a0b"/>
                             <constraint firstItem="IeQ-um-gGa" firstAttribute="top" secondItem="iYw-GI-wvX" secondAttribute="top" id="byF-1b-3zP"/>
                             <constraint firstItem="Xqg-vL-Yof" firstAttribute="top" secondItem="IeQ-um-gGa" secondAttribute="bottom" id="c5a-UW-5uE"/>
@@ -337,6 +348,7 @@
                     <connections>
                         <outlet property="bottomElementsViewHeight" destination="XTi-Z9-868" id="1fe-aA-ou7"/>
                         <outlet property="chatBottomElementsView" destination="eWi-r9-c3A" id="6bw-Xy-dW3"/>
+                        <outlet property="chatBottomFakeInputView" destination="fvL-La-j6u" id="kdP-iF-uwW"/>
                         <outlet property="chatContainerView" destination="y6S-nV-mpd" id="Mow-E0-hF1"/>
                         <outlet property="chatInputTextView" destination="XSF-da-uVK" id="k55-7L-YKA"/>
                         <outlet property="chatTableView" destination="Xqg-vL-Yof" id="r4r-FG-52T"/>

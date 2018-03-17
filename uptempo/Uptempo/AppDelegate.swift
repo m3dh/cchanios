@@ -10,11 +10,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationBarAppearance = UINavigationBar.appearance()
         navigationBarAppearance.tintColor = ColorCollection.NavigationItemTintColor
         navigationBarAppearance.barTintColor = ColorCollection.NavigationBarBackgroundColor
-        navigationBarAppearance.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "AvenirNext-DemiBold", size: 18)!]
+        navigationBarAppearance.titleTextAttributes = [NSAttributedStringKey.foregroundColor: ColorCollection.NavigationBarTextColor, NSAttributedStringKey.font: UIFont(name: "AvenirNext-DemiBold", size: 18)!]
         let barButtonAppearance = UIBarButtonItem.appearance()
-        barButtonAppearance.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "AvenirNext-Medium", size: 16)!], for: .normal)
+        barButtonAppearance.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: ColorCollection.NavigationBarTextColor, NSAttributedStringKey.font: UIFont(name: "AvenirNext-Medium", size: 16)!], for: .normal)
 
-        application.statusBarStyle = .lightContent
+        application.statusBarStyle = .default
         guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else {
             fatalError("Status bar cannot be accessed")
         }

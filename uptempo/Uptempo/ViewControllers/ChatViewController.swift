@@ -80,6 +80,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var chatBottomElementsView: UIView!
     @IBOutlet weak var chatInputTextView: UITextView!
+    @IBOutlet weak var chatBottomFakeInputView: UIView!
     @IBOutlet weak var topShadowView: UIView!
 
     @IBOutlet var chatContainerView: UIView!
@@ -107,19 +108,19 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.chatTableView.dataSource = self
 
         // Setup bottom elements.
-        self.chatBottomElementsView.backgroundColor = ColorCollection.ChatElementViewBackground
+        self.chatBottomElementsView.backgroundColor = ColorCollection.White
         self.chatInputTextView.returnKeyType = .send
         self.chatInputTextView.layer.borderWidth = 0
+        self.chatBottomFakeInputView.backgroundColor = ColorCollection.ChatElementViewBackground
         self.chatInputTextView.backgroundColor = ColorCollection.ChatElementViewBackground
-
-        /* Uncomment this to set text field border color */
-        // self.chatInputTextField.layer.borderWidth = 1;
-        // self.chatInputTextField.layer.borderColor = UIColor.red.cgColor
+        self.chatInputTextView.textColor = ColorCollection.LightGrey
+        self.chatBottomFakeInputView.layer.cornerRadius = 5.0
+        self.chatBottomFakeInputView.layer.masksToBounds = true
 
         self.chatInputTextView.delegate = self
         self.chatInputTextView.isScrollEnabled = false
         self.chatInputTextView.text = "Message"
-        self.chatInputTextView.textColor = .lightGray
+        self.chatInputTextView.textColor = ColorCollection.Cyan
         self.chatInputTextView.font = UIFont.init(name: "AvenirNext-DemiBold", size: 13)
 
         // Manage keyboard interactions.
@@ -146,6 +147,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.topShadowView.layer.shadowOffset = CGSize(width: 0, height: 0.5)
 
         self.loadInitChatMessages()
+        self.scrollChatTableToBottom()
     }
 
     func loadInitChatMessages() {
@@ -173,6 +175,13 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.loadedMessages.append(msg2)
     }
 
+    func scrollChatTableToBottom() {
+        DispatchQueue.main.async {
+            let bottomIndex = IndexPath(row: self.loadedMessages.count - 1, section: 0)
+            self.chatTableView.scrollToRow(at: bottomIndex, at: UITableViewScrollPosition.bottom, animated: false)
+        }
+    }
+
     func isRecvMessageSenderAvatarNeeded() -> Bool {
         return true // For testing...
     }
@@ -192,11 +201,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func textViewDidChange(_ textView: UITextView) {
         let newSize = textView.sizeThatFits(CGSize(width: textView.bounds.width, height: CGFloat.greatestFiniteMagnitude))
-        let newHeight = max(40, newSize.height + 8)
+        let newHeight = max(45, newSize.height + 11)
         if newHeight != self.bottomElementsViewHeight.constant {
             let newTableHeight = self.chatTableViewHeight.constant - newHeight + self.bottomElementsViewHeight.constant
             self.bottomElementsViewHeight.constant = newHeight
-            self.chatTableViewHeight.constant = newTableHeight // this is not correct! > integrate with tracker.
+            self.chatTableViewHeight.constant = newTableHeight
         }
     }
 
@@ -205,15 +214,15 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             let trimmedText = text.trimmingCharacters(in: .whitespacesAndNewlines)
             if trimmedText.isEmpty {
                 textView.text = "Message"
-                textView.textColor = .lightGray
+                textView.textColor = ColorCollection.Cyan
             }
         }
     }
 
     func textViewDidBeginEditing (_ textView: UITextView) {
-        if textView.textColor == .lightGray {
+        if textView.textColor == ColorCollection.Cyan {
             textView.text = ""
-            textView.textColor = .darkGray
+            textView.textColor = ColorCollection.Black
         }
     }
 

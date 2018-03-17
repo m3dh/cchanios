@@ -22,6 +22,9 @@ class ChatSentMessageTableCell : UITableViewCell {
             self.messageContainerViewWidth = self.messageBodyContainer.widthAnchor.constraint(equalToConstant: 150)
             self.messageContainerViewWidth.isActive = true
             self.messageBodyContainer.backgroundColor = UIColor.white
+            self.messageBodyContainer.layer.cornerRadius = 5.0
+            self.messageBodyContainer.layer.masksToBounds = true
+            self.messageBodyContainer.backgroundColor = ColorCollection.ChatSentMessageBackground
 
             self.messageBodyView = UITextView()
             self.messageBodyView.isEditable = false
@@ -36,13 +39,15 @@ class ChatSentMessageTableCell : UITableViewCell {
             self.messageBodyView.leftAnchor.constraint(
                 equalTo: self.messageBodyContainer.leftAnchor,
                 constant: ChatViewController.ChatMessageSideMargin).isActive = true
-
+            self.messageBodyView.backgroundColor = ColorCollection.ChatSentMessageBackground
+            self.messageBodyView.textColor = ColorCollection.Black
             self.messageBodyView.font = UIFont.init(name: "Avenir-Medium", size: 13)
             self.initialized = true
         }
 
         self.messageBodyView.text = message.messageBody
         if let actualSize = message.textViewSize {
+            self.messageContainerViewWidth.constant = actualSize.width + 2 * ChatViewController.ChatMessageSideMargin
         } else {
             let maxWidth = self.contentView.bounds.width * ChatViewController.FullMessageWidthPerct - 3 * ChatViewController.ChatMessageSideMargin
             let newSize = self.messageBodyView.sizeThatFits(CGSize(width: maxWidth, height: CGFloat.greatestFiniteMagnitude))

@@ -40,6 +40,7 @@
 		C3C8DDEF2053F62A0081C458 /* MainSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C8DDEC2053F62A0081C458 /* MainSessionCell.swift */; };
 		C3C8DDF02053F62A0081C458 /* MainSessionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C8DDED2053F62A0081C458 /* MainSessionDataSource.swift */; };
 		C3C8DDF32055598B0081C458 /* ChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C8DDF22055598B0081C458 /* ChatTableCell.swift */; };
+		C3C8DDF5205E97D30081C458 /* ShadowAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C8DDF4205E97D30081C458 /* ShadowAvatarView.swift */; };
 		C3D8D104203D61190027DBFF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8D103203D61190027DBFF /* ChatViewController.swift */; };
 		C3E58C501FFBA72E0022E181 /* WebHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */; };
 		C3FC5F651FFCC52400083BF3 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5F641FFCC52400083BF3 /* UnderlineTextField.swift */; };
@@ -101,6 +102,7 @@
 		C3C8DDEC2053F62A0081C458 /* MainSessionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSessionCell.swift; sourceTree = "<group>"; };
 		C3C8DDED2053F62A0081C458 /* MainSessionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSessionDataSource.swift; sourceTree = "<group>"; };
 		C3C8DDF22055598B0081C458 /* ChatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableCell.swift; sourceTree = "<group>"; };
+		C3C8DDF4205E97D30081C458 /* ShadowAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowAvatarView.swift; sourceTree = "<group>"; };
 		C3D8D103203D61190027DBFF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C3E58C4F1FFBA72E0022E181 /* WebHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebHelper.swift; sourceTree = "<group>"; };
 		C3FC5F641FFCC52400083BF3 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				C3C8DDF22055598B0081C458 /* ChatTableCell.swift */,
+				C3C8DDF4205E97D30081C458 /* ShadowAvatarView.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				C3C8DDF32055598B0081C458 /* ChatTableCell.swift in Sources */,
 				C3D8D104203D61190027DBFF /* ChatViewController.swift in Sources */,
 				C3FC5F651FFCC52400083BF3 /* UnderlineTextField.swift in Sources */,
+				C3C8DDF5205E97D30081C458 /* ShadowAvatarView.swift in Sources */,
 				C3B92508204436D10061039F /* ImageManager.swift in Sources */,
 				C37EBA2B1FF5DF68009BEE01 /* MainViewCollectionDataSource.swift in Sources */,
 				C3ABF0EE2047D5B00044A84C /* SideMenuAnimation.swift in Sources */,
