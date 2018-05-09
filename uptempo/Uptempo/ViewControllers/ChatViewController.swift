@@ -90,6 +90,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     var loadedMessages: [ChatViewChatMessage] = []
     var currentUserAccount: MainAccount!
+    var targetAccount: UserAccount?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,6 +107,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.chatTableView.estimatedRowHeight = ChatViewController.EstimatedChatCellHeight
         self.chatTableView.delegate = self
         self.chatTableView.dataSource = self
+
+        // Setup navigation bar
+        if let targetAccount = self.targetAccount {
+            self.navigationItem.title = targetAccount.displayName
+        }
 
         // Setup bottom elements.
         self.chatBottomElementsView.backgroundColor = ColorCollection.White

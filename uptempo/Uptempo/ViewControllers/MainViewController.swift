@@ -134,6 +134,11 @@ class MainViewController: UIViewController {
             dest.transitioningDelegate = self
         } else if let dest = segue.destination as? ChatViewController {
             dest.currentUserAccount = self.activeMainAccount
+
+            var testTargetAccount = UserAccount()
+            testTargetAccount.displayName = "self.activeMainAccount.displayName"
+            testTargetAccount.avatarImageData = self.activeMainAccount.avatarImageData
+            dest.targetAccount = testTargetAccount
         }
     }
 }
